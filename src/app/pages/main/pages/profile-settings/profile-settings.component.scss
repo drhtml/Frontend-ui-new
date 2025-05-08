@@ -1,0 +1,50 @@
+@import "../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px 50px 0 40px;
+  background-color: $LightGrey;
+
+  @include media-breakpoint-tablet-landscape-down {
+    padding: 36px 50px 0 40px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding: 16px 10px 0;
+  }
+}
+
+.text-1 {
+  font-size: 30px;
+  line-height: 37px;
+  position: absolute;
+  top: 36px;
+  left: 40px;
+  font-weight: 500;
+
+  @include media-breakpoint-tablet-landscape-down {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  @include media-breakpoint-mobile-down {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 12px;
+    margin-left: 6px;
+  }
+}
+
+mat-tab-group {
+  margin-bottom: 40px;
+}
+
+app-bottom-links {
+  margin-top: auto;
+  margin-bottom: 12px;
+}

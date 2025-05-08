@@ -1,0 +1,71 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  padding-top: 50px;
+  box-sizing: border-box;
+  align-items: flex-start;
+
+  @include media-breakpoint-tablet-down {
+    flex-direction: column;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding-top: 16px;
+  }
+}
+
+.img-1 {
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+}
+
+.block-1 {
+  margin-right: 30px;
+  height: 270px;
+  width: 260px;
+  align-items: center;
+  justify-content: center;
+  background-color: $White;
+
+  @include media-breakpoint-tablet-down {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  app-button {
+    margin-top: 29px;
+  }
+}
+
+.block-2 {
+  background-color: $White;
+  box-sizing: border-box;
+  padding: 30px 40px 31px 36px;
+
+  @include media-breakpoint-tablet-down {
+    width: 100%;
+  }
+}
+
+.text-1 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: bold;
+  margin-bottom: 31px;
+
+  @include media-breakpoint-mobile-down {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.btn-save {
+  margin-top: 26px;
+}
+
+app-divider {
+  margin-top: 50px;
+}

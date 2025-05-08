@@ -1,0 +1,10 @@
+:host {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 24px;
+  margin-top: 10px;
+}
+
+app-review-field-section.column-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}

@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 51px;
+}
+
+.text-1 {
+  font-size: 30px;
+  line-height: 36px;
+  margin-top: 24px;
+}
+
+.text-2 {
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 8px;
+}
+
+app-user-and-properties-table {
+  margin-top: 25px;
+}

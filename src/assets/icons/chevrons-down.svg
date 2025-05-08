@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="12px" viewBox="0 0 10 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>chevrons-down</title>
+    <g id="REX-Admin-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="05.2.-Evaluation-Results-Admin-10-pp" transform="translate(-894.000000, -716.000000)" stroke="#000000" stroke-width="1.25">
+            <g id="Sort-by-Copy" transform="translate(786.000000, 704.000000)">
+                <g id="chevrons-down" transform="translate(109.000000, 13.000000)">
+                    <polyline id="Path" points="0 5.83333333 4.16666667 10 8.33333333 5.83333333"></polyline>
+                    <polyline id="Path" points="0 0 4.16666667 4.16666667 8.33333333 0"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,34 @@
+<app-settings-wrapper
+  (saveChange)="submitForm()"
+  [form]="form"
+  title="PERSONAL INFO"
+>
+  <div class="container">
+    <app-input-field
+      [formControl]="getControl('firstName')"
+      label="First Name"
+    ></app-input-field>
+    <app-input-field
+      [formControl]="getControl('lastName')"
+      label="Last Name"
+    ></app-input-field>
+    <app-input-field
+      [formControl]="getControl('address')"
+      class="field-address"
+      label="Address"
+    ></app-input-field>
+    <app-input-field
+      [formControl]="getControl('phoneNumber')"
+      label="Phone Number"
+    ></app-input-field>
+    <app-radios
+      [formControl]="getControl('type')"
+      class="field-radios"
+      label="Customer Type"
+      [options]="[
+        { label: 'I’m a Canary', key: 'CANARY' },
+        { label: 'Real Estate Agent', key: 'REAL_ESTATE_AGENT' }
+      ]"
+    ></app-radios>
+  </div>
+</app-settings-wrapper>

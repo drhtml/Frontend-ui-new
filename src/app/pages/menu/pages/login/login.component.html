@@ -1,0 +1,32 @@
+<h3>LOGIN</h3>
+
+<app-input-field
+  [formControl]="getControl('email')"
+  class="email-field"
+  label="Email"
+></app-input-field>
+
+<app-input-field
+  [formControl]="getControl('password')"
+  class="password-field"
+  [isPasswordField]="true"
+  label="Password"
+></app-input-field>
+<div class="d-flex align-items-center justify-content-between block-1">
+  <app-checkbox>Remember me</app-checkbox>
+
+  <a class="link body-3">Forgot Password?</a>
+</div>
+
+<app-button
+  (click)="submitForm()"
+  iconLeft="../../../assets/icons/right-arrow.svg"
+  iconLeftHover="../../../assets/icons/right-arrow-teal.svg"
+  class="btn-1"
+  >LOGIN</app-button
+>
+
+<span class="body-3"
+  >Don’t have My Canary account?
+  <a routerLink="/menu/signup" class="link">Register here.</a></span
+>

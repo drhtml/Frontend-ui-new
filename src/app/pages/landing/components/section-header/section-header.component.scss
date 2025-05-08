@@ -1,0 +1,33 @@
+@import "../../../../../styles/includes";
+
+:host {
+  position: relative;
+  display: flex;
+
+  @include media-breakpoint-mobile-down {
+    max-width: calc(100% - 40px);
+  }
+}
+
+h2 {
+  height: 49px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  display: flex;
+}
+
+img {
+  margin-right: 24px;
+  flex-shrink: 0;
+
+  @include media-breakpoint-tablet-down {
+    width: 36px;
+    margin-right: 14px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    width: 26px;
+  }
+}

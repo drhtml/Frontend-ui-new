@@ -1,0 +1,49 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  height: 240px;
+  width: 100%;
+  background-color: white;
+}
+
+figure {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  ::ng-deep {
+    svg {
+      width: 100%;
+      height: 100%;
+      font-size: 10px;
+      line-height: 13px;
+
+      #y-axis-2 {
+        .domain {
+          fill: $LightestGrey;
+          stroke: transparent;
+        }
+
+        .tick {
+          line {
+            stroke: #f0f0f0;
+          }
+        }
+      }
+      #y-axis {
+        .domain {
+          stroke: #dbdbdb;
+        }
+      }
+      #x-axis {
+        .domain {
+          stroke: #dbdbdb;
+        }
+        text {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

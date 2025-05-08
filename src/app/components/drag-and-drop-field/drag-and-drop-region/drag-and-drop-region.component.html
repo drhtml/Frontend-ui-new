@@ -1,0 +1,44 @@
+<div class="d-flex flex-column block-1 align-items-center">
+  <span class="body-4 text-1">
+    Drag & drop your photos here<br />
+    or use the Browse button to select from your computer.
+  </span>
+
+  <ul *ngIf="selectedFiles.length && !isPhoto" class="full-width block-3">
+    <li
+      *ngFor="let item of selectedFiles; let i = index"
+      class="full-width block-2 full-width"
+    >
+      <div class="d-flex justify-content-between align-items-center">
+        <span class="body-4">{{ item.file.name }}</span>
+
+        <app-button
+          (click)="removeFile.emit(i)"
+          class="btn-1"
+          type="icon"
+          color="primary"
+        >
+          <img src="../../../assets/icons/trash-Red.svg" alt="trash" />
+        </app-button>
+      </div>
+    </li>
+  </ul>
+
+  <input
+    type="file"
+    [accept]="fileAccept"
+    #file
+    (change)="handleFileInput($event.target)"
+    hidden
+  />
+
+  <app-button
+    iconLeft="../../../assets/icons/browse-Teal.svg"
+    iconLeftHover="../../../assets/icons/browse-Teal.svg"
+    type="secondary"
+    size="small"
+    class="btn-browse"
+    (click)="file.click()"
+    >BROWSE</app-button
+  >
+</div>

@@ -1,0 +1,27 @@
+<img height="48" [src]="popupIcon" alt="" />
+
+<span class="text-1">{{ title }}</span>
+<span class="text-2" [innerHtml]="content"></span>
+
+<div class="d-flex bottom" *ngIf="isYesNo">
+  <app-button type="secondary" size="normal" class="btn-save" (click)="doNo()"
+    >NO, KEEP IT</app-button
+  >
+
+  <app-button
+    iconLeft="../../../../../../../assets/icons/trash-White.svg"
+    iconLeftHover="../../../../../../../assets/icons/trash-White.svg"
+    type="primary"
+    size="normal"
+    color="warn"
+    class="btn-remove-all-photos"
+    (click)="doDelete()"
+    >YES, DELETE</app-button
+  >
+</div>
+
+<div class="d-flex bottom" *ngIf="!isYesNo">
+  <app-button type="secondary" size="normal" class="btn-save" (click)="doNo()"
+    >CLOSE</app-button
+  >
+</div>

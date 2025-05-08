@@ -1,0 +1,41 @@
+$Pastel: #fffe71;
+$Teal: #00b3b0;
+$TealDark: #186363;
+$Black: #131415;
+$White: #ffffff;
+$YellowLight01: #fefacb;
+$YellowLight02: #fceab8;
+$TealLight01: #e8f7f7;
+$TealLight02: #a5d8d9;
+$TealLight03: #6dc8c9;
+$RedLight01: #f9d0b6;
+$RedLight02: #f3b1b1;
+$Red: #ff5e57;
+$Blue: #019eeb;
+$Green: #28c840;
+$DarkGrey: #757575;
+$Grey: #bfbfbf;
+$LightGrey: #f6f6f6;
+$LightestGrey: #fafafa;
+
+.color- {
+  &Pastel {
+    color: $Pastel;
+  }
+}
+
+:root {
+  --LightGrey: #f6f6f6;
+  --LightestGrey: #fafafa;
+  --RedLight02: #f3b1b1;
+  --Red: #ff5e57;
+  --Blue: #019eeb;
+  --Green: #28c840;
+  --White: #ffffff;
+  --Teal: #00b3b0;
+  --TealDark: #186363;
+  --TealLight02: #a5d8d9;
+  --TealLight03: #6dc8c9;
+  --Pastel: #fffe71;
+  --PodBlue: #03a9f4;
+}

@@ -1,0 +1,276 @@
+<span class="section-title text-1">Property Name *</span>
+<app-input-field [noLabel]="true" [formControl]="getControl('name')"></app-input-field>
+
+<div class="d-flex flex-column relative">
+  <span></span>
+  <span class="section-title">Photos</span>
+  <app-divider class="hide-desktop show-mobile d-block"></app-divider>
+
+  <app-button
+    *ngIf="!!getControl('photos').value.length"
+    iconLeft="../../../../../../../assets/icons/trash-Red.svg"
+    iconLeftHover="../../../../../../../assets/icons/trash-White.svg"
+    type="secondary"
+    size="small"
+    color="warn"
+    class="btn-remove-all-photos"
+    (click)="removeAllPhotos()"
+    >REMOVE ALL PHOTOS</app-button
+  >
+
+  <span class="description">
+    <strong>Guidelines:</strong>
+    <br />
+    <ul>
+      <li>
+        When uploading photos, make sure you only use the best pictures of your
+        house. The photos should be taken in a good light and give a great view
+        of the property for both interior and exterior.
+      </li>
+      <li>
+        Mandatory to upload a photo of:
+        <strong
+          >front elevation*, living room*, kitchen*, primary bedroom*, primary
+          bathroom *, rear yard*</strong
+        >
+      </li>
+    </ul>
+  </span>
+</div>
+
+<app-drag-and-drop-field
+  [formControl]="getControl('photos')"
+></app-drag-and-drop-field>
+
+<div class="d-flex flex-column relative">
+  <span></span>
+  <span class="section-title">Floor Plans</span>
+  <app-divider class="hide-desktop show-mobile d-block"></app-divider>
+
+  <app-button
+    *ngIf="!!getControl('floorPlans').value.length"
+    iconLeft="../../../../../../../assets/icons/trash-Red.svg"
+    iconLeftHover="../../../../../../../assets/icons/trash-White.svg"
+    type="secondary"
+    size="small"
+    color="warn"
+    class="btn-remove-all-photos"
+    (click)="removeAllFloorPlans()"
+    >REMOVE ALL PHOTOS</app-button
+  >
+</div>
+
+<app-drag-and-drop-field
+  [formControl]="getControl('floorPlans')"
+></app-drag-and-drop-field>
+
+<span class="section-title">Location</span>
+<app-divider class="hide-desktop show-mobile d-block"></app-divider>
+<app-input-field
+  label="House number"
+  [formControl]="getControl('addressHouseNumber')"
+  (blur)="searchProperty()"
+  (enter)="searchProperty()"
+></app-input-field>
+<app-input-field
+  label="Street name"
+  [formControl]="getControl('addressStreetName')"
+  (blur)="searchProperty()"
+  (enter)="searchProperty()"
+  class="mt-24"
+></app-input-field>
+<app-input-field
+  label="City"
+  [formControl]="getControl('addressCity')"
+  (blur)="searchProperty()"
+  (enter)="searchProperty()"
+  class="mt-24"
+></app-input-field>
+<app-input-field
+  label="State"
+  [formControl]="getControl('addressState')"
+  (blur)="searchProperty()"
+  (enter)="searchProperty()"
+  class="mt-24"
+></app-input-field>
+<app-input-field
+  label="Zip"
+  [formControl]="getControl('addressZip')"
+  (blur)="searchProperty()"
+  (enter)="searchProperty()"
+  class="mt-24"
+></app-input-field>
+<app-input-field
+  label="School District"
+  [formControl]="getControl('schoolDistrict')"
+  class="mt-24"
+></app-input-field>
+
+<app-select-field
+  label="Type of Home"
+  [formControl]="getControl('typeOfHome')"
+  [options]="[
+    { label: 'Single-Detached', key: 'single_detached' },
+    {
+      label: 'Twin (Attached on One Side)',
+      key: 'twin'
+    },
+    { label: 'Town Home (End Unit)', key: 'town_home_end_unit' },
+    { label: 'Town Home (Interior Unit)', key: 'town_home_interior_unit' },
+    { label: 'Condo (Ground Floor)', key: 'condo_ground_floor' },
+    { label: 'Condo (Not Ground Floor)', key: 'condo_non_ground_floor' }
+  ]"
+  class="mt-24"
+></app-select-field>
+
+<span class="section-title">Liveable Square Footage</span>
+<app-divider class="hide-desktop show-mobile d-block"></app-divider>
+
+<div class="recent-impovements-grid-list">
+  <app-input-field
+    [formControl]="getControl('aboveGrade')"
+    label="Above Grade"
+  ></app-input-field>
+  <app-input-field
+    [formControl]="getControl('belowGrade')"
+    label="Below Grade"
+  ></app-input-field>
+  <app-input-field
+    [formControl]="getControl('totalGrade')"
+    label="Total"
+    [disabled]="true"
+  ></app-input-field>
+</div>
+
+<span class="section-title">House Facts</span>
+<app-divider class="hide-desktop show-mobile d-block"></app-divider>
+
+<app-textarea-field
+  label="Describe your house"
+  class="mt-24"
+  [formControl]="getControl('describeYourHouse')"
+></app-textarea-field>
+
+<span class="section-title">INTERIOR DETAILS</span>
+<app-divider class="hide-desktop show-mobile d-block"></app-divider>
+<span class="section-sub-title">Bedrooms and Bathrooms</span>
+
+<mat-grid-list
+  [cols]="screenSize === 'mobile' ? 2 : 3"
+  [gutterSize]="'28px'"
+  [rowHeight]="65"
+  class="block-3-column align-top-left"
+  [ngClass]="{ 'grid-list-with-dynamic-height': screenSize !== 'mobile' }"
+>
+  <mat-grid-tile>
+    <app-input-field
+      label="# of Beds"
+      [formControl]="getControl('beds')"
+    ></app-input-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-input-field
+      label="# of Full Baths"
+      [formControl]="getControl('bathsfull')"
+    ></app-input-field>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-input-field
+      label="# of Half Baths"
+      [formControl]="getControl('bathspartial')"
+    ></app-input-field>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<span class="section-sub-title">Parking</span>
+
+<app-select-field
+  label="Parking type"
+  [formControl]="getControl('parkingType')"
+  [options]="[
+    { label: 'Garage', key: 'garage' },
+    { label: 'Off Street (No Garage)', key: 'off_street' },
+    { label: 'No Private Parking', key: 'none' }
+  ]"
+></app-select-field>
+
+<app-input-field
+  *ngIf="getControl('prkgSpaces')"
+  [formControl]="getControl('prkgSpaces')"
+  [showMinusAddBtn]="true"
+  class="block-1-column mt-24"
+  label="Number of spaces"
+></app-input-field>
+
+<div
+  *ngIf="getControl('attachedNumberOfSpaces')"
+  class="recent-impovements-grid-list"
+>
+  <app-input-field
+    [showMinusAddBtn]="true"
+    class="block-1-column mt-24"
+    label="Attached number of spaces"
+    [formControl]="getControl('attachedNumberOfSpaces')"
+  ></app-input-field>
+  <app-input-field
+    [showMinusAddBtn]="true"
+    class="block-1-column mt-24"
+    label="Detached number of spaces"
+    [formControl]="getControl('detachedNumberOfSpaces')"
+  ></app-input-field>
+</div>
+
+<span class="section-title" *ngIf="isAdmin">Plan</span>
+<app-divider
+  class="hide-desktop show-mobile d-block"
+  *ngIf="isAdmin"
+></app-divider>
+
+<span class="description" *ngIf="isAdmin && selectedPlan">
+  User’s current plan is <strong>{{ selectedPlan.name }}</strong
+  >, however you can update the plan for the property below.
+</span>
+
+<div class="block-plan d-flex flex-wrap" *ngIf="isAdmin">
+  <ng-container *ngFor="let formControl of planListForm.controls; let i = index"
+    ><app-plan-card
+      [formControl]="getControl('selectedPlan')"
+      [formControlSettings]="formControl"
+      [showRadioOnMobile]="true"
+    ></app-plan-card
+  ></ng-container>
+</div>
+
+<app-button
+  *ngIf="isAdmin"
+  size="small"
+  type="secondary"
+  class="btn-show-plan-details align-self-start hide-desktop show-mobile"
+  >SHOW PLAN DETAILS</app-button
+>
+
+<span class="section-title">Contact</span>
+<app-divider class="hide-desktop show-mobile d-block"></app-divider>
+
+<div class="grid-2-column">
+  <app-input-field
+    [formControl]="getControl('email')"
+    class="full-width"
+    label="Email"
+  ></app-input-field>
+  <app-input-field
+    class="full-width"
+    label="Phone Number"
+    [formControl]="getControl('phoneNumber')"
+  ></app-input-field>
+</div>
+
+<app-checkbox
+  *ngIf="shouldShowCheckboxTerm"
+  [formControl]="getControl('disclosureTerms')"
+  class="checkbox-terms"
+  size="small"
+  >By checking this box, you agree to our
+  <a href="https://angular.io/guide/router" class="link">Disclosure Terms </a>
+  and hereby accept to proceed further.
+</app-checkbox>

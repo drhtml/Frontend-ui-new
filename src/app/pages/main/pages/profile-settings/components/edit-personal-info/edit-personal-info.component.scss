@@ -1,0 +1,31 @@
+@import "../../../../../../../styles/includes";
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+  row-gap: 24px;
+  width: 100%;
+
+  @include media-breakpoint-mobile-down {
+    grid-template-columns: auto;
+    row-gap: 17px;
+  }
+}
+
+.field-address {
+  grid-column: 1 / span 2;
+
+  @include media-breakpoint-mobile-down {
+    grid-column: 1 / span 1;
+  }
+}
+
+.field-radios {
+  grid-column: 1 / span 2;
+  max-width: 360px;
+
+  @include media-breakpoint-mobile-down {
+    grid-column: 1 / span 1;
+  }
+}

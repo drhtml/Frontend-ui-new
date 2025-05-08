@@ -1,0 +1,67 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  ::ng-deep {
+    mat-slider {
+      background-color: $LightestGrey;
+      border: 1px solid #ebebeb;
+      height: 40px;
+
+      &.red {
+        .mat-slider-wrapper {
+          .mat-slider-track-wrapper {
+            .mat-slider-track-fill {
+              background-color: $Red;
+            }
+          }
+        }
+      }
+
+      .mat-slider-wrapper {
+        height: 38px;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        .mat-slider-track-wrapper {
+          height: 38px;
+
+          .mat-slider-track-background {
+            height: 38px;
+            background-color: $LightestGrey;
+          }
+          .mat-slider-track-fill {
+            height: 38px;
+            background-color: $Teal;
+          }
+        }
+
+        .mat-slider-thumb-container {
+          .mat-slider-thumb {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.txt-label {
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.text-1 {
+  font-size: 14px;
+  line-height: 18px;
+  color: $White;
+  position: absolute;
+  left: 13px;
+  top: 35px;
+}

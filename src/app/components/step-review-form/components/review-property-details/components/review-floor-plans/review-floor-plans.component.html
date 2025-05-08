@@ -1,0 +1,10 @@
+<div
+  *ngFor="let item of photos; let i = index"
+  class="d-flex flex-column align-items-center"
+>
+  <img class="img-1" [src]="item.url" alt="floor" />
+
+  <div class="text-1">
+    {{ item.name }}
+  </div>
+</div>

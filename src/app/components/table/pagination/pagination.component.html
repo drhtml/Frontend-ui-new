@@ -1,0 +1,58 @@
+<div *ngIf="!paginationData.isInfiniteScroll" class="d-flex align-items-center">
+  <app-select-field
+    [options]="displayOptions"
+    [formControl]="displayFormControl"
+    [noLabel]="true"
+    leftLabel="Display"
+    class="display-select-field"
+  ></app-select-field>
+  <li
+    *ngFor="
+      let item of collection
+        | paginate
+          : {
+              id: 'page-control',
+              itemsPerPage: paginationData.itemsPerPage,
+              currentPage: paginationData.currentPage,
+              totalItems: paginationData.totalItems
+            }
+    "
+    class="hide"
+  ></li>
+
+  <span class="text-1">items/page</span>
+</div>
+
+<button
+  *ngIf="paginationData.isInfiniteScroll"
+  (click)="selectViewByPage()"
+  class="button btn-view-by-page"
+>
+  View by page
+</button>
+
+<div
+  *ngIf="paginationData.isInfiniteScroll && loading"
+  class="d-flex align-items-center block-loading"
+>
+  <img src="../../../../assets/icons/loader.svg" alt="loader" />
+
+  <span>Loading more</span>
+</div>
+
+<div
+  *ngIf="!paginationData.isInfiniteScroll && loading"
+  class="d-flex align-items-center block-loading"
+>
+  <img src="../../../../assets/icons/loader.svg" alt="loader" />
+
+  <span>Loading</span>
+</div>
+
+<pagination-controls
+  *ngIf="!paginationData.isInfiniteScroll"
+  (pageChange)="onPageChange($event)"
+  id="page-control"
+  [maxSize]="6"
+></pagination-controls>
+<div *ngIf="paginationData.isInfiniteScroll"></div>

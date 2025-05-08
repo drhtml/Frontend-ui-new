@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="953px" height="337px" viewBox="0 0 953 337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>floor</title>
+    <defs>
+        <filter x="-3.7%" y="-12.2%" width="107.4%" height="124.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="11" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="30.0205068%" y1="51.7748559%" x2="94.7348434%" y2="46.4953189%" id="linearGradient-2">
+            <stop stop-color="#FFFDE7" offset="0%"></stop>
+            <stop stop-color="#FEF566" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="REX-general-user" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="t01.Landing-A" transform="translate(320.000000, -691.000000)">
+            <g id="floor" transform="translate(-286.290903, 716.132775)">
+                <polygon id="shadow" fill="#000000" opacity="0.0799999982" filter="url(#filter-1)" points="886.290903 19.9000191 -0.709097155 278.867225 -0.709097155 183.037956 813.737443 7.86722477"></polygon>
+                <path d="M815.762876,-0.132775232 L888.290903,11.8953699 L128.246226,216.867225 L127.290903,111.78311 L815.762876,-0.132775232 Z M278.61892,130.211425 C278.61892,123.929955 269.471617,119.395335 258.187847,120.08307 C246.904077,120.770804 237.756775,126.420461 237.756775,132.701932 C237.756775,138.983403 246.904077,143.518022 258.187847,142.830287 C269.471617,142.142553 278.61892,136.492896 278.61892,130.211425 Z" id="floor1-w-hole" fill="url(#linearGradient-2)"></path>
+                <polygon id="floor1" fill="url(#linearGradient-2)" points="888.290903 11.8953699 128.246226 216.867225 127.290903 111.78311 815.762876 -0.132775232"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

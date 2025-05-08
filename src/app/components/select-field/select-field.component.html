@@ -1,0 +1,21 @@
+<label class="left-label" *ngIf="leftLabel">{{ leftLabel }}</label>
+<mat-form-field
+  floatLabel="always"
+  appearance="outline"
+  [ngClass]="{ noLabel: noLabel }"
+>
+  <mat-label>{{ label }}</mat-label>
+  <mat-select
+    [formControl]="formControl"
+    disableOptionCentering
+    [placeholder]="placeholder"
+  >
+    <mat-option *ngFor="let item of options" [value]="item.key">
+      {{ item.label }}
+    </mat-option>
+  </mat-select>
+
+  <mat-error *ngIf="errorMessage">
+    {{ errorMessage }}
+  </mat-error>
+</mat-form-field>

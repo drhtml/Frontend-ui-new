@@ -1,0 +1,38 @@
+<div *ngFor="let item of datas" class="d-flex align-items-center block-1">
+  <span class="text-1">{{ item.name }}</span>
+  <div class="d-flex block-container align-items-center">
+    <div
+      [ngStyle]="{ backgroundColor: item.color, width: item.percent }"
+      class="d-flex block-content justify-content-between align-items-center"
+    >
+      <div class="d-flex flex-column">
+        <span class="text-2">{{ item.price }}</span>
+        <span class="text-3"
+          ><strong>{{ item.leads }}</strong> Leads</span
+        >
+      </div>
+      <span class="text-4 hide-mobile"
+        >Total Score: <strong>{{ item.totalScore }}</strong></span
+      >
+      <span class="text-4 hide-desktop show-mobile"
+        ><strong>{{ item.totalScore }}</strong></span
+      >
+    </div>
+  </div>
+</div>
+
+<div class="grid-bg">
+  <div class="line"><span>$0</span></div>
+  <div [ngStyle]="{ left: (100.0 * 100.0) / 300 + '%' }" class="line">
+    <span>$100k</span>
+  </div>
+  <div [ngStyle]="{ left: (150.0 * 100.0) / 300 + '%' }" class="line">
+    <span>$150k</span>
+  </div>
+  <div [ngStyle]="{ left: (200.0 * 100.0) / 300 + '%' }" class="line">
+    <span>$200k</span>
+  </div>
+  <div [ngStyle]="{ left: '100%' }" class="line last-line">
+    <span>$300k</span>
+  </div>
+</div>

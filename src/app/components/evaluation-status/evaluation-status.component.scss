@@ -1,0 +1,51 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: $Green;
+  color: $White;
+  padding-left: 14px;
+  padding-right: 13px;
+  height: 30px;
+  border-radius: 16px;
+
+  &.red {
+    background-color: $Red;
+  }
+
+  &.blue {
+    background-color: $Blue;
+  }
+
+  @include media-breakpoint-mobile-down {
+    height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 11px;
+  }
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: $White;
+  margin-right: 10px;
+
+  @include media-breakpoint-mobile-down {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.text-4 {
+  font-size: 13px;
+  line-height: 16px;
+
+  @include media-breakpoint-mobile-down {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

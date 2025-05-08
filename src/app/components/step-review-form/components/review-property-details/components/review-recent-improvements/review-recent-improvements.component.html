@@ -1,0 +1,7 @@
+<app-review-recent-ticker
+  *ngFor="let item of recentImprovements"
+  class="ticker-1"
+  [date]="item.dateString || ''"
+  [title]="item.type"
+  [description]="item.description"
+></app-review-recent-ticker>

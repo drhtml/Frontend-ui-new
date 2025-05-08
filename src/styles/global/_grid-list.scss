@@ -1,0 +1,51 @@
+mat-grid-list {
+  @include selfBreakPointHideShow(block);
+}
+mat-grid-list {
+  .mat-grid-tile {
+    overflow: visible;
+
+    .mat-grid-tile-content {
+      overflow: visible;
+    }
+  }
+
+  &.grid-list-with-dynamic-height {
+    padding-bottom: 0 !important;
+    > div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .mat-grid-tile {
+      padding-top: 0 !important;
+      position: relative;
+      left: 0 !important;
+      overflow: visible;
+
+      .mat-grid-tile-content {
+        position: relative;
+        overflow: visible;
+
+        > * {
+          max-width: 100%;
+          margin: 0 auto auto 0;
+        }
+      }
+    }
+  }
+
+  &.align-top-left {
+    .mat-grid-tile {
+      .mat-grid-tile-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        > * {
+          margin: 0 auto auto 0;
+        }
+      }
+    }
+  }
+}

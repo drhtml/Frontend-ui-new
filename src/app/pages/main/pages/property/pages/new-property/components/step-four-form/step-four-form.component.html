@@ -1,0 +1,48 @@
+<div class="block-1 d-flex">
+  <img src="../../../../../../../assets/images/logo-visa.svg" alt="logo visa" />
+  <img
+    src="../../../../../../../assets/images/logo-mastercard.svg"
+    alt="logo mastercard"
+  />
+  <img
+    src="../../../../../../../assets/images/logo-paypal.svg"
+    alt="logo paypal"
+  />
+  <img
+    src="../../../../../../../assets/images/logo-other.svg"
+    alt="logo other"
+  />
+</div>
+
+<app-input-field
+  [formControl]="getControl('cardholderName')"
+  label="Cardholder Name *"
+></app-input-field>
+<app-input-field
+  [formControl]="getControl('cardNumber')"
+  class="mt-24"
+  label="Card Number *"
+></app-input-field>
+<div class="d-flex mt-24 block-2">
+  <app-input-field
+    [formControl]="getControl('expiredDate')"
+    label="Expired Date *"
+    placeholder="MM/YY"
+  ></app-input-field>
+  <app-input-field
+    [formControl]="getControl('ccv')"
+    label="CCV *"
+    [isPasswordField]="true"
+    subfixImage="../../../../../../../assets/icons/help-circle.svg"
+    [isCCVField]="true"
+  ></app-input-field>
+</div>
+
+<span class="body-4 description">
+  <strong>Note: </strong>Credit card number may take up to 24 hours to be
+  processes.
+</span>
+
+<app-checkbox [formControl]="getControl('saveMyPayment')" class="checkbox-save"
+  >Save my payment details for future purchases.</app-checkbox
+>

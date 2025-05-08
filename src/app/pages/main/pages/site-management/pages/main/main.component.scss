@@ -1,0 +1,117 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px 42px 0 40px;
+  background-color: $White;
+  min-height: 100%;
+
+  @include media-breakpoint-tablet-down {
+    padding: 36px 24px 0 24px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding: 16px 10px 0;
+    background-color: $LightGrey;
+  }
+
+  &.isPlanSettings {
+    @include media-breakpoint-mobile-down {
+      background-color: $White;
+    }
+
+    ::ng-deep {
+      mat-tab-group {
+        .mat-tab-body-wrapper {
+          overflow: visible;
+
+          @include media-breakpoint-mobile-down {
+            overflow: visible;
+          }
+
+          mat-tab-body:nth-child(2) {
+            @include media-breakpoint-mobile-down {
+              overflow: visible;
+              z-index: revert;
+            }
+
+            .mat-tab-body-content {
+              @include media-breakpoint-mobile-down {
+                overflow: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-1 {
+  position: absolute;
+  top: 36px;
+  left: 40px;
+
+  @media (max-width: 750px) {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 12px;
+    margin-left: 6px;
+  }
+}
+
+.text-1 {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 500;
+
+  @include media-breakpoint-mobile-down {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.text-2 {
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 3px;
+}
+
+mat-tab-group {
+  margin-bottom: 40px;
+}
+
+app-bottom-links {
+  margin-top: 48px;
+  margin-bottom: 12px;
+}
+
+.block-2 {
+  background-color: $LightGrey;
+}
+
+.block-2,
+.block-3 {
+  margin: 0 -42px 0 -40px;
+  padding: 32px 42px 0 40px;
+  box-sizing: border-box;
+  margin-top: auto;
+
+  @include media-breakpoint-tablet-down {
+    margin: 0 -24px 0 -24px;
+    padding: 32px 24px 0 24px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    margin: 0 -10px 0 -10px;
+    padding: 32px 10px 0 10px;
+  }
+}

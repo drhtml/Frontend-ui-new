@@ -1,0 +1,120 @@
+<div class="d-flex flex-wrap justify-content-around container relative">
+  <div class="bg"></div>
+  <img
+    src="../../../../../assets/images/stair-path-w-hole.svg"
+    alt="stair path"
+    class="img-1 hide-tablet"
+  />
+  <img
+    src="../../../../../assets/images/stair-path-step.svg"
+    alt="stair path"
+    class="img-1-step hide-tablet"
+  />
+  <img
+    src="../../../../../assets/images/stair-path-tablet.svg"
+    alt="stair path"
+    class="img-1 hide-desktop show-tablet"
+  />
+  <div
+    *ngFor="let item of datas; let i = index; let lastItem = last"
+    class="d-flex flex-column align-items-center block-1 relative"
+    [ngStyle]="{ 'margin-top.px': item.top }"
+  >
+    <img
+      height="120"
+      [src]="item.data.fields.image.fields.file.url"
+      [alt]="item.data.fields.image.fields.title"
+    />
+    <h3 class="d-flex align-items-center">
+      <img
+        width="36px"
+        src="../../../../../assets/images/ball-6.svg"
+        alt="ball"
+        id="how-it-work-item-ball-{{ i }}"
+      />
+      <div
+        class="animate-point point-13 point-sub-{{ i }} hide-mobile"
+        order="13"
+        [attr.order2]="i"
+        [attr.type]="lastItem ? '' : 'bounce'"
+        duration="1"
+        [attr.hide-element]="'#how-it-work-item-ball-' + i"
+      ></div>
+      <div
+        class="animate-point point-13 point-sub-{{
+          i
+        }} hide-desktop show-mobile"
+        order="13"
+        [attr.order2]="i"
+        [attr.type]="lastItem ? '' : 'bounce'"
+        duration="2"
+        [attr.hide-element]="'#how-it-work-item-ball-' + i"
+      ></div>
+
+      {{ item.data.fields.title }}
+    </h3>
+    <span class="text-1 body-2"> {{ item.data.fields.description }}</span>
+  </div>
+  <div
+    class="animate-point point-14"
+    order="14"
+    duration="0.5"
+    type="bounce"
+  ></div>
+  <div
+    class="animate-point point-15"
+    order="15"
+    duration="0.4"
+    type="bounce"
+  ></div>
+
+  <div
+    class="animate-point point-16"
+    order="16"
+    duration="0.3"
+    type="bounce"
+    bounceY="-20"
+  ></div>
+  <div
+    class="animate-point point-17"
+    order="17"
+    duration="0.2"
+    type="bounce"
+    bounceY="-20"
+  ></div>
+  <div
+    class="animate-point point-18"
+    order="18"
+    duration="0.2"
+    type="bounce"
+    bounceY="-20"
+  ></div>
+  <div
+    class="animate-point point-19"
+    order="19"
+    duration="0.2"
+    type="bounce"
+    bounceY="-20"
+  ></div>
+  <div
+    class="animate-point point-20"
+    order="20"
+    duration="0.2"
+    type="bounce"
+    bounceY="-20"
+  ></div>
+  <div
+    class="animate-point point-21"
+    order="21"
+    duration="0.8"
+    type="bounce"
+  ></div>
+
+  <div
+    class="animate-point point-26"
+    order="26"
+    duration="0.2"
+    type="hide"
+  ></div>
+  <div class="animate-point point-27" order="27"></div>
+</div>

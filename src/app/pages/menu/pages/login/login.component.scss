@@ -1,0 +1,64 @@
+@import "../../../../../styles/includes";
+
+:host {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  background-color: $White;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+  width: 460px;
+  box-sizing: border-box;
+  padding: 0 36px 40px 36px;
+
+  @include media-breakpoint-mobile-down {
+    width: calc(100% - 20px);
+    padding: 0 20px 33px 20px;
+  }
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 22px;
+    margin-bottom: 23px;
+  }
+}
+
+.email-field {
+  margin-bottom: 24px;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 17px;
+  }
+}
+
+.password-field {
+  margin-bottom: 16px;
+}
+
+.block-1 {
+  margin-bottom: 45px;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 40px;
+  }
+}
+
+.btn-1 {
+  margin-bottom: 30px;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 16px;
+  }
+}
+
+.body-3 {
+  align-self: center;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+}

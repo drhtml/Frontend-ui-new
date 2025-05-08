@@ -1,0 +1,20 @@
+@import "../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+span {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  margin-bottom: 19px;
+  margin-left: 20px;
+
+  @include media-breakpoint-mobile-down {
+    margin-left: 10px;
+  }
+}

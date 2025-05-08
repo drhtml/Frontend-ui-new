@@ -1,0 +1,26 @@
+<div class="container relative">
+  <img
+    class="bg hide-tablet"
+    src="../../../../../assets/images/why-use-rex.png"
+    alt="why use rex"
+  />
+  <img
+    class="bg hide-desktop show-tablet hide-mobile"
+    src="../../../../../assets/images/why-use-rex-tablet.png"
+    alt="why use rex"
+  />
+  <img
+    class="bg hide-desktop show-mobile"
+    src="../../../../../assets/images/why-use-rex-mobile.png"
+    alt="why use rex"
+  />
+
+  <div class="flex-1 body-1 block-1" [innerHTML]="htmlContent"></div>
+
+  <img
+    *ngIf="imageData"
+    class="img-1"
+    [src]="imageData.fields.file.url"
+    [alt]="imageData.fields.title"
+  />
+</div>

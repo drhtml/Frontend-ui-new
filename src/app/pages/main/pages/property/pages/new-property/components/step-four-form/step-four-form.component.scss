@@ -1,0 +1,66 @@
+@import "../../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding-left: 44px;
+  box-sizing: border-box;
+  max-width: 484px;
+
+  @include media-breakpoint-tablet-down {
+    padding-left: 0;
+  }
+}
+
+.block-1 {
+  margin-bottom: 38px;
+
+  @include media-breakpoint-mobile-down {
+    flex-wrap: wrap;
+    margin-bottom: 33px;
+  }
+
+  img {
+    margin-right: 8px;
+
+    @include media-breakpoint-mobile-down {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+app-input-field {
+  ::ng-deep {
+    mat-label {
+      font-weight: 600 !important;
+    }
+  }
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.block-2 {
+  app-input-field {
+    max-width: 156px;
+
+    @include media-breakpoint-mobile-down {
+      width: 0;
+      max-width: none;
+      flex: 1;
+    }
+
+    & + app-input-field {
+      margin-left: 26px;
+    }
+  }
+}
+
+.description {
+  margin-top: 45px;
+}
+
+.checkbox-save {
+  margin-top: 30px;
+}

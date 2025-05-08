@@ -1,0 +1,72 @@
+@import "../../../styles/includes";
+
+:host {
+  position: fixed;
+  top: 130px;
+  right: 51px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+  width: 330px;
+  box-sizing: border-box;
+  padding: 26px 30px 32px;
+  overflow: hidden;
+
+  @include media-breakpoint-tablet-down {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    margin-top: 26px;
+  }
+}
+
+.text-1 {
+  margin-top: 51px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.block-1 {
+  margin-top: 13px;
+
+  &.block-1-properties {
+    gap: 13px;
+  }
+
+  .block-1-right {
+    flex: 1;
+    width: 10px;
+  }
+
+  .img-avatar {
+    border-radius: 100%;
+  }
+
+  img {
+    margin-right: 18px;
+  }
+
+  .text-2 {
+    color: $Teal;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+
+  .text-3 {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.btn-view {
+  margin-top: 30px;
+}

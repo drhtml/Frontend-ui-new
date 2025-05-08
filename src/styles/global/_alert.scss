@@ -1,0 +1,14 @@
+.mat-snack-bar-container {
+  &.error {
+    background-color: $Red;
+
+    .mat-simple-snackbar {
+      color: $White;
+      font-weight: 500;
+
+      .mat-simple-snackbar-action {
+        color: $Pastel;
+      }
+    }
+  }
+}

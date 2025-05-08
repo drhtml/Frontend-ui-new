@@ -1,0 +1,51 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 63px 71px 44px 70px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  @include media-breakpoint-mobile-down {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 82px 26px 52px 26px;
+  }
+}
+
+.text-1 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  margin-top: 34px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 27px;
+  }
+}
+
+.text-2 {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.bottom {
+  margin-top: 57px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 50px;
+  }
+
+  app-button {
+    min-width: 120px;
+
+    & + app-button {
+      margin-left: 24px;
+    }
+  }
+}

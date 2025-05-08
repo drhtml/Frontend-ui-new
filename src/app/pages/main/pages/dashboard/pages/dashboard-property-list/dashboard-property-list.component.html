@@ -1,0 +1,9 @@
+<app-property-list
+  (removeItem)="removeItem.emit($event)"
+  [tableDatas]="propertyList"
+></app-property-list>
+
+<app-dashboard-bottom-statistic
+  *ngIf="propertyList.length"
+  [dashboardRealEstateAgent]="dashboardRealEstateAgent"
+></app-dashboard-bottom-statistic>

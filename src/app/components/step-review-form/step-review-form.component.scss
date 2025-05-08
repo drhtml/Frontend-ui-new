@@ -1,0 +1,54 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 801px;
+  box-sizing: border-box;
+
+  @include media-breakpoint-tablet-down {
+    max-width: none;
+  }
+}
+
+.btn-1 {
+  @include media-breakpoint-mobile-down {
+    position: fixed;
+    margin-top: 0;
+    top: 34px;
+    right: 4px;
+    z-index: 2;
+  }
+}
+
+.text-1 {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: bold;
+}
+
+mat-tab-group {
+  margin-top: 14px;
+}
+
+mat-tab-group {
+  margin-bottom: 50px;
+  ::ng-deep {
+    .mat-tab-header {
+      .mat-tab-label-container {
+        .mat-tab-label {
+          padding: 0 25px;
+
+          &:first-child {
+            min-width: 0;
+            margin-left: -25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-share {
+  width: 231px;
+}

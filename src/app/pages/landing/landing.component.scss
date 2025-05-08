@@ -1,0 +1,452 @@
+@import "../../../styles/includes";
+
+:host {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.container {
+  min-height: 834px;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-desktop-down {
+    min-height: 783px;
+  }
+}
+
+.bg {
+  background-color: $Pastel;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 834px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 0 100%, 0 0);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.9;
+
+  @include media-breakpoint-desktop-down {
+    height: 783px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    height: 812px;
+    clip-path: polygon(50% 0%, 100% 17%, 100% 92%, 0 100%, 0 0);
+  }
+}
+
+.block-1-container {
+  padding-top: 128px;
+  height: 834px;
+  box-sizing: border-box;
+
+  .block-1 {
+    margin-left: 72px;
+    width: 567px;
+    flex-shrink: 0;
+    align-items: flex-start;
+
+    @include media-breakpoint-tablet-down {
+      margin-left: 58px;
+      width: 376px;
+    }
+
+    @include media-breakpoint-mobile-down {
+      margin-left: 18px;
+      width: auto;
+    }
+
+    .img-2 {
+      margin-top: -60px;
+      margin-bottom: -60px;
+      margin-left: -61px;
+      width: 557px;
+      height: 290px;
+
+      @include media-breakpoint-tablet-down {
+        margin-top: -43px;
+        margin-bottom: -43px;
+        margin-left: -64px;
+        width: 393px;
+        height: 206px;
+      }
+
+      @include media-breakpoint-mobile-down {
+        margin-top: -29px;
+        margin-bottom: -29px;
+        margin-left: -29px;
+        width: 239px;
+        height: 130px;
+      }
+    }
+
+    .text-1 {
+      margin-left: 171px;
+      margin-top: 6px;
+      line-height: 30px;
+
+      @include media-breakpoint-tablet-down {
+        margin-left: 49px;
+        margin-top: 47px;
+        width: 327px;
+      }
+
+      @include media-breakpoint-tablet-down {
+        margin-left: 14px;
+        margin-top: 43px;
+        max-width: 248px;
+        width: 100%;
+      }
+    }
+
+    .btn-1 {
+      margin-top: 46px;
+      margin-left: 171px;
+
+      @include media-breakpoint-tablet-down {
+        margin-left: 49px;
+        margin-top: 38px;
+      }
+
+      @include media-breakpoint-tablet-down {
+        margin-left: 14px;
+        margin-top: 45px;
+      }
+    }
+  }
+
+  .block-2 {
+    width: 801px;
+    height: 585px;
+    position: relative;
+    flex-shrink: 0;
+
+    .img-1 {
+      position: absolute;
+      top: 0;
+      right: -29px;
+
+      @include media-breakpoint-mobile-down {
+        right: -31px;
+      }
+    }
+    .img-3 {
+      position: absolute;
+      right: 321px;
+      bottom: -56px;
+      z-index: -1;
+
+      @include media-breakpoint-tablet-down {
+        right: 98px;
+        bottom: -81px;
+      }
+      @include media-breakpoint-mobile-down {
+        right: 43px;
+        bottom: -356px;
+      }
+    }
+    .img-4 {
+      position: absolute;
+      right: 464px;
+      bottom: -390px;
+      z-index: -1;
+
+      @include media-breakpoint-tablet-down {
+        right: 189px;
+        bottom: -390px;
+      }
+    }
+
+    @include media-breakpoint-desktop-down {
+      margin-left: -47px;
+    }
+
+    @include media-breakpoint-tablet-down {
+      width: 457px;
+      height: 414px;
+      margin-left: -43px;
+      margin-top: 116px;
+    }
+
+    @include media-breakpoint-mobile-down {
+      width: 100%;
+      height: 375px;
+      margin-left: 0;
+      margin-top: 36px;
+    }
+  }
+
+  @include media-breakpoint-tablet-down {
+    padding-top: 111px;
+    height: 783px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding-top: 75px;
+    flex-direction: column;
+    height: 812px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.section-header-1 {
+  margin-top: -25px;
+  margin-bottom: 63px;
+
+  @include media-breakpoint-tablet-down {
+    margin-top: -30px;
+    margin-bottom: 80px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 36px;
+    margin-bottom: -44px;
+  }
+}
+
+.section-header-2 {
+  margin-top: -25px;
+  margin-bottom: -140px;
+
+  @include media-breakpoint-tablet-down {
+    margin-bottom: 0;
+  }
+}
+
+.section-header-3 {
+  margin-top: -25px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 40px;
+    max-width: calc(100% - 119px);
+  }
+}
+
+app-section-welcome-to-my-canary {
+  margin-top: -135px;
+  margin-bottom: -114px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: -293px;
+  }
+}
+
+app-button-box {
+  position: absolute;
+  top: 38px;
+  right: 198px;
+
+  @include media-breakpoint-tablet-down {
+    top: 50px;
+    right: 75px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    top: 40px;
+    right: 34px;
+  }
+}
+
+.animate-point {
+  &.point-1 {
+    position: absolute;
+    right: 345px;
+    top: 300px;
+
+    @include media-breakpoint-tablet-down {
+      right: 139px;
+      top: 277px;
+    }
+
+    @include media-breakpoint-mobile-down {
+      right: 78px;
+      top: 212px;
+    }
+  }
+  &.point-2 {
+    position: absolute;
+    right: 372px;
+    bottom: 90px;
+
+    @include media-breakpoint-tablet-down {
+      right: 139px;
+      bottom: 53px;
+    }
+
+    @include media-breakpoint-mobile-down {
+      right: 78px;
+      bottom: 41px;
+    }
+  }
+  &.point-3 {
+    position: absolute;
+    right: 453px;
+    bottom: 15px;
+
+    @include media-breakpoint-tablet-down {
+      right: 218px;
+      bottom: -15px;
+    }
+    @include media-breakpoint-mobile-down {
+      right: 156px;
+      bottom: -22px;
+    }
+  }
+  &.point-4 {
+    position: absolute;
+    right: 575px;
+    bottom: -60px;
+
+    @include media-breakpoint-tablet-down {
+      right: 315px;
+      bottom: -78px;
+    }
+    @include media-breakpoint-mobile-down {
+      right: 229px;
+      bottom: -78px;
+    }
+  }
+  &.point-5 {
+    position: absolute;
+    right: 673px;
+    bottom: -73px;
+
+    @include media-breakpoint-tablet-down {
+      right: 358px;
+      bottom: -90px;
+    }
+    @include media-breakpoint-mobile-down {
+      display: none;
+    }
+  }
+  &.point-6 {
+    position: absolute;
+    right: 793px;
+    bottom: -91px;
+
+    @include media-breakpoint-tablet-down {
+      right: 419px;
+      bottom: -104px;
+    }
+    @include media-breakpoint-mobile-down {
+      display: none;
+    }
+  }
+  &.point-7 {
+    position: absolute;
+    left: 0px;
+    top: 0;
+  }
+  &.point-8 {
+    position: absolute;
+    left: -50px;
+    top: 33px;
+    @include media-breakpoint-mobile-down {
+      display: none;
+    }
+  }
+  &.point-9 {
+    position: absolute;
+    left: -100px;
+    top: 40px;
+  }
+  &.point-10 {
+    position: absolute;
+    left: -150px;
+    top: 50px;
+
+    @include media-breakpoint-tablet-down {
+      left: -185px;
+      top: 68px;
+    }
+    @include media-breakpoint-mobile-down {
+      display: none;
+    }
+  }
+  &.point-11 {
+    position: absolute;
+    right: 1275px;
+    bottom: -195px;
+
+    @include media-breakpoint-tablet-down {
+      display: none;
+    }
+  }
+  &.point-12 {
+    position: absolute;
+    right: 1266px;
+    bottom: -294px;
+
+    @include media-breakpoint-tablet-down {
+      display: none;
+    }
+  }
+  &.point-22 {
+    position: absolute;
+    left: 0px;
+    top: 0;
+  }
+  &.point-23 {
+    position: absolute;
+    left: -50px;
+    top: 33px;
+
+    @include media-breakpoint-mobile-down {
+      display: none;
+    }
+  }
+  &.point-24 {
+    position: absolute;
+    left: -100px;
+    top: 40px;
+
+    @include media-breakpoint-mobile-down {
+      display: none;
+    }
+  }
+  &.point-25 {
+    position: absolute;
+    left: -150px;
+    top: 50px;
+
+    @include media-breakpoint-tablet-down {
+      top: -62px;
+    }
+    @include media-breakpoint-mobile-down {
+      left: -62px;
+      top: 50px;
+    }
+  }
+  &.point-32 {
+    position: absolute;
+    left: 0px;
+    top: -88px;
+
+    @include media-breakpoint-tablet-down {
+      top: -62px;
+    }
+
+    @include media-breakpoint-mobile-down {
+      display: none;
+    }
+  }
+  &.point-33 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  &.point-41 {
+    position: absolute;
+    right: 116px;
+    bottom: 152px;
+
+    @include media-breakpoint-mobile-down {
+      right: 60px;
+      bottom: 183px;
+    }
+  }
+}

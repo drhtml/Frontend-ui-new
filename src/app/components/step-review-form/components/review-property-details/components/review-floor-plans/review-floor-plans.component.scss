@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  overflow: auto;
+  gap: 30px;
+  margin-top: 14px;
+}
+
+.img-1 {
+  width: 266px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.text-1 {
+  background-color: #ebebeb;
+  padding: 0 20px;
+  height: 28px;
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 600;
+  margin-top: 29px;
+  border-radius: 18px;
+}

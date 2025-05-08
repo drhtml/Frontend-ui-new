@@ -1,0 +1,15 @@
+<div *ngFor="let item1 of data" class="d-flex flex-column">
+  <div *ngIf="item1.title1" class="text-1">{{ item1.title1 }}</div>
+  <div class="d-flex block-1">
+    <div class="d-flex flex-column">
+      <div
+        *ngIf="item1.title2"
+        class="text-2"
+        [ngClass]="{ 'mt-4': !!item1.title1 }"
+      >
+        {{ item1.title2 }}
+      </div>
+      <span *ngFor="let item2 of item1.items" class="text-3">{{ item2 }}</span>
+    </div>
+  </div>
+</div>

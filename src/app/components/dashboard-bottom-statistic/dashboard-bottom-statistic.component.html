@@ -1,0 +1,8 @@
+<app-top-cities-pie-chart
+  [data]="topSourceCityDatas"
+  *ngIf="!isCanary"
+></app-top-cities-pie-chart>
+<app-average-visit-line-chart
+  [data]="averageVisitPerPriceDatas"
+  *ngIf="!isCanary"
+></app-average-visit-line-chart>

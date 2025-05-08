@@ -1,0 +1,41 @@
+<span class="section-title">Property Price Evolution</span>
+
+<div
+  class="d-flex align-items-end block-1"
+  *ngFor="let formControl of formControls.controls; let i = index"
+>
+  <div class="block-form">
+    <app-input-field
+      [formControl]="getFormControlField(formControl, 'year')"
+      label="Year"
+    ></app-input-field>
+    <app-input-field
+      [formControl]="getFormControlField(formControl, 'yearValue')"
+      label="Year-Value"
+      class="field-year-value"
+    ></app-input-field>
+  </div>
+
+  <app-button
+    class="btn-delete"
+    [shouldIgnoreHover]="true"
+    type="icon"
+    color="primary"
+    (click)="removeAtIndex(i)"
+  >
+    <img
+      src="../../../../../../../../assets/icons/trash-rectangle.svg"
+      alt="trash"
+    />
+  </app-button>
+</div>
+
+<app-button
+  (click)="addNew()"
+  size="small"
+  type="secondary"
+  iconLeft="../../../../../../../../assets/icons/plus-Teal.svg"
+  iconLeftHover="../../../../../../../../assets/icons/plus-Teal.svg"
+  class="align-self-start btn-add"
+  >ADD NEW PRICE</app-button
+>

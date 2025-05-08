@@ -1,0 +1,212 @@
+@import "../../../../../styles/includes";
+
+:host {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  padding-left: 83px;
+  padding-right: 83px;
+  position: relative;
+  padding-bottom: 157px;
+  width: 100%;
+
+  @include media-breakpoint-tablet-down {
+    padding-left: 57px;
+    padding-right: 57px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding-top: 64px;
+    padding-bottom: 99px;
+  }
+}
+
+.bg {
+  background-image: linear-gradient(to top right, #fffde7, #fef566);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 250px, 100% 100%, 0 calc(100% - 300px));
+  z-index: -2;
+  opacity: 0.9;
+  pointer-events: none;
+
+  @include media-breakpoint-tablet-down {
+    clip-path: polygon(0 0, 100% 190px, 100% 100%, 0 calc(100% - 190px));
+  }
+
+  @include media-breakpoint-mobile-down {
+    clip-path: polygon(0 0, 100% 75px, 100% 100%, 0 calc(100% - 105px));
+  }
+}
+
+.block-1 {
+  width: 208px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.text-1 {
+  text-align: center;
+}
+
+h3 {
+  height: 29px;
+  margin-top: 26px;
+  margin-bottom: 27px;
+  position: relative;
+
+  .animate-point {
+    position: absolute;
+    top: -12px;
+    left: 0;
+  }
+
+  img {
+    margin-right: 15px;
+  }
+}
+
+.img-1-step {
+  position: absolute;
+  right: 267px;
+  bottom: 69px;
+  z-index: -1;
+}
+
+.img-1 {
+  position: absolute;
+  right: 354px;
+  bottom: -232px;
+  z-index: -1;
+
+  @include media-breakpoint-tablet-down {
+    bottom: -332px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    width: 900px;
+    height: 339px;
+    right: 32px;
+    bottom: -253px;
+  }
+}
+
+.point-14 {
+  position: absolute;
+  right: 318px;
+  bottom: 178px;
+
+  @include media-breakpoint-tablet-down {
+    right: 315px;
+    bottom: 128px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    right: 109px;
+    bottom: 193px;
+  }
+}
+
+.point-15 {
+  position: absolute;
+  right: 371px;
+  bottom: 102px;
+
+  @include media-breakpoint-tablet-down {
+    right: 371px;
+    bottom: 72px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    right: 109px;
+    bottom: 81px;
+  }
+}
+
+.point-16 {
+  position: absolute;
+  right: 451px;
+  bottom: 69px;
+  @include media-breakpoint-tablet-down {
+    right: 451px;
+    bottom: 35px;
+  }
+  @include media-breakpoint-mobile-down {
+    right: 250px;
+    bottom: 35px;
+  }
+}
+
+.point-17 {
+  position: absolute;
+  right: 521px;
+  bottom: 55px;
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}
+
+.point-18 {
+  position: absolute;
+  right: 571px;
+  bottom: 47px;
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}
+
+.point-19 {
+  position: absolute;
+  right: 641px;
+  bottom: 47px;
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}
+
+.point-20 {
+  position: absolute;
+  right: 711px;
+  bottom: 47px;
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}
+
+.point-21 {
+  position: absolute;
+  right: 781px;
+  bottom: 47px;
+
+  @include media-breakpoint-tablet-down {
+    right: 507px;
+    bottom: 29px;
+  }
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}
+
+.point-26 {
+  position: absolute;
+  right: 1244px;
+  bottom: -66px;
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}
+
+.point-27 {
+  position: absolute;
+  right: 1249px;
+  bottom: -144px;
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}

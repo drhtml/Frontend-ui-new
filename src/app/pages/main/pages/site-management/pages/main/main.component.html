@@ -1,0 +1,33 @@
+<div class="d-flex flex-column block-1">
+  <span class="text-1">Site Management</span>
+  <span class="text-2 hide-mobile">Welcome back, <strong>{{ firstName }}</strong></span>
+</div>
+
+<mat-tab-group
+  [selectedIndex]="selectedTab"
+  (selectedIndexChange)="changeTab($event)"
+  dynamicHeight
+  class="no-header-separator"
+  [attr.mat-align-tabs]="screenSize === 'mobile' ? 'center' : 'end'"
+  animationDuration="0"
+  [disablePagination]="true"
+>
+  <mat-tab label="Users & Properties"
+    ><app-user-and-properties></app-user-and-properties
+  ></mat-tab>
+  <mat-tab class="tab-plan-settings" label="Plans Settings"
+    ><app-plan-settings></app-plan-settings
+  ></mat-tab>
+</mat-tab-group>
+
+<div *ngIf="selectedTab === 0" class="d-flex flex-column block-2">
+  <div class="bg"></div>
+  <app-dashboard-bottom-statistic></app-dashboard-bottom-statistic>
+
+  <app-bottom-links></app-bottom-links>
+</div>
+
+<div *ngIf="selectedTab !== 0" class="d-flex flex-column block-3">
+  <div class="bg"></div>
+  <app-bottom-links></app-bottom-links>
+</div>

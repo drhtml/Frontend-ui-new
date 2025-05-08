@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="8px" viewBox="0 0 28 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Line</title>
+    <g id="REX-mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="m05.2a-Dashboard---Canary" transform="translate(-171.000000, -268.000000)" stroke="#FFFFFF" stroke-width="3">
+            <g id="KPIs-Copy" transform="translate(10.000000, 152.000000)">
+                <polyline id="Line" points="163 118 175.492187 122 187 118"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

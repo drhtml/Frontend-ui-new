@@ -1,0 +1,73 @@
+@import "../../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 34px 30px 39px;
+}
+
+.block-1 {
+  max-width: 419px;
+}
+
+.text-1 {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: bold;
+}
+
+.text-2 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.block-2 {
+  width: 100%;
+  background-color: $LightestGrey;
+  height: 50px;
+  padding-left: 27px;
+  margin-top: 8px;
+
+  &.active {
+    background-color: $Pastel;
+
+    .text-3,
+    .text-4 {
+      font-weight: bold;
+    }
+  }
+
+  .img-1 {
+    margin-left: -32px;
+    margin-right: -32px;
+  }
+
+  .img-2 {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: -15px;
+  }
+
+  .text-3 {
+    margin-left: 26px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+
+  .text-4 {
+    margin-left: auto;
+    margin-right: 41px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+}
+
+.btn-next {
+  margin-top: 28px;
+}

@@ -1,0 +1,85 @@
+@import "../includes";
+
+@import "flex";
+@import "typography";
+@import "breakpoint";
+@import "grid-list";
+@import "dialog";
+@import "tabs";
+@import "accordion";
+@import "selectDropdown";
+@import "tooltip";
+@import "ballAnimation";
+@import "alert";
+
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+body {
+  margin: 0;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  color: $Black;
+  font-size: 18px;
+  line-height: 22px;
+
+  * {
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  }
+}
+
+.full {
+  &-width {
+    width: 100%;
+  }
+
+  &-height {
+    height: 100%;
+  }
+}
+
+.wrap-all {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.child-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.hide {
+  display: none !important;
+}
+
+.button {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.link {
+  color: $Teal;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

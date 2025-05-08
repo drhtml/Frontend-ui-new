@@ -1,0 +1,375 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  align-items: center;
+
+  &.isDiabled {
+    pointer-events: none;
+
+    img {
+      opacity: 0.3;
+    }
+  }
+
+  @include selfBreakPointHideShow;
+
+  .container {
+    &.size-small:not(.doNotUpdateImageSize) {
+      .icon-left-hover,
+      .icon-left,
+      .icon-right-hover,
+      .icon-right {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  .secondary-container,
+  .primary-container {
+    padding: 0 21px;
+    border-radius: 0;
+    border: none;
+    clip-path: polygon(
+      8px 0,
+      100% 0,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      25% 100%,
+      0 100%,
+      0 8px
+    );
+
+    ::ng-deep {
+      .mat-button-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &.size-normal {
+      height: 48px;
+      padding-left: 18px;
+      padding-right: 18px;
+
+      ::ng-deep {
+        .mat-button-wrapper {
+          font-size: 16px;
+          line-height: 48px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &.size-small {
+      height: 36px;
+      padding-left: 18px;
+      padding-right: 18px;
+
+      ::ng-deep {
+        .mat-button-wrapper {
+          font-size: 12px;
+          line-height: 36px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    &.size-large {
+      height: 56px;
+      padding-left: 27px;
+      padding-right: 27px;
+      clip-path: polygon(
+        16px 0,
+        100% 0,
+        100% calc(100% - 16px),
+        calc(100% - 16px) 100%,
+        25% 100%,
+        0 100%,
+        0 16px
+      );
+
+      ::ng-deep {
+        .mat-button-wrapper {
+          font-size: 18px;
+          line-height: 56px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .primary-container {
+    background-color: $Teal;
+
+    &.color-warn {
+      background-color: $Red;
+    }
+
+    &:hover:not(.shouldIgnoreHover) {
+      background-color: $Pastel;
+      color: $Teal;
+
+      &.color-warn {
+        background-color: #cc4b45;
+        color: $White;
+      }
+    }
+    &.mat-button-disabled::ng-deep {
+      background-color: $TealLight01;
+      color: $TealLight02;
+    }
+  }
+
+  .secondary-container {
+    background-color: $Teal;
+    color: $Teal;
+    position: relative;
+
+    &.color-warn {
+      background-color: $Red;
+      color: $Red;
+    }
+
+    &:hover:not(.shouldIgnoreHover) {
+      &.color-warn {
+        color: $White;
+
+        &:after {
+          background: $Red;
+        }
+      }
+
+      &:after {
+        background: $Pastel;
+      }
+    }
+
+    &.size-large {
+      &:after {
+        clip-path: polygon(
+          15.5px 0,
+          100% 0,
+          100% calc(100% - 15.5px),
+          calc(100% - 15.5px) 100%,
+          25% 100%,
+          0 100%,
+          0 15.5px
+        );
+      }
+    }
+
+    &:after {
+      content: "";
+      background: $White;
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      right: 1px;
+      bottom: 1px;
+      z-index: -1;
+
+      clip-path: polygon(
+        7.5px 0,
+        100% 0,
+        100% calc(100% - 7.5px),
+        calc(100% - 7.5px) 100%,
+        25% 100%,
+        0 100%,
+        0 7.5px
+      );
+    }
+  }
+
+  .basic-container {
+    border-radius: 0;
+    clip-path: polygon(
+      8px 0,
+      100% 0,
+      100% calc(100% - 8px),
+      calc(100% - 8px) 100%,
+      25% 100%,
+      0 100%,
+      0 8px
+    );
+    text-align: left;
+    box-sizing: border-box;
+
+    ::ng-deep {
+      .mat-button-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &.size-small {
+      height: 36px;
+
+      ::ng-deep {
+        .mat-button-wrapper {
+          font-size: 14px;
+          letter-spacing: 0.32px;
+          font-weight: bold;
+          line-height: 36px;
+        }
+      }
+    }
+
+    &.size-very-small {
+      height: 36px;
+
+      ::ng-deep {
+        .mat-button-wrapper {
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 36px;
+        }
+      }
+    }
+
+    &.size-very-large {
+      height: 80px;
+      clip-path: polygon(
+        16px 0,
+        100% 0,
+        100% calc(100% - 16px),
+        calc(100% - 16px) 100%,
+        25% 100%,
+        0 100%,
+        0 16px
+      );
+      padding-left: 60px;
+      padding-right: 60px;
+
+      ::ng-deep {
+        .mat-button-wrapper {
+          font-size: 36px;
+          font-weight: 500;
+          line-height: 80px;
+
+          @include media-breakpoint-mobile-down {
+            font-size: 32px;
+            line-height: 56px;
+          }
+        }
+      }
+
+      @include media-breakpoint-tablet-down {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      @include media-breakpoint-mobile-down {
+        height: 56px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+    }
+
+    &:hover:not(.shouldIgnoreHover) {
+      background-color: $Teal;
+      color: $White;
+    }
+  }
+
+  .outline-container {
+    border-color: #ebebeb;
+    border-radius: 0;
+    background-color: $LightestGrey;
+
+    &.size-small {
+      height: 36px;
+
+      ::ng-deep {
+        .mat-button-wrapper {
+          font-size: 14px;
+          letter-spacing: 0.32px;
+          font-weight: 500;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
+
+.ball {
+  display: none;
+  margin-left: 25px;
+  width: 36px;
+
+  @include media-breakpoint-tablet-down {
+    width: 24px;
+  }
+}
+
+.container {
+  width: 100%;
+
+  ::ng-deep {
+    .mat-button-wrapper {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &:hover {
+    & ~ .ball {
+      display: flex;
+    }
+  }
+
+  .icon-main-hover {
+    display: none;
+  }
+
+  &:not(.noContent) {
+    .icon-left-hover,
+    .icon-left {
+      margin-right: 20px;
+    }
+
+    .icon-right-hover,
+    .icon-right {
+      margin-left: 20px;
+    }
+  }
+
+  &.size-normal {
+    .icon-left-hover,
+    .icon-left,
+    .icon-right-hover,
+    .icon-right {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.size-very-small,
+  &.size-small {
+    .icon-left-hover,
+    .icon-left {
+      margin-right: 10px;
+    }
+    .icon-right-hover,
+    .icon-right {
+      margin-left: 10px;
+    }
+  }
+
+  &:hover:not(.shouldIgnoreHover) {
+    .icon-main {
+      display: none;
+    }
+
+    .icon-main-hover {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@import "../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 602px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 22px 34px 17px 40px;
+  position: relative;
+
+  @include media-breakpoint-tablet-down {
+    max-width: none;
+  }
+}
+
+.block-1 {
+  margin-bottom: 18px;
+
+  .text-1 {
+    color: $Teal;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: bold;
+
+    @include media-breakpoint-tablet-down {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @include media-breakpoint-mobile-down {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  @include media-breakpoint-mobile-down {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 26px;
+  }
+}
+
+.text-2 {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.text-3 {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: bold;
+  color: $TealDark;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+
+.block-4 {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.block-3 {
+  height: 37px;
+  background-color: $LightestGrey;
+  margin-top: 9px;
+}
+
+.btn-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

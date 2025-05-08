@@ -1,0 +1,84 @@
+@import "../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 42px;
+  position: relative;
+  box-sizing: border-box;
+
+  @include media-breakpoint-tablet-down {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $LightGrey;
+  z-index: -2;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 43px;
+  margin-top: 30px;
+  margin-bottom: 2px;
+
+  @include media-breakpoint-tablet-down {
+    font-size: 30px;
+    line-height: 37px;
+    margin-top: 36px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 9px;
+    margin-bottom: 4px;
+  }
+}
+
+.btn-1 {
+  margin-top: 32px;
+
+  @include media-breakpoint-mobile-down {
+    position: fixed;
+    margin-top: 0;
+    top: 34px;
+    right: 4px;
+    z-index: 2;
+  }
+}
+
+app-kpi {
+  margin-top: 36px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 19px;
+  }
+}
+
+app-bottom-links {
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.icon-evaluate {
+  ::ng-deep {
+    .mat-button-wrapper {
+      font-size: 12px !important;
+    }
+  }
+}

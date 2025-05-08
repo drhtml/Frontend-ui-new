@@ -1,0 +1,19 @@
+<label *ngIf="label" [id]="'checkbox-group-' + id" class="txt-label">{{
+  label
+}}</label>
+
+<mat-radio-group
+  aria-labelledby="example-radio-group-label"
+  class="example-radio-group"
+  [value]="formControl.value"
+  (change)="changeValue($event.value)"
+  [formControl]="formControl"
+  [style.grid-template-columns]="
+    'repeat(' + numberOfColumn + ', minmax(0, 1fr))'
+  "
+  [disabled]="disabled"
+>
+  <mat-radio-button *ngFor="let option of options" [value]="option.key">
+    {{ option.label }}
+  </mat-radio-button>
+</mat-radio-group>

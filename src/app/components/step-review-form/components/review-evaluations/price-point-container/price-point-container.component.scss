@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.block-1 {
+  margin-bottom: 16px;
+}
+
+.sort-by-field {
+  width: 219px;
+
+  ::ng-deep {
+    mat-form-field {
+      flex: 1;
+      width: 0;
+    }
+  }
+}
+
+.btn-expand-all {
+  margin-left: 24px;
+}

@@ -1,0 +1,8 @@
+<span class="text-1"
+  >The current plan selected by the user: <strong>{{ planName }}</strong></span
+>
+<app-plan-card
+  *ngIf="formControlSettings"
+  [formControlSettings]="formControlSettings"
+  [isReview]="true"
+></app-plan-card>

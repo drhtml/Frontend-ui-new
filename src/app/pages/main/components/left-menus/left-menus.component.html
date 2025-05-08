@@ -1,0 +1,99 @@
+<nav class="d-flex flex-column block-1">
+  <img
+    class="img-2"
+    src="../../../assets/images/left-menu-logo.svg"
+    alt="app logo"
+  />
+  <img class="img-1" [src]="avatarUrl" alt="avatar" />
+
+  <button
+    routerLink="/main/site-management/main"
+    [queryParams]="{ tab: 0 }"
+    routerLinkActive="active"
+    *ngIf="isAdmin"
+    class="button nav-item"
+    [ngClass]="{
+      active: isSiteManagementUserProfile
+    }"
+  >
+    <img class="main" src="../../../assets/icons/stack-Teal.svg" alt="stack" />
+    <img
+      class="hover"
+      src="../../../assets/icons/stack-Pastel.svg"
+      alt="stack"
+    />
+  </button>
+
+  <button
+    routerLink="/main/site-management/main"
+    [queryParams]="{ tab: 1 }"
+    routerLinkActive="active"
+    *ngIf="isAdmin"
+    class="button nav-item"
+  >
+    <img class="main" src="../../../assets/icons/tag-Teal.svg" alt="tag" />
+    <img class="hover" src="../../../assets/icons/tag-Pastel.svg" alt="tag" />
+  </button>
+
+  <button *ngIf="isAdmin" class="button nav-item">
+    <img
+      class="main"
+      src="../../../assets/icons/my-property-Teal.svg"
+      alt="my-property"
+    />
+    <img
+      class="hover"
+      src="../../../assets/icons/my-property-Pastel.svg"
+      alt="my-property"
+    />
+  </button>
+
+  <app-divider *ngIf="isAdmin"></app-divider>
+
+  <button
+    routerLink="/main/dashboard"
+    routerLinkActive="active"
+    class="button nav-item"
+    *ngIf="!isAdmin"
+  >
+    <img class="main" src="../../../assets/icons/grid-Teal.svg" alt="grid" />
+    <img class="hover" src="../../../assets/icons/grid-Pastel.svg" alt="grid" />
+  </button>
+
+  <button class="button nav-item">
+    <img class="main" src="../../../assets/icons/bell-Teal.svg" alt="bell" />
+    <img class="hover" src="../../../assets/icons/bell-Pastel.svg" alt="bell" />
+  </button>
+  <button
+    class="button nav-item"
+    routerLink="/main/profile-settings"
+    routerLinkActive="active"
+  >
+    <img
+      class="main"
+      src="../../../assets/icons/settings-Teal.svg"
+      alt="settings"
+    />
+    <img
+      class="hover"
+      src="../../../assets/icons/settings-Pastel.svg"
+      alt="settings"
+    />
+  </button>
+  <button
+    routerLink="/landing"
+    routerLinkActive="active"
+    class="button nav-item"
+  >
+    <img
+      class="main"
+      src="../../../assets/icons/log-out-Teal.svg"
+      alt="log out"
+    />
+    <img
+      class="hover"
+      src="../../../assets/icons/log-out-Pastel.svg"
+      alt="log out"
+    />
+  </button>
+</nav>

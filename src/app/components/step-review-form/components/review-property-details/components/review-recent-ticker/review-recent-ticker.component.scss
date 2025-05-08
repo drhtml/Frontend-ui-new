@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.text-1 {
+  font-size: 14px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.img-1 {
+  margin-top: 9px;
+  position: relative;
+}
+
+.text-2 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 10px;
+}
+
+.text-3 {
+  font-size: 14px;
+  line-height: 17px;
+  max-width: 127px;
+  margin-left: 10px;
+  width: max-content;
+}
+
+.value {
+  position: absolute;
+  height: 10px;
+  width: calc(100% + 50px);
+  background-color: var(--Pastel);
+  left: 0;
+  top: 27px;
+}

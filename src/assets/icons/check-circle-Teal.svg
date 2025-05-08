@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>check-circle</title>
+    <g id="REX-Admin-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="03.3.-Profile-Details---updated" transform="translate(-657.000000, -251.000000)" stroke="#00B3B0" stroke-width="2.5">
+            <g id="modal" transform="translate(403.000000, 190.000000)">
+                <g id="check-circle" transform="translate(256.000000, 63.000000)">
+                    <path d="M47.9969646,21.8055231 L47.9969646,24.0133772 C47.9908877,34.6415211 40.9949327,43.9997679 30.8029463,47.01322 C20.6109599,50.0266721 9.65084243,45.9774752 3.86617229,37.0614744 C-1.91849785,28.1454735 -1.14971627,16.486608 5.75561332,8.40738136 C12.6609429,0.328154718 24.0578565,-2.24682723 33.7659047,2.07882631" id="Path"></path>
+                    <polyline id="Path" points="47.9969646 4.81464557 23.99855 28.8370585 16.7990257 21.6375342"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

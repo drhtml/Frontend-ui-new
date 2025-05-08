@@ -1,0 +1,82 @@
+<span class="text-1">User Profile</span>
+
+<mat-tab-group
+  dynamicHeight
+  class="no-header-separator"
+  mat-align-tabs="end"
+  animationDuration="0"
+  [disablePagination]="true"
+  [selectedIndex]="selectedTab"
+  (selectedIndexChange)="selectedTab = $event"
+>
+  <mat-tab label="Profile Settings"
+    ><app-profile-settings
+      (setIsEdit)="isEdit = $event"
+      [isEdit]="isEdit"
+      [avatarField]="avatarField"
+      [form]="profileForm"
+      (doSaveUser)="doSaveUser()"
+    ></app-profile-settings
+  ></mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Properties
+
+      <div class="tab-count">{{ propertyList.length }}</div>
+    </ng-template>
+    <app-profile-properties
+      [tableDatas]="propertyList"
+      [avatarField]="avatarField"
+      [isEdit]="isEdit"
+      [profileFormControl]="profileForm"
+    ></app-profile-properties
+  ></mat-tab>
+</mat-tab-group>
+
+<app-button
+  iconLeft="../../../../../../../assets/icons/edit-Teal.svg"
+  iconLeftHover="../../../../../../../assets/icons/edit-Teal.svg"
+  type="secondary"
+  size="small"
+  class="btn-edit hide-mobile"
+  (click)="isEdit = true; selectedTab = 0"
+  *ngIf="!isEdit"
+  >EDIT USER</app-button
+>
+<app-button
+  iconLeft="../../../../../../../assets/icons/save-White.svg"
+  iconLeftHover="../../../../../../../assets/icons/save-Teal.svg"
+  type="primary"
+  size="small"
+  class="btn-edit hide-mobile"
+  (click)="doSaveUser()"
+  [disabled]="profileForm.invalid"
+  *ngIf="isEdit"
+  >SAVE CHANGES</app-button
+>
+
+<app-button
+  class="btn-edit show-mobile hide-desktop"
+  [shouldIgnoreHover]="true"
+  iconLeft="../../../../../assets/icons/edit-Teal.svg"
+  type="basic"
+  size="very-small"
+  color="primary"
+  (click)="isEdit = true; selectedTab = 0"
+  *ngIf="!isEdit"
+  >EDIT</app-button
+>
+
+<app-button
+  class="btn-edit show-mobile hide-desktop"
+  [shouldIgnoreHover]="true"
+  iconLeft="../../../../../assets/icons/save-Teal.svg"
+  type="basic"
+  size="very-small"
+  color="primary"
+  (click)="doSaveUser()"
+  *ngIf="isEdit"
+  >SAVE</app-button
+>
+
+<app-bottom-links></app-bottom-links>

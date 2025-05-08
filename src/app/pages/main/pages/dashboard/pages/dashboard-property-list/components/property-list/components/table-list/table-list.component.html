@@ -1,0 +1,83 @@
+<ng-template #expandRowTemplate>
+  <div class="d-flex flex-column block-1">
+    <mat-grid-list class="block-2" [cols]="5" [rowHeight]="58">
+      <mat-grid-tile [colspan]="2">
+        <div class="d-flex align-items-center text-4-container">
+          <div class="dot"></div>
+          <span class="text-4">Completed</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="d-flex flex-column align-items-start block-4">
+          <span class="text-2">Date Added</span>
+          <span class="text-3">Jan 12, 2022</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="d-flex flex-column align-items-start block-4">
+          <span class="text-2">Location</span>
+          <span class="text-3">Chicago</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="d-flex flex-column align-items-start block-4">
+          <span class="text-2">Type</span>
+          <span class="text-3">House</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile *ngIf="!isRealEstateAgent" [colspan]="2">
+        <div class="d-flex flex-column align-items-start block-4">
+          <span class="text-2">Value</span>
+          <span class="text-3">$400,000</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile *ngIf="!isRealEstateAgent">
+        <div class="d-flex flex-column align-items-start block-4">
+          <span class="text-2">Sold Price</span>
+          <span class="text-3">$410,000</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile *ngIf="!isRealEstateAgent">
+        <div class="d-flex flex-column align-items-start block-4">
+          <span class="text-2">Spread</span>
+          <span class="text-3">5%</span>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <div class="d-flex justify-content-center block-3">
+      <app-button
+        [shouldIgnoreHover]="true"
+        iconLeft="../../../../../../../../../../assets/icons/eye-Teal.svg"
+        type="basic"
+        size="very-small"
+        color="primary"
+        >View</app-button
+      >
+      <app-button
+        [shouldIgnoreHover]="true"
+        iconLeft="../../../../../../../../../../assets/icons/edit-Teal.svg"
+        type="basic"
+        size="very-small"
+        color="primary"
+        >Edit</app-button
+      >
+      <app-button
+        [shouldIgnoreHover]="true"
+        iconLeft="../../../../../../../../../../assets/icons/trash-Red.svg"
+        type="basic"
+        size="very-small"
+        color="warn"
+        >Delete</app-button
+      >
+    </div>
+  </div>
+</ng-template>
+
+<app-table
+  [selectable]="isSelectable"
+  [inputDatas]="tableDatas"
+  [displayedColumns]="displayedColumns"
+  [expandRowTemplate]="expandRowTemplate"
+>
+</app-table>

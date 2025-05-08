@@ -1,0 +1,131 @@
+@import "../../../../../../../../styles/includes";
+
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: $White;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30px 36px 53px;
+}
+
+app-radios {
+  max-width: 453px;
+
+  ::ng-deep {
+    label {
+      font-weight: 400 !important;
+    }
+
+    mat-radio-group {
+      @include media-breakpoint-mobile-down {
+        grid-template-columns: minmax(0, 1fr) !important;
+      }
+    }
+  }
+}
+
+.title {
+  margin-top: 60px;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.block-field-container {
+  margin-top: 30px;
+}
+
+.block-field {
+  .text-field-title {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .text-field-value {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+}
+
+.first-name-field {
+  min-width: 129px;
+}
+
+.input-field-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+  row-gap: 24px;
+
+  @include media-breakpoint-mobile-down {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .address-field {
+    grid-column: 1 / span 2;
+
+    @include media-breakpoint-mobile-down {
+      grid-column: 1 / span 1;
+    }
+  }
+}
+
+.btn-save {
+  margin-left: 24px;
+}
+
+.divider-container {
+  background-color: $White;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  app-divider {
+    width: 100%;
+  }
+}
+
+.block-bottom {
+  padding-top: 24px;
+
+  @include media-breakpoint-mobile-down {
+    padding-top: 29px;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: $White;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .block-right {
+    @include media-breakpoint-mobile-down {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    app-button {
+      @include media-breakpoint-mobile-down {
+        flex: 1;
+      }
+    }
+  }
+
+  .btn-delete {
+    @include media-breakpoint-mobile-down {
+      margin-top: 29px;
+      margin-bottom: 36px;
+    }
+  }
+}

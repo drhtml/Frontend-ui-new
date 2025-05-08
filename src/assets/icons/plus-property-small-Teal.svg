@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="24px" viewBox="0 0 22 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon</title>
+    <defs>
+        <path d="M10,5 C10,5.375 9.75,5.625 9.375,5.625 L5.625,5.625 L5.625,9.375 C5.625,9.75 5.375,10 5,10 C4.625,10 4.375,9.75 4.375,9.375 L4.375,5.625 L0.625,5.625 C0.25,5.625 0,5.375 0,5 C0,4.625 0.25,4.375 0.625,4.375 L4.375,4.375 L4.375,0.625 C4.375,0.25 4.625,0 5,0 C5.375,0 5.625,0.25 5.625,0.625 L5.625,4.375 L9.375,4.375 C9.75,4.375 10,4.625 10,5 Z" id="path-1"></path>
+    </defs>
+    <g id="REX-mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="m05.1-Dashboard---empty" transform="translate(-288.000000, -40.000000)">
+            <g id="icon" transform="translate(289.000000, 42.000000)">
+                <path d="M0,17.5855306 L0,8.17491017 C1.21346314e-15,7.16352985 0.509598402,6.22022604 1.35548161,5.66581486 L10,0 L10,0 L18.6445184,5.66581486 C19.4904016,6.22022604 20,7.16352985 20,8.17491017 L20,17.5855306 C20,19.2423848 18.6568542,20.5855306 17,20.5855306 L3,20.5855306 C1.34314575,20.5855306 2.02906125e-16,19.2423848 0,17.5855306 Z" id="Path-2" stroke="#00B3B0" stroke-width="2"></path>
+                <g id="icon-/-plus" transform="translate(5.000000, 6.666667)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#00B3B0" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Icon-Color" mask="url(#mask-2)" fill="#00B3B0">
+                        <g transform="translate(-2.500000, -2.500000)" id="Shape">
+                            <rect x="0" y="0" width="15" height="15"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

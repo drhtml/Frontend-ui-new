@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="96px" viewBox="0 0 94 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EBC52082-E00D-4F47-B68C-D16472DD79F1</title>
+    <defs>
+        <filter x="-7.4%" y="-7.9%" width="114.9%" height="115.8%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="REX-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06.1c.New" transform="translate(-474.000000, -329.000000)">
+            <g id="Group-2" filter="url(#filter-1)" transform="translate(391.000000, 130.000000)">
+                <g id="Group-9-Copy" transform="translate(88.000000, 223.000000)">
+                    <g id="z" transform="translate(27.000000, 8.000000)">
+                        <circle id="Oval" fill="#E41A1A" cx="15" cy="17" r="15"></circle>
+                        <text id="r" font-family="MontserratRoman-SemiBold, Montserrat" font-size="26" font-weight="500" fill="#FFFFFF">
+                            <tspan x="10" y="25">r</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+@import "../../../../../../../../../styles/includes";
+
+:host {
+  display: grid;
+  padding-left: 44px;
+  max-width: 800px;
+  box-sizing: border-box;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 30px;
+
+  @include media-breakpoint-mobile-down {
+    padding-left: 0;
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  app-plan-card {
+    @include media-breakpoint-mobile-down {
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+<div class="d-flex align-items-center block-1 justify-content-between">
+  <span class="text-1">{{ data.name }}</span>
+  <app-evaluation-status
+    [evaluationStatus]="data.evaluationStatus"
+  ></app-evaluation-status>
+</div>
+
+<mat-grid-list class="block-2" [cols]="columns" [rowHeight]="dataCellHeight">
+  <mat-grid-tile *ngFor="let item of datas">
+    <div class="d-flex flex-column align-items-start block-4">
+      <span class="text-3">{{ item.key }}</span>
+      <span class="text-2">{{ item.value }}</span>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div class="d-flex justify-content-center block-3 hide-mobile">
+  <app-button
+    [shouldIgnoreHover]="true"
+    iconLeft="../../../../../../../../../../assets/icons/eye-Teal.svg"
+    type="basic"
+    size="very-small"
+    color="primary"
+    [routerLink]="['/main/property/view', data.id]"
+    (click)="ignoreEvent($event)"
+    >View</app-button
+  >
+  <app-button
+    [shouldIgnoreHover]="true"
+    iconLeft="../../../../../../../../../../assets/icons/edit-Teal.svg"
+    type="basic"
+    size="very-small"
+    color="primary"
+    (click)="ignoreEvent($event)"
+    [routerLink]="['/main/property/edit', data.id]"
+    >Edit</app-button
+  >
+  <app-button
+    [shouldIgnoreHover]="true"
+    iconLeft="../../../../../../../../../../assets/icons/trash-Red.svg"
+    type="basic"
+    size="very-small"
+    color="warn"
+    (click)="removeData($event)"
+    >Delete</app-button
+  >
+</div>
+
+<app-button
+  class="btn-1 hide-desktop show-mobile"
+  [shouldIgnoreHover]="true"
+  type="icon"
+  color="primary"
+  [matMenuTriggerFor]="menu"
+  #menuTrigger="matMenuTrigger"
+  (click)="ignoreEvent($event)"
+>
+  <img
+    src="../../../../../../../../../../assets/icons/more-vertical.svg"
+    alt="more options"
+  />
+</app-button>
+
+<mat-menu #menu="matMenu">
+  <button
+    (click)="menuTrigger.closeMenu(); ignoreEvent($event)"
+    [routerLink]="['/main/property/view', data.id]"
+    mat-menu-item
+    color="primary"
+  >
+    <app-menu-item color="primary">
+      <img
+        src="../../../../../../../../../../assets/icons/eye-Teal.svg"
+        alt="eye"
+      />
+      <span>View</span>
+    </app-menu-item>
+  </button>
+  <button
+    [routerLink]="['/main/property/edit', data.id]"
+    (click)="menuTrigger.closeMenu(); ignoreEvent($event)"
+    mat-menu-item
+  >
+    <app-menu-item color="primary">
+      <img
+        src="../../../../../../../../../../assets/icons/edit-Teal.svg"
+        alt="edit"
+      />
+      <span>Edit</span>
+    </app-menu-item>
+  </button>
+  <button mat-menu-item (click)="menuTrigger.closeMenu(); removeData($event)">
+    <app-menu-item color="warn">
+      <img
+        src="../../../../../../../../../../assets/icons/trash-Red.svg"
+        alt="trash"
+      />
+      <span>Delete</span>
+    </app-menu-item>
+  </button>
+</mat-menu>

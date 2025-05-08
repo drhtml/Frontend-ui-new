@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="41px" viewBox="0 0 101 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>87B78C97-E45C-4A25-BBA3-051F3202C287</title>
+    <g id="REX-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06.3.payment" transform="translate(-164.000000, -225.000000)">
+            <g id="visa" transform="translate(164.333333, 225.833333)">
+                <rect id="Rectangle" fill="#005EAB" x="0" y="0" width="100" height="40" rx="20"></rect>
+                <text id="VISA" font-family="MontserratItalic-ExtraBold, Montserrat" font-size="20" font-style="italic" font-weight="700" letter-spacing="0.454545455" fill="#FFFFFF">
+                    <tspan x="24" y="27">VISA</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center block-3">
+  <app-button
+    [shouldIgnoreHover]="true"
+    [iconLeft]="getIconLeft(item.type)"
+    type="basic"
+    size="very-small"
+    [color]="getColor(item.type)"
+    *ngFor="let item of options"
+    (click)="item.action?.(data)"
+    >{{ getLabel(item.type) }}</app-button
+  >
+</div>

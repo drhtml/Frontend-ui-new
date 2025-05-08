@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.btn-close {
+  margin-top: 60px;
+  margin-right: 24px;
+  ::ng-deep {
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+app-price-points-summary {
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 46px;
+}

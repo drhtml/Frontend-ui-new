@@ -1,0 +1,35 @@
+<div class="d-flex align-items-center justify-content-between full-width">
+  <span class="text-1"
+    ><strong>{{ datas.length }}</strong> schools around</span
+  >
+</div>
+
+<div *ngFor="let item of datas" class="block-1 d-flex">
+  <div class="text-2" [ngClass]="{ isGoodGrade: item.isGoodGrade }">
+    {{ item.GSTestRating }}/10
+  </div>
+  <div class="d-flex flex-column justify-content-center">
+    <span class="text-3">{{ item.InstitutionName }}</span>
+    <div class="block-2">
+      <div class="item">
+        Grades: <strong>{{ item.gradelevel1 }}</strong>
+      </div>
+      <div class="item">
+        Distances: <strong>{{ item.distance }}</strong>
+      </div>
+      <div class="item">
+        Students: <strong>{{ item.students }}</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-button
+  iconLeft="../../../../../../../../../../../assets/icons/search-Teal.svg"
+  iconLeftHover="../../../../../../../../../../../assets/icons/search-Teal.svg"
+  type="secondary-link"
+  size="small"
+  class="btn-1"
+  hrefLink="https://www.find-out-more.com.vn/"
+  >FIND OUT MORE</app-button
+>

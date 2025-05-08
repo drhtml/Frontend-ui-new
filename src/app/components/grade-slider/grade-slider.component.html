@@ -1,0 +1,13 @@
+<label *ngIf="label" [id]="'checkbox-group-' + id" class="txt-label">{{
+  label
+}}</label>
+
+<mat-slider
+  [formControl]="formControl"
+  [min]="min"
+  [max]="max"
+  [step]="step"
+  [ngClass]="{ red: formControl.value < 7 }"
+></mat-slider>
+
+<span class="text-1">{{ formControl.value }}/{{ max }}</span>

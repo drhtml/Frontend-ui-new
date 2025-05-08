@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon / edit-2</title>
+    <defs>
+        <path d="M13.1333333,3.53333333 L9.8,0.2 C9.53333333,-0.0666666667 9.13333333,-0.0666666667 8.86666667,0.2 L0.2,8.86666667 C0.0666666667,9 8.8817842e-16,9.13333333 8.8817842e-16,9.33333333 L8.8817842e-16,12.6666667 C8.8817842e-16,13.0666667 0.266666667,13.3333333 0.666666667,13.3333333 L4,13.3333333 C4.2,13.3333333 4.33333333,13.2666667 4.46666667,13.1333333 L13.1333333,4.46666667 C13.4,4.2 13.4,3.8 13.1333333,3.53333333 Z M3.73333333,12 L1.33333333,12 L1.33333333,9.6 L9.33333333,1.6 L11.7333333,4 L3.73333333,12 Z" id="path-1"></path>
+    </defs>
+    <g id="REX-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05.2-Dashboard---Canary" transform="translate(-652.000000, -577.000000)">
+            <g id="Group-14" transform="translate(651.000000, 576.000000)">
+                <g id="icon-/-edit-2" transform="translate(1.333333, 1.333333)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#00B3B0" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Icon-Color" mask="url(#mask-2)" fill="#00B3B0">
+                        <g transform="translate(-1.333333, -1.333333)" id="Shape">
+                            <rect x="0" y="0" width="16" height="16"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

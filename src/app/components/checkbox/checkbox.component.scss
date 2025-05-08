@@ -1,0 +1,92 @@
+@import "../../../styles/includes";
+
+:host {
+  ::ng-deep {
+    .mat-checkbox {
+      &.size-small {
+        .mat-checkbox-layout {
+          .mat-checkbox-inner-container {
+            height: 14px;
+            width: 14px;
+
+            @include media-breakpoint-mobile-down {
+              height: 24px;
+              width: 24px;
+            }
+          }
+
+          .mat-checkbox-label {
+            font-size: 13px;
+            line-height: 14px;
+
+            @include media-breakpoint-mobile-down {
+              line-height: 24px;
+            }
+          }
+        }
+      }
+
+      .mat-checkbox-layout {
+        .mat-checkbox-inner-container {
+          margin-right: 8px;
+          height: 20px;
+          width: 20px;
+          margin-top: 0;
+
+          @include media-breakpoint-mobile-down {
+            height: 24px;
+            width: 24px;
+          }
+
+          .mat-ripple {
+            .mat-ripple-element {
+              background-color: $Teal;
+            }
+          }
+
+          .mat-checkbox-frame {
+            border-width: 1px;
+            border-color: #ebebeb;
+            background-color: $LightGrey;
+          }
+        }
+
+        .mat-checkbox-label {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 500;
+          white-space: break-spaces;
+
+          @include media-breakpoint-mobile-down {
+            line-height: 24px;
+          }
+        }
+      }
+
+      &.mat-checkbox-indeterminate,
+      &.mat-checkbox-checked {
+        .mat-checkbox-layout {
+          .mat-checkbox-inner-container {
+            .mat-checkbox-frame {
+              border-color: $Teal;
+              background-color: $White;
+            }
+
+            .mat-checkbox-background {
+              background-color: transparent;
+
+              .mat-checkbox-mixedmark {
+                background-color: $Teal;
+              }
+              svg {
+                path {
+                  stroke: $Teal !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

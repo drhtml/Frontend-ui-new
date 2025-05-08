@@ -1,0 +1,67 @@
+<div class="container d-flex relative">
+  <img
+    class="wrap-all bg"
+    src="../../../../../assets/images/CTA-box.png"
+    alt="bg"
+  />
+  <img
+    id="welcome-to-my-canary-ball"
+    class="img-1"
+    src="../../../../../assets/images/ball-6.svg"
+    alt="ball"
+  />
+
+  <div
+    class="animate-point point-34"
+    order="34"
+    type="bounce"
+    duration="0.8"
+    hide-element="#welcome-to-my-canary-ball"
+  ></div>
+
+  <div
+    class="animate-point point-35"
+    order="35"
+    type="bounce"
+    duration="0.5"
+  ></div>
+  <div
+    class="animate-point point-36"
+    order="36"
+    type="bounce"
+    duration="0.3"
+    bounceY="-20"
+  ></div>
+  <div
+    class="animate-point point-37"
+    order="37"
+    type="bounce"
+    duration="0.3"
+    bounceY="-20"
+  ></div>
+  <div
+    class="animate-point point-38"
+    order="38"
+    type="bounce"
+    duration="0.2"
+    bounceY="-20"
+  ></div>
+  <div class="animate-point point-39" order="39" duration="0.3"></div>
+  <div
+    class="animate-point point-40"
+    order="40"
+    type="bounce"
+    bounceY="pointInfo"
+    bounceX="20"
+    duration="0.8"
+  ></div>
+
+  <div class="block-1 d-flex align-items-center relative">
+    <div
+      class="block-2 d-flex flex-column full-height"
+      [innerHTML]="htmlContent"
+    ></div>
+
+    <app-button routerLink="/menu/signup">GET STARTED</app-button>
+  </div>
+</div>

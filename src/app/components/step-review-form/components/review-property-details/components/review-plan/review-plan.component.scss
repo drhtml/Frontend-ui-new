@@ -1,0 +1,22 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+  box-sizing: border-box;
+}
+
+.text-1 {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+app-plan-card {
+  margin-top: 22px;
+  max-width: 288px;
+
+  @include media-breakpoint-mobile-down {
+    align-self: center;
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  width: 50px;
+  height: 84px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include selfBreakPointHideShow;
+
+  @include media-breakpoint-tablet-down {
+    width: 40px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    width: 30px;
+  }
+}
+
+.button {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.forceShowHover {
+    .img-box-empty {
+      display: none;
+    }
+    .img-box-menu {
+      display: block;
+    }
+  }
+
+  .img-box-empty {
+    width: 100%;
+  }
+  .img-box-menu {
+    width: 100%;
+    display: none;
+
+    @include media-breakpoint-tablet-down {
+      width: 112%;
+    }
+  }
+
+  &:hover {
+    .img-box-menu {
+      display: block;
+    }
+    .img-box-empty {
+      display: none;
+    }
+  }
+}
+
+svg {
+  overflow: visible;
+}

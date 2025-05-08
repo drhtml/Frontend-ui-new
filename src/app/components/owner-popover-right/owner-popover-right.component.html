@@ -1,0 +1,44 @@
+<span class="text-1">Owner</span>
+
+<div class="d-flex block-1 align-items-center">
+  <img
+    class="img-avatar"
+    width="56"
+    height="56"
+    [src]="ownerInfo.profilePicture.url"
+    alt=""
+    *ngIf="ownerInfo.profilePicture"
+  />
+
+  <div class="d-flex flex-column block-1-right">
+    <span class="text-2"
+      >{{ ownerInfo.lastName }} {{ ownerInfo.firstName }}</span
+    >
+    <span [title]="ownerInfo.email" class="text-3 ellipsis">{{
+      ownerInfo.email
+    }}</span>
+  </div>
+</div>
+
+<span class="text-1 hide-tablet">Other Properties</span>
+
+<div class="d-flex flex-column block-1 block-1-properties hide-tablet">
+  <div *ngFor="let item of otherProperties" class="d-flex align-items-center">
+    <img width="56" height="56" src="../../../assets/images/house.jpg" alt="" />
+
+    <div class="d-flex flex-column">
+      <span class="text-2">{{ item.name }}</span>
+      <span class="text-3">{{ getPropertyCity(item) }}</span>
+    </div>
+  </div>
+</div>
+
+<app-button
+  iconLeft="../../../../../../../assets/icons/eye-Teal.svg"
+  iconLeftHover="../../../../../../../assets/icons/eye-Teal.svg"
+  type="secondary"
+  size="small"
+  class="hide-mobile btn-view hide-tablet"
+  [routerLink]="['/main/site-management/user-profile', ownerInfo._id]"
+  >VIEW PROFILE</app-button
+>

@@ -1,0 +1,38 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  align-items: center;
+
+  @include selfBreakPointHideShow;
+}
+
+.text-1 {
+  margin-right: 8px;
+}
+
+.btn-toggle {
+  background-color: $White;
+  width: 32px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .selected {
+    display: none;
+  }
+
+  &.active {
+    background-color: $Teal;
+    pointer-events: none;
+
+    .main {
+      display: none;
+    }
+
+    .selected {
+      display: block;
+    }
+  }
+}

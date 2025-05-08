@@ -1,0 +1,24 @@
+<div *ngIf="isPhoto && selectedFiles.length > 0" class="block-photos">
+  <div
+    *ngFor="let item of selectedFiles; let i = index"
+    class="d-flex img-container"
+  >
+    <img class="img-1" [src]="item.url" alt="" />
+
+    <app-button
+      (click)="removeFile(i)"
+      class="btn-remove"
+      type="icon"
+      color="primary"
+    >
+      <img width="24" height="24" src="../../../assets/icons/trash-rectangle.svg" alt="trash" />
+    </app-button>
+  </div>
+</div>
+
+<app-drag-and-drop-region
+  (onSelectFiles)="onSelectFiles($event)"
+  (removeFile)="removeFile($event)"
+  [isPhoto]="isPhoto"
+  [selectedFiles]="selectedFiles"
+></app-drag-and-drop-region>

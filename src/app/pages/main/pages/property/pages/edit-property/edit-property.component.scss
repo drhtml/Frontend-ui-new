@@ -1,0 +1,51 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-right: 400px;
+
+  @include media-breakpoint-tablet-down {
+    padding-left: 18px;
+    padding-right: 16px;
+  }
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 400;
+  margin-top: 46px;
+  margin-bottom: 47px;
+  font-weight: bold;
+
+  @include media-breakpoint-mobile-down {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-delete {
+  @include media-breakpoint-mobile-down {
+    position: fixed;
+    margin-top: 0;
+    top: 34px;
+    right: 4px;
+    z-index: 2;
+  }
+}
+
+app-bottom-links {
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.btn-save {
+  margin-left: 12px;
+}

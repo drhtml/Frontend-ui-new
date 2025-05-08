@@ -1,0 +1,150 @@
+<div
+  class="d-flex flex-column hide-tablet block-6"
+  [ngClass]="{ 'show-mobile': isExpand }"
+>
+  <span class="text-1">Complete These Steps</span>
+
+  <div class="d-flex flex-column block-2">
+    <span
+      class="text-2"
+      [ngClass]="{ current: currentStep === 1, completed: currentStep > 1 }"
+      >Add Property Details</span
+    >
+    <div
+      *ngFor="let item of addPropertyDetailOptions"
+      class="d-flex align-items-start block-1"
+    >
+      <img
+        src="../../../../../../../assets/icons/check-Teal.svg"
+        alt="check"
+        class="img-1"
+        *ngIf="currentStep > 1"
+      />
+      <span class="text-3">{{ item }}</span>
+    </div>
+    <span
+      class="text-2"
+      [ngClass]="{ current: currentStep === 2, completed: currentStep > 2 }"
+      >Interior Details</span
+    >
+    <div
+      *ngFor="let item of confirmExternalDataOptions"
+      class="d-flex align-items-start block-1"
+    >
+      <img
+        src="../../../../../../../assets/icons/check-Teal.svg"
+        alt="check"
+        class="img-1"
+        *ngIf="currentStep > 2"
+      />
+      <span class="text-3">{{ item }}</span>
+    </div>
+    <span
+      class="text-2"
+      [ngClass]="{ current: currentStep === 3, completed: currentStep > 3 }"
+      >Choose Plan</span
+    >
+  </div>
+
+  <app-button
+    iconLeft="../../../../../../../assets/icons/eye-White.svg"
+    iconLeftHover="../../../../../../../assets/icons/eye-Teal.svg"
+    type="primary"
+    size="small"
+    class="btn-review"
+    [disabled]="!enablePreviewBtn"
+    (click)="review.emit()"
+    >PREVIEW</app-button
+  >
+</div>
+
+<mat-grid-list
+  class="grid-list-with-dynamic-height block-3 hide-desktop show-tablet"
+  [cols]="4"
+  [gutterSize]="'20px'"
+>
+  <mat-grid-tile>
+    <div
+      class="block-4"
+      [ngClass]="{
+        current: currentStep === 1,
+        completed: currentStep > 1
+      }"
+    >
+      <div class="text-number">{{ currentStep > 1 ? "" : 1 }}</div>
+      <span class="text-4 hide-mobile">Add Property Details</span>
+      <ng-container *ngIf="isExpand">
+        <div
+          *ngFor="let item of addPropertyDetailOptions"
+          class="d-flex align-items-start block-5 hide-mobile"
+        >
+          <img
+            *ngIf="currentStep > 1"
+            src="../../../../../../../assets/icons/check-Teal.svg"
+            alt="check"
+            class="img-2"
+          />
+          <span class="text-5">{{ item }}</span>
+        </div>
+      </ng-container>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div
+      class="block-4"
+      [ngClass]="{ current: currentStep === 2, completed: currentStep > 2 }"
+    >
+      <div class="text-number">{{ currentStep > 2 ? "" : 2 }}</div>
+      <span class="text-4 hide-mobile">Interior Details</span>
+      <ng-container *ngIf="isExpand">
+        <div
+          *ngFor="let item of confirmExternalDataOptions"
+          class="d-flex align-items-start block-5 hide-mobile"
+        >
+          <img
+            src="../../../../../../../assets/icons/check-Teal.svg"
+            alt="check"
+            class="img-2"
+            *ngIf="currentStep > 2"
+          />
+          <span class="text-5">{{ item }}</span>
+        </div>
+      </ng-container>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div
+      class="block-4"
+      [ngClass]="{ current: currentStep === 3, completed: currentStep > 3 }"
+    >
+      <div class="text-number">{{ currentStep > 3 ? "" : 3 }}</div>
+      <span class="text-4 hide-mobile">Choose Plan</span>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<app-button
+  iconLeft="../../../../../../../assets/icons/eye-White.svg"
+  iconLeftHover="../../../../../../../assets/icons/eye-Teal.svg"
+  type="primary"
+  size="small"
+  [disabled]="!enablePreviewBtn"
+  class="btn-review hide-desktop show-tablet hide-mobile"
+  (click)="review.emit()"
+  *ngIf="isExpand"
+  >PREVIEW</app-button
+>
+
+<app-button
+  class="btn-expand hide-desktop show-tablet"
+  type="icon"
+  color="primary"
+  (click)="isExpand = !isExpand"
+>
+  <img
+    src="../../../../../../../assets/icons/arrow-down.svg"
+    alt="arrow down"
+    class="img-expand"
+    [ngClass]="{ isExpand: isExpand }"
+  />
+</app-button>

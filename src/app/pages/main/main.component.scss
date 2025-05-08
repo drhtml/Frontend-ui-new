@@ -1,0 +1,13 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  min-height: 100vh;
+  padding-left: 80px;
+  box-sizing: border-box;
+
+  @include media-breakpoint-mobile-down {
+    padding-left: 0;
+    padding-top: 76px;
+  }
+}

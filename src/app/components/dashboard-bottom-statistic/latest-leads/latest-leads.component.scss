@@ -1,0 +1,90 @@
+@import "../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.text-1 {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: bold;
+  margin-left: 20px;
+
+  @include media-breakpoint-mobile-down {
+    margin-left: 10px;
+  }
+}
+
+.text-2 {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 600;
+  color: $Teal;
+}
+
+.block-1 {
+  margin-bottom: 19px;
+}
+
+.block-2 {
+  background-color: $White;
+  padding: 16px 26px 17px;
+  margin-bottom: 14px;
+}
+
+.text-3 {
+  background-color: $Teal;
+  color: $White;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-right: 23px;
+  flex-shrink: 0;
+}
+
+.text-4 {
+  font-size: 21px;
+  line-height: 25px;
+  color: $Teal;
+  font-weight: 600;
+
+  @include media-breakpoint-tablet-down {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.text-5 {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 3px;
+
+  @include media-breakpoint-tablet-down {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.text-6 {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 5px;
+  opacity: 0.5;
+
+  @include media-breakpoint-tablet-down {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+.block-3 {
+  min-width: 0;
+}

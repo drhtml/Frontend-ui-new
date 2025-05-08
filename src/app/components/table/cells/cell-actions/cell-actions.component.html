@@ -1,0 +1,70 @@
+<app-button
+  class="btn-1 hide-tablet"
+  [shouldIgnoreHover]="true"
+  type="icon"
+  color="primary"
+  *ngFor="let item of options"
+  (click)="item.action?.(data)"
+>
+  <img
+    *ngIf="item.type == 'view'"
+    src="../../../../../assets/icons/eye-Teal.svg"
+    alt="eye"
+  />
+  <img
+    *ngIf="item.type == 'edit'"
+    src="../../../../../assets/icons/edit-Teal.svg"
+    alt="edit"
+  />
+  <img
+    *ngIf="item.type == 'delete'"
+    src="../../../../../assets/icons/trash-Red.svg"
+    alt="trash"
+  />
+</app-button>
+
+<app-button
+  class="btn-2 hide-desktop show-tablet"
+  [shouldIgnoreHover]="true"
+  type="icon"
+  color="primary"
+  [matMenuTriggerFor]="menu"
+>
+  <img
+    src="../../../../../../../../../../assets/icons/more-vertical.svg"
+    alt="more options"
+  />
+</app-button>
+
+<mat-menu #menu="matMenu">
+  <button
+    mat-menu-item
+    color="primary"
+    *ngFor="let item of options"
+    (click)="item.action?.(data)"
+  >
+    <app-menu-item *ngIf="item.type == 'view'" color="primary">
+      <img
+        src="../../../../../../../../../../assets/icons/eye-Teal.svg"
+        alt="eye"
+      />
+      <span>View</span>
+    </app-menu-item>
+
+    <app-menu-item *ngIf="item.type == 'edit'" color="primary">
+      <img
+        src="../../../../../../../../../../assets/icons/edit-Teal.svg"
+        alt="edit"
+      />
+      <span>Edit</span>
+    </app-menu-item>
+
+    <app-menu-item *ngIf="item.type == 'delete'" color="warn">
+      <img
+        src="../../../../../../../../../../assets/icons/trash-Red.svg"
+        alt="trash"
+      />
+      <span>Delete</span>
+    </app-menu-item>
+  </button>
+</mat-menu>

@@ -1,0 +1,24 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.txt-label {
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  min-height: 16px;
+}
+
+app-checkbox {
+
+  & + app-checkbox {
+    @include media-breakpoint-mobile-down {
+      margin-top: 15px;
+    }
+  }
+}

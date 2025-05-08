@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="40px" viewBox="0 0 101 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>035658B5-77C3-4F87-98AF-7FBF27090217</title>
+    <g id="REX-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="06.3.payment" transform="translate(-492.000000, -226.000000)">
+            <g id="other" transform="translate(492.333333, 226.000000)">
+                <rect id="Rectangle-Copy-5" fill="#FFFE71" x="0" y="0" width="100" height="40" rx="20"></rect>
+                <text id="other-option" font-family="MontserratItalic-Bold, Montserrat" font-size="16" font-style="italic" font-weight="bold" line-spacing="10" letter-spacing="-0.636364" fill="#000000">
+                    <tspan x="20" y="25">other</tspan>
+                    <tspan x="20" y="35">   option</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

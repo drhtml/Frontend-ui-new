@@ -1,0 +1,48 @@
+@mixin selfBreakPointHideShow($display: flex) {
+  &.hide-desktop {
+    display: none;
+  }
+
+  @include media-breakpoint-tablet-down {
+    &.hide-tablet {
+      display: none;
+    }
+    &.show-tablet {
+      display: $display;
+    }
+  }
+
+  @include media-breakpoint-mobile-down {
+    &.hide-mobile {
+      display: none;
+    }
+    &.show-mobile {
+      display: $display;
+    }
+  }
+}
+
+@mixin media-breakpoint-mobile-down {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-tablet-down {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-tablet-landscape-down {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+
+@mixin media-breakpoint-desktop-down {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}

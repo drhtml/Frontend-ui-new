@@ -1,0 +1,147 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  & + app-divider + .section-sub-title,
+  & + .section-sub-title {
+    margin-top: -5px;
+
+    @include media-breakpoint-mobile-down {
+      margin-top: 0;
+    }
+  }
+}
+
+.section-sub-title {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 20px;
+
+  strong {
+    text-transform: capitalize;
+  }
+
+  ul {
+    margin-top: 14px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-position: inside;
+
+    li {
+      margin-top: 14px;
+      padding-left: 0;
+    }
+  }
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.block-3-column {
+  max-width: 596px;
+}
+.block-2-column {
+  max-width: 388px;
+}
+.block-1-column {
+  max-width: 180px;
+}
+
+.checkbox-terms {
+  margin-top: 32px;
+}
+
+app-divider {
+  margin-bottom: 20px;
+}
+
+.grid-2-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 16px;
+
+  @include media-breakpoint-mobile-down {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.recent-impovements-grid-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 16px;
+
+  .renovation-text {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+  }
+
+  .renovation-full-width {
+    grid-column: 1 / span 4;
+  }
+
+  .renovation-description {
+    grid-column: 2 / span 2;
+  }
+
+  @include media-breakpoint-mobile-down {
+    grid-template-columns: auto auto;
+
+    .renovation-full-width {
+      grid-column: 1 / span 2;
+    }
+
+    .renovation-description {
+      grid-column: 1 / span 2;
+    }
+  }
+}
+
+.btn-remove-all-photos {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.block-plan {
+  gap: 40px;
+  padding-left: 19px;
+
+  @include media-breakpoint-mobile-down {
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.btn-show-plan-details {
+  margin-top: 20px;
+}

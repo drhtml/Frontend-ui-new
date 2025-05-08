@@ -1,0 +1,5 @@
+<app-property-grid-list-item
+  *ngFor="let item of tableDatas; let i = index"
+  (deleteThis)="deleteThis.emit(item.id)"
+  [data]="item"
+></app-property-grid-list-item>

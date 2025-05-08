@@ -1,0 +1,44 @@
+<div class="d-flex flex-column block-2">
+  <span class="text-2">Property Details</span>
+  <div
+    *ngFor="let item of addPropertyDetailOptions"
+    class="d-flex align-items-start block-1"
+  >
+    <img
+      src="../../../../../../../assets/icons/check-Teal.svg"
+      alt="check"
+      class="img-1"
+    />
+    <span class="text-3">{{ item }}</span>
+  </div>
+</div>
+
+<app-button
+  iconLeft="../../../../../../../assets/icons/eye-Teal.svg"
+  iconLeftHover="../../../../../../../assets/icons/eye-Teal.svg"
+  type="secondary"
+  size="small"
+  class="hide-mobile"
+  (click)="review.emit()"
+  >PREVIEW</app-button
+>
+<app-button
+  iconLeft="../../../../../../../assets/icons/save-White.svg"
+  iconLeftHover="../../../../../../../assets/icons/save-Teal.svg"
+  type="primary"
+  size="small"
+  class="btn-save"
+  (click)="save.emit()"
+  >SAVE CHANGES</app-button
+>
+
+<app-button
+  iconLeft="../../../../../../../assets/icons/trash-Red.svg"
+  iconLeftHover="../../../../../../../assets/icons/trash-White.svg"
+  type="secondary"
+  size="small"
+  color="warn"
+  class="btn-remove-all-photos"
+  (click)="deleteThis.emit()"
+  >DELETE THIS PROPERTY</app-button
+>

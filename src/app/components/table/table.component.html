@@ -1,0 +1,203 @@
+<div class="table-container" (scroll)="onScroll($event)">
+  <table
+    mat-table
+    matSort
+    multiTemplateDataRows
+    [dataSource]="dataSource"
+    class="mat-elevation-z8"
+    (matSortChange)="sortData($event)"
+  >
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select" sticky>
+      <th columnname="select" mat-header-cell *matHeaderCellDef>
+        <app-checkbox
+          size="small"
+          (change)="$event ? toggleAllRows() : null"
+          [checked]="selection.hasValue() && isAllSelected()"
+          [indeterminate]="selection.hasValue() && !isAllSelected()"
+        >
+        </app-checkbox>
+      </th>
+      <td columnname="select" mat-cell *matCellDef="let row">
+        <app-checkbox
+          size="small"
+          (click)="$event.stopPropagation()"
+          (change)="$event ? selection.toggle(row) : null"
+          [checked]="selection.isSelected(row)"
+        >
+        </app-checkbox>
+      </td>
+    </ng-container>
+
+    <ng-container
+      matColumnDef="{{ column.key }}"
+      *ngFor="let column of displayedColumns"
+      [sticky]="column.isSticky ? true : undefined"
+    >
+      <th
+        [mat-sort-header]="column.key"
+        [disabled]="!column.sortable"
+        mat-header-cell
+        [attr.columnName]="column.key"
+        *matHeaderCellDef
+      >
+        {{ column.title }}
+      </th>
+      <td
+        [attr.colspan]="
+          element.config && element.config.colspan
+            ? element.config.colspan[column.key]
+            : undefined
+        "
+        [ngClass]="{
+          clickable: !!column.onClick,
+          isExpandable: column.isExpandable,
+          isExpanded: expandRowTemplate && expandedElement && expandedElement.id === element.id,
+          hide:
+            element.config && element.config.hideColumn
+              ? element.config.hideColumn[column.key]
+              : false,
+          isAlignRight:
+            column.align === 'right' ||
+            (element.config &&
+              element.config.align &&
+              element.config.align[column.key] === 'right'),
+          isExpandChild: element.isExpandChild,
+          showExpandArrowDown: column.isExpandable && !element.isExpandChild,
+          showExpandArrowUp: expandedElement && expandedElement.id === element.id
+        }"
+        mat-cell
+        [attr.columnName]="column.key"
+        (click)="onClickCell(column, element)"
+        *matCellDef="let element"
+      >
+        <ng-container
+          *ngIf="
+            column.isExpandable ||
+            element != expandedElement ||
+            column.showWhenExpand
+          "
+        >
+          <span
+            class="cell-text"
+            *ngIf="
+              element.config &&
+              element.config.type &&
+              element.config.type[column.key]
+                ? element.config.type[column.key] === 'text'
+                : column.type === 'text'
+            "
+            >{{ element[column.key] || "-" }}</span
+          >
+          <app-cell-evaluation-status
+            *ngIf="
+              element.config &&
+              element.config.type &&
+              element.config.type[column.key]
+                ? element.config.type[column.key] === 'evaluation status'
+                : column.type === 'evaluation status'
+            "
+            [value]="element[column.key]"
+          ></app-cell-evaluation-status>
+          <app-cell-actions
+            *ngIf="
+              element.config &&
+              element.config.type &&
+              element.config.type[column.key]
+                ? element.config.type[column.key] === 'actions'
+                : column.type === 'actions'
+            "
+            [data]="element"
+            [columnConfig]="column"
+          ></app-cell-actions>
+          <app-cell-actions-bottom
+            *ngIf="
+              element.config &&
+              element.config.type &&
+              element.config.type[column.key]
+                ? element.config.type[column.key] === 'actions bottom'
+                : column.type === 'actions bottom'
+            "
+            [data]="element"
+            [columnConfig]="column"
+          ></app-cell-actions-bottom>
+          <app-cell-user-info
+            *ngIf="
+              element.config &&
+              element.config.type &&
+              element.config.type[column.key]
+                ? element.config.type[column.key] === 'user info'
+                : element[column.key] && column.type === 'user info'
+            "
+            [value]="element[column.key]"
+          ></app-cell-user-info>
+          <app-cell-evaluation-status-list
+            *ngIf="
+              element.config &&
+              element.config.type &&
+              element.config.type[column.key]
+                ? element.config.type[column.key] === 'evaluation status list'
+                : element[column.key] &&
+                  column.type === 'evaluation status list'
+            "
+            [value]="element[column.key]"
+          ></app-cell-evaluation-status-list>
+          <app-cell-evaluation-status-collapse
+            *ngIf="
+              element.config &&
+              element.config.type &&
+              element.config.type[column.key]
+                ? element.config.type[column.key] ===
+                  'evaluation status collapse'
+                : element[column.key] &&
+                  column.type === 'evaluation status collapse'
+            "
+            [value]="element[column.key]"
+          ></app-cell-evaluation-status-collapse>
+        </ng-container>
+      </td>
+    </ng-container>
+
+    <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+    <ng-container matColumnDef="expandedDetail">
+      <td
+        mat-cell
+        *matCellDef="let element"
+        [attr.colspan]="displayedColumns.length"
+        class="expand-cell"
+        [ngClass]="{
+          isExpanded: expandRowTemplate && expandedElement && element.id === expandedElement.id
+        }"
+      >
+        <ng-container
+          *ngIf="expandRowTemplate && expandedElement && element.id === expandedElement.id"
+          [ngTemplateOutlet]="expandRowTemplate"
+        ></ng-container>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnKeys"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: columnKeys"
+      [ngClass]="{
+        hide:
+          (row.isExpandChild &&
+            (!expandedElement || expandedElement.id !== row.parent)) ||
+          row.hideThisRow
+      }"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: ['expandedDetail']"
+      class="expand-detail-row"
+    ></tr>
+  </table>
+</div>
+
+<app-pagination
+  [paginationData]="paginationData"
+  [loading]="loading"
+  (paginationChange)="paginationChange.emit($event)"
+  *ngIf="paginationData"
+></app-pagination>

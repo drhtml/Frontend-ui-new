@@ -1,0 +1,55 @@
+<app-evaluation-slider
+  [formControl]="formControl"
+  [selectedDate]="selectedDate"
+  [disabled]="true"
+></app-evaluation-slider>
+
+<div *ngIf="formControl.value < 100" class="d-flex block-1">
+  <span
+    >Check back on <strong>{{ selectedDate }}</strong> to find the
+    results.</span
+  >
+</div>
+
+<div
+  *ngIf="formControl.value === 100"
+  class="d-flex flex-column align-items-start block-2"
+>
+  <span class="text-1"
+    >The 3 price points iterations have been completed. Read below for more
+    details.</span
+  >
+  <span class="text-2">Best Price Point</span>
+  <div class="d-flex align-items-center block-3">
+    <div class="d-flex justify-content-between align-items-center block-4">
+      <span>Price Point 2</span>
+      <span class="text-3">$173.000</span>
+    </div>
+
+    <app-button
+      iconLeft="../../../../../../../../../assets/icons/download-Teal.svg"
+      iconLeftHover="../../../../../../../../../assets/icons/download-Teal.svg"
+      type="secondary"
+      size="small"
+      class="btn-download"
+      >DOWNLOAD RESULT</app-button
+    >
+  </div>
+  <span class="font-medium"
+    >Do you wish to evaluate your property with more price points?</span
+  >
+
+  <app-button
+    iconLeft="../../../../../../../../../assets/icons/star-White.svg"
+    iconLeftHover="../../../../../../../../../assets/icons/star-Teal.svg"
+    type="primary"
+    size="normal"
+    class="btn-upgrade"
+    >UPGRADE TO PREMIUM PLAN</app-button
+  >
+</div>
+
+<app-price-point-container
+  [datas]="datas"
+  *ngIf="isAdmin"
+></app-price-point-container>

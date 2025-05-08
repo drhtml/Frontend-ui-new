@@ -1,0 +1,12 @@
+:host {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 32px;
+  margin-top: 10px;
+}
+
+.block-1 {
+  display: grid;
+  grid-template-columns: auto;
+  row-gap: 24px;
+}

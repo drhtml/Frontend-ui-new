@@ -1,0 +1,115 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+
+  &.isNotEdit {
+    .value-field {
+      margin-top: 12px;
+
+      &.total-field {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.container-bar {
+  height: 30px;
+  margin-bottom: 16px;
+
+  .value {
+    height: 100%;
+
+    &.value-1 {
+      background-color: $TealLight03;
+    }
+
+    &.value-2 {
+      background-color: $RedLight02;
+    }
+
+    &.value-3 {
+      background-color: $TealLight02;
+    }
+
+    &.value-4 {
+      background-color: $YellowLight02;
+    }
+
+    &.value-5 {
+      background-color: $RedLight01;
+    }
+  }
+}
+
+app-input-field {
+  width: 180px;
+}
+
+.value-field {
+  padding-left: 28px;
+  margin-top: 8px;
+
+  .label {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .value {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -28px;
+      top: 0;
+      width: 16px;
+      height: 16px;
+    }
+
+    &.value-1 {
+      &::before {
+        background-color: $TealLight03;
+      }
+    }
+
+    &.value-2 {
+      &::before {
+        background-color: $RedLight02;
+      }
+    }
+
+    &.value-3 {
+      &::before {
+        background-color: $TealLight02;
+      }
+    }
+
+    &.value-4 {
+      &::before {
+        background-color: $YellowLight02;
+      }
+    }
+
+    &.value-5 {
+      &::before {
+        background-color: $RedLight01;
+      }
+    }
+  }
+}
+
+.text-1 {
+  font-size: 14px;
+  line-height: 16px;
+}

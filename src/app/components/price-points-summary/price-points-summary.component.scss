@@ -1,0 +1,71 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.text-1 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  margin: 24px 0 0 24px;
+}
+
+.block-1 {
+  padding: 12px 0 17px 24px;
+  box-sizing: border-box;
+  min-width: 338px;
+  position: relative;
+
+  &.isBestPricePoint {
+    background-color: var(--Pastel);
+  }
+
+  .text-2 {
+    display: flex;
+    height: 30px;
+    min-width: 30px;
+    border-radius: 30px;
+    background-color: var(--LightGrey);
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    margin-right: 12px;
+  }
+
+  .text-3 {
+    margin-top: 6px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+  }
+
+  .block-2 {
+    margin-top: 4px;
+
+    .text-4 {
+      font-size: 13px;
+      line-height: 16px;
+      margin-right: 14px;
+    }
+
+    .text-5 {
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
+
+  .text-best-price {
+    background-color: var(--Teal);
+    font-size: 10px;
+    line-height: 12px;
+    padding: 2px 8px;
+    position: absolute;
+    top: 12px;
+    right: 0;
+    font-weight: 600;
+    color: var(--White);
+  }
+}

@@ -1,0 +1,7 @@
+<ng-container
+  *ngFor="let formControlSettings of planListForm.controls; let i = index"
+  ><app-plan-card
+    [formControl]="formControl"
+    [formControlSettings]="formControlSettings"
+  ></app-plan-card
+></ng-container>

@@ -1,0 +1,36 @@
+<div class="d-flex flex-column block-1">
+  <img class="img-1" [src]="avatarUrl" alt="avatar" />
+
+  <input
+    type="file"
+    [accept]="'image/*'"
+    #file
+    (change)="handleFileInput($event.target)"
+    hidden
+  />
+  <app-button
+    iconLeft="../../../../../../../assets/icons/change-Teal.svg"
+    iconLeftHover="../../../../../../../assets/icons/change-Teal.svg"
+    type="secondary"
+    size="small"
+    class="btn-change-picture"
+    (click)="file.click()"
+    >CHANGE PICTURE</app-button
+  >
+</div>
+
+<div class="d-flex flex-column flex-1 block-2 align-items-start">
+  <span class="text-1">{{ title }}</span>
+  <ng-content></ng-content>
+
+  <app-divider class="full-width"></app-divider>
+
+  <app-button
+    (click)="saveChange.emit()"
+    iconLeft="../../../../../../../assets/icons/save-White.svg"
+    iconLeftHover="../../../../../../../assets/icons/save-Teal.svg"
+    type="primary"
+    class="btn-save"
+    >SAVE CHANGES</app-button
+  >
+</div>

@@ -1,0 +1,11 @@
+<h1 class="hide-mobile">{{ title }}</h1>
+
+<app-step-review-form
+  class="form-group d-flex"
+  (edit)="doEdit()"
+  [isAdmin]="isAdmin"
+  (changeTab)="selectedTabChange($event)"
+  [propertyData]="propertyData"
+></app-step-review-form>
+
+<app-bottom-links></app-bottom-links>

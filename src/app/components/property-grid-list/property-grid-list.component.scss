@@ -1,0 +1,11 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  @include selfBreakPointHideShow;
+}
+

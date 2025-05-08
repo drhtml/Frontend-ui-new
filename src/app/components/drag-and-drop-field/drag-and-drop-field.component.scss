@@ -1,0 +1,44 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-photos {
+  margin-bottom: 36px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  column-gap: 20px;
+  row-gap: 18px;
+  margin-top: 26px;
+
+  @include media-breakpoint-tablet-down {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  @include media-breakpoint-mobile-down {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .img-container {
+    height: 90px;
+    position: relative;
+
+    @include media-breakpoint-mobile-down {
+      height: 82px;
+    }
+
+    .img-1 {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .btn-remove {
+    position: absolute;
+    top: -21px;
+    right: -19px;
+  }
+}

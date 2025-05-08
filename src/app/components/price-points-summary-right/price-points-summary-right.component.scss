@@ -1,0 +1,18 @@
+@import "../../../styles/includes";
+
+:host {
+  position: fixed;
+  top: 130px;
+  right: 51px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  max-height: calc(100vh - 260px);
+  overflow: auto;
+
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}

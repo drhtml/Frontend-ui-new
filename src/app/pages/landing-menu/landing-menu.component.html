@@ -1,0 +1,62 @@
+<div class="bg wrap-all"></div>
+
+<div class="img-1-container">
+  <img
+    class="img-1 hide-tablet"
+    src="../../../assets/images/menu-house.svg"
+    alt="menu house"
+  />
+  <img
+    class="img-1 hide-desktop show-tablet hide-mobile"
+    src="../../../assets/images/menu-house-tablet.svg"
+    alt="menu house"
+  />
+  <img
+    class="img-1 hide-desktop show-mobile"
+    src="../../../assets/images/menu-house-mobile.svg"
+    alt="menu house"
+  />
+</div>
+
+<img
+  class="img-2 hide-tablet"
+  src="../../../assets/images/logo-header-big.svg"
+  alt="logo"
+/>
+<img
+  class="img-2 hide-desktop show-tablet hide-mobile"
+  src="../../../assets/images/logo-header-tablet.svg"
+  alt="logo"
+/>
+<img
+  class="img-2 hide-desktop show-mobile"
+  src="../../../assets/images/logo-header-mobile.svg"
+  alt="logo"
+/>
+
+<router-outlet></router-outlet>
+
+<div class="d-flex align-items-center block-2">
+  <div class="d-flex block-3">
+    <app-button
+      routerLink="/menu/signup"
+      size="large"
+      [shouldIgnoreHover]="true"
+      >GET STARTED</app-button
+    >
+    <app-button
+      routerLink="/menu/login"
+      size="large"
+      type="secondary"
+      [shouldIgnoreHover]="true"
+      >LOGIN</app-button
+    >
+  </div>
+  <img class="img-3" src="../../../assets/images//ball-4.svg" alt="ball" />
+</div>
+
+<app-button-box
+  routerLink="/"
+  [isClose]="true"
+  [forceShowHover]="true"
+></app-button-box>

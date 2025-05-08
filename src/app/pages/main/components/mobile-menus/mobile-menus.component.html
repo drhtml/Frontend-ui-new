@@ -1,0 +1,153 @@
+<nav
+  class="container d-flex flex-column align-items-start"
+  [ngClass]="{ open: isOpenMenu }"
+>
+  <div class="d-flex align-items-center block-menu-logo">
+    <app-button
+      class="btn-1"
+      [shouldIgnoreHover]="true"
+      type="icon"
+      color="primary"
+      (click)="isOpenMenu = !isOpenMenu"
+    >
+      <img
+        *ngIf="!isOpenMenu"
+        src="../../../../../assets/icons/menu-Teal.svg"
+        alt="menu"
+      />
+      <img
+        *ngIf="isOpenMenu"
+        src="../../../../../assets/icons/x-Teal.svg"
+        alt="menu"
+      />
+    </app-button>
+
+    <img
+      class="img-1"
+      src="../../../assets/images/logo-header-menu.svg"
+      alt="logo"
+    />
+  </div>
+
+  <div *ngIf="isOpenMenu" class="img-2-container">
+    <img
+      class="img-2"
+      src="../../../assets/images/menu-house-mobile.svg"
+      alt="menu house"
+    />
+  </div>
+
+  <div *ngIf="isOpenMenu" class="d-flex flex-column block-2">
+    <button
+      class="button d-flex align-items-center"
+      (click)="isOpenMenu = false"
+    >
+      <img
+        class="avatar"
+        src="../../../assets/images/avatar2.jpg"
+        alt="avatar"
+      />
+      <span class="text-1 font-medium">My Profile</span>
+    </button>
+    <button
+      class="button d-flex align-items-center block-1"
+      (click)="isOpenMenu = false"
+      *ngIf="isAdmin"
+    >
+      <div class="img-container">
+        <img
+          class="main"
+          src="../../../assets/icons/stack-Teal.svg"
+          alt="stack"
+        />
+      </div>
+      <span class="text-1 font-medium">Users & Properties</span>
+    </button>
+    <button
+      class="button d-flex align-items-center block-1"
+      (click)="isOpenMenu = false"
+      *ngIf="isAdmin"
+    >
+      <div class="img-container">
+        <img
+          class="main"
+          src="../../../assets/icons/tag-Teal.svg"
+          alt="tag"
+        />
+      </div>
+      <span class="text-1 font-medium">Plan Settings</span>
+    </button>
+    <button
+      class="button d-flex align-items-center block-1"
+      (click)="isOpenMenu = false"
+      *ngIf="isAdmin"
+    >
+      <div class="img-container">
+        <img
+          class="main"
+          src="../../../assets/icons/my-property-Teal.svg"
+          alt="my-property"
+        />
+      </div>
+      <span class="text-1 font-medium"> My Property</span>
+    </button>
+    <button
+      routerLink="/main/dashboard"
+      class="button d-flex align-items-center block-1"
+      (click)="isOpenMenu = false"
+      *ngIf="!isAdmin"
+    >
+      <div class="img-container">
+        <img
+          class="main"
+          src="../../../assets/icons/grid-Teal.svg"
+          alt="grid"
+        />
+      </div>
+      <span class="text-1 font-medium">Dashboard</span>
+    </button>
+    <button
+      class="button d-flex align-items-center block-1"
+      (click)="isOpenMenu = false"
+    >
+      <div class="img-container">
+        <img
+          class="main"
+          src="../../../assets/icons/bell-Teal.svg"
+          alt="bell"
+        />
+      </div>
+      <span class="text-1 font-medium">Notifications</span>
+    </button>
+    <button
+      class="button d-flex align-items-center block-1"
+      (click)="isOpenMenu = false"
+      routerLink="/main/profile-settings"
+    >
+      <div class="img-container">
+        <img
+          class="main"
+          src="../../../assets/icons/settings-Teal.svg"
+          alt="settings"
+        />
+      </div>
+      <span class="text-1 font-medium">Settings</span>
+    </button>
+    <button
+      routerLink="/landing"
+      class="button d-flex align-items-center block-1"
+      (click)="isOpenMenu = false"
+    >
+      <div class="img-container">
+        <img
+          class="main"
+          src="../../../assets/icons/log-out-Teal.svg"
+          alt="log out"
+        />
+      </div>
+      <span class="text-1 font-medium">Logout</span>
+    </button>
+  </div>
+
+  <app-bottom-links *ngIf="isOpenMenu"></app-bottom-links>
+</nav>

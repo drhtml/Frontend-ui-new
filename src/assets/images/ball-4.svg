@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="77px" viewBox="0 0 38 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>00669C3F-B129-45A3-9266-7885D288601C</title>
+    <defs>
+        <filter x="-45.0%" y="-450.0%" width="190.0%" height="1000.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <radialGradient cx="63.9405573%" cy="26.1938917%" fx="63.9405573%" fy="26.1938917%" r="49.053135%" id="radialGradient-2">
+            <stop stop-color="#FFF9F9" offset="0%"></stop>
+            <stop stop-color="#F3B1B1" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="REX-design-style" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="05.-Design-Style---Icons" transform="translate(-374.000000, -2760.000000)">
+            <g id="balls" transform="translate(72.000000, 2730.000000)">
+                <g id="ball-4" transform="translate(303.000000, 30.000000)">
+                    <ellipse id="Oval" fill="#000000" opacity="0.6" filter="url(#filter-1)" cx="18" cy="67" rx="10" ry="1"></ellipse>
+                    <g id="ball" fill="url(#radialGradient-2)">
+                        <circle id="Oval" cx="18" cy="18" r="18"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

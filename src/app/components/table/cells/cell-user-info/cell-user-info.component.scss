@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 60px;
+}
+
+.img-1 {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  margin-right: 12px;
+}
+
+.text-1 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--Teal);
+}
+
+.text-2 {
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 3px;
+}

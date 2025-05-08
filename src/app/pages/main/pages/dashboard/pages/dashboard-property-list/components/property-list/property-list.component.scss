@@ -1,0 +1,21 @@
+@import '../../../../../../../../../styles/includes';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.block-1 {
+  margin-top: 30px;
+  margin-bottom: 17px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 28px;
+  }
+}

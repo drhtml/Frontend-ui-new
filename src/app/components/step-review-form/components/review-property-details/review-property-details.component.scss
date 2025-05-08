@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+app-divider {
+  margin: 32px 0;
+}
+
+.text-1 {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.32px;
+}
+
+mat-accordion {
+  margin-top: 38px;
+}
+
+app-monthly-payment {
+  padding-top: 33px;
+}

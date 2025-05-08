@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="47px" height="52px" viewBox="0 0 47 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>trash-2</title>
+    <g id="REX-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="09.-Delete-Property" transform="translate(-659.000000, -251.000000)" stroke="#FF5E57" stroke-width="2.5">
+            <g id="modal" transform="translate(403.000000, 190.000000)">
+                <g id="trash-2" transform="translate(258.000000, 63.000000)">
+                    <polyline id="Path" points="0 9.6 4.8 9.6 43.2 9.6"></polyline>
+                    <path d="M38.4,9.6 L38.4,43.2 C38.4,45.8509668 36.2509668,48 33.6,48 L9.6,48 C6.9490332,48 4.8,45.8509668 4.8,43.2 L4.8,9.6 M12,9.6 L12,4.8 C12,2.1490332 14.1490332,0 16.8,0 L26.4,0 C29.0509668,0 31.2,2.1490332 31.2,4.8 L31.2,9.6" id="Shape"></path>
+                    <line x1="16.8" y1="21.6" x2="16.8" y2="36" id="Path"></line>
+                    <line x1="26.4" y1="21.6" x2="26.4" y2="36" id="Path"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

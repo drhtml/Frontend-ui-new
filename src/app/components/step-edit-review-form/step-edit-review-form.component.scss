@@ -1,0 +1,42 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+app-divider {
+  margin-top: 36px;
+  margin-bottom: 17px;
+}
+
+.bottom {
+  .btn-save {
+    margin-left: 25px;
+
+    @include media-breakpoint-mobile-down {
+      margin-left: 11px;
+    }
+  }
+
+  margin-bottom: 200px;
+}
+
+mat-tab-group {
+  ::ng-deep {
+    .mat-tab-body-wrapper {
+      overflow: visible;
+
+      #mat-tab-content-1-1,
+      #mat-tab-content-0-1 {
+        overflow: visible;
+
+        .mat-tab-body-content {
+          overflow: visible;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@import "../../../../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  width: 100%;
+
+  @include selfBreakPointHideShow;
+
+  ::ng-deep {
+    table {
+      tbody {
+        tr {
+          td[columnname="name"] {
+            span {
+              color: $Teal;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      th,
+      td {
+        min-width: 100px;
+      }
+
+      th[columnname="select"],
+      td[columnname="select"] {
+        min-width: 0;
+        padding-left: 14px !important;
+
+        ::ng-deep {
+          .mat-checkbox-inner-container {
+            margin-right: 0 !important;
+          }
+        }
+      }
+      th[columnname="name"],
+      td[columnname="name"],
+      th[columnname="evaluationStatus"],
+      td[columnname="evaluationStatus"] {
+        min-width: 138px;
+      }
+
+      th[columnname="action"],
+      td[columnname="action"] {
+        @include media-breakpoint-tablet-down {
+          min-width: 50px;
+        }
+      }
+    }
+  }
+}
+
+.block-1 {
+  position: sticky;
+  width: calc(100vw - 214px);
+  left: 42px;
+}
+
+.text-4-container {
+  background-color: $Green;
+  color: $White;
+  padding-left: 14px;
+  padding-right: 13px;
+  height: 30px;
+  border-radius: 16px;
+  margin: 0 auto auto 0;
+
+  @include media-breakpoint-mobile-down {
+    height: 22px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 11px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: $White;
+    margin-right: 10px;
+
+    @include media-breakpoint-mobile-down {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .text-4 {
+    font-size: 13px;
+    line-height: 16px;
+
+    @include media-breakpoint-mobile-down {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
+
+.block-4 {
+  width: 100%;
+
+  .text-2 {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+    color: $TealDark;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+  }
+
+  .text-3 {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.block-2 {
+  margin-bottom: 21px;
+}
+
+.block-3 {
+  height: 37px;
+  background-color: $LightestGrey;
+  margin-bottom: 16px;
+}

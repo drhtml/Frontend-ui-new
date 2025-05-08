@@ -1,0 +1,137 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 37px;
+
+  @include media-breakpoint-mobile-down {
+    padding-bottom: 31px;
+  }
+}
+
+.text-1 {
+  width: 163px;
+  padding-right: 17px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  box-sizing: border-box;
+  font-weight: 500;
+
+  @include media-breakpoint-tablet-down {
+    width: 83px;
+    text-align: left;
+    padding-right: 5px;
+    padding-left: 0;
+  }
+
+  @include media-breakpoint-mobile-down {
+    width: 66px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.block-1 {
+  margin-bottom: 32px;
+
+  &:first-child {
+    margin-top: 32px;
+  }
+
+  .block-container {
+    flex: 1;
+    height: 60px;
+
+    .block-content {
+      height: 100%;
+      box-sizing: border-box;
+      padding: 9px 10px 9px 30px;
+      gap: 20px;
+
+      .text-2 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bold;
+
+        @include media-breakpoint-mobile-down {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+      .text-3 {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 3px;
+        font-weight: 500;
+        white-space: nowrap;
+
+        @include media-breakpoint-mobile-down {
+          margin-top: 8px;
+        }
+      }
+      .text-4 {
+        font-size: 14px;
+        line-height: 16px;
+        white-space: nowrap;
+
+        @include media-breakpoint-mobile-down {
+          font-size: 12px;
+          line-height: 14px;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+.grid-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 163px;
+  bottom: 37px;
+  border: 1px solid #dbdbdb;
+  background-color: $LightestGrey;
+  z-index: -1;
+  border-left: none;
+
+  @include media-breakpoint-tablet-down {
+    left: 83px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    left: 66px;
+  }
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #dbdbdb;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  &.last-line {
+    align-items: flex-end;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    margin-bottom: -31px;
+
+    @include media-breakpoint-mobile-down {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}

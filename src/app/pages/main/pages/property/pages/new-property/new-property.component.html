@@ -1,0 +1,123 @@
+<h1 *ngIf="step < 6">New Property Evaluation Request</h1>
+<div
+  class="d-flex align-items-center justify-content-between h1-container"
+  *ngIf="step === 6"
+>
+  <h1>{{ getControl("name").value }}</h1>
+
+  <div class="d-flex hide-desktop show-tablet hide-mobile">
+    <app-button
+      iconLeft="../../../../../assets/icons/trash-Red.svg"
+      iconLeftHover="../../../../../assets/icons/trash-White.svg"
+      type="secondary"
+      size="small"
+      color="warn"
+      class="btn-remove-all-photos"
+      (click)="doDelete()"
+      >DELETE PROPERTY</app-button
+    >
+    <app-button
+      iconLeft="../../../../../assets/icons/save-White.svg"
+      iconLeftHover="../../../../../assets/icons/save-Teal.svg"
+      type="primary"
+      size="small"
+      class="btn-save"
+      >SAVE CHANGES</app-button
+    >
+  </div>
+
+  <app-button
+    class="btn-delete show-mobile hide-desktop"
+    [shouldIgnoreHover]="true"
+    iconLeft="../../../../../assets/icons/trash-Red.svg"
+    type="basic"
+    size="very-small"
+    color="primary"
+    (click)="doDelete()"
+    color="warn"
+    >DELETE</app-button
+  >
+</div>
+
+<app-complete-these-steps-right
+  [currentStep]="step"
+  [enablePreviewBtn]="enablePreviewBtn"
+  [shouldShowPayment]="shouldShowPayment"
+  (review)="doReview()"
+  *ngIf="step < 5"
+></app-complete-these-steps-right>
+<app-delete-this-property-right
+  (review)="doReview()"
+  (deleteThis)="doDelete()"
+  *ngIf="step === 6"
+></app-delete-this-property-right>
+
+<div class="d-flex block-2" *ngIf="step < 5">
+  <div class="block-step">{{ step }}</div>
+  <div class="d-flex flex-column">
+    <h2>{{ stepTitle }}</h2>
+    <span class="body-3">{{ stepDescription }}</span>
+  </div>
+</div>
+<app-step-one-form
+  (searchPropertyEvent)="searchProperty($event)"
+  [screenSize]="screenSize"
+  [form]="form"
+  class="form-group d-flex"
+  *ngIf="step === 1"
+></app-step-one-form>
+<app-step-two-form
+  [form]="form"
+  class="form-group d-flex"
+  *ngIf="step === 2"
+></app-step-two-form>
+<app-step-three-form
+  [formControl]="getControl('selectedPlan')"
+  class="form-group d-flex"
+  *ngIf="step === 3 && !shouldShowPayment"
+></app-step-three-form>
+<app-step-four-form
+  [form]="form"
+  class="form-group d-flex"
+  *ngIf="step === 4 && shouldShowPayment"
+></app-step-four-form>
+<app-step-review-form
+  class="form-group d-flex"
+  *ngIf="step === 4"
+  (edit)="doEdit()"
+></app-step-review-form>
+<app-step-edit-review-form
+  class="form-group d-flex"
+  *ngIf="step === 5"
+  [form]="form"
+  [screenSize]="screenSize"
+  (review)="doReview()"
+></app-step-edit-review-form>
+<app-divider *ngIf="step < 4"></app-divider>
+<div
+  *ngIf="step < 4"
+  class="d-flex align-items-center justify-content-between block-1"
+>
+  <app-button
+    *ngIf="step > 1"
+    iconLeft="../../../../../assets/icons/arrow-left-Teal.svg"
+    iconLeftHover="../../../../../assets/icons/arrow-left-Teal.svg"
+    type="secondary"
+    size="small"
+    class="btn-back"
+    (click)="step = step - 1"
+    >BACK</app-button
+  >
+  <div *ngIf="step === 1"></div>
+  <app-button
+    iconRight="../../../../../assets/icons/arrow-right-White.svg"
+    iconRightHover="../../../../../assets/icons/arrow-right-Teal.svg"
+    type="primary"
+    size="small"
+    class="btn-next"
+    (click)="nextStep()"
+    >NEXT</app-button
+  >
+</div>
+
+<app-bottom-links></app-bottom-links>

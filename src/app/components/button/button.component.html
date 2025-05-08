@@ -1,0 +1,129 @@
+<ng-template #contentTpl>
+  <img
+    *ngIf="iconLeft"
+    class="icon-main icon-left"
+    [src]="disabled ? iconLeftHover : iconLeft"
+    alt="left icon"
+  />
+  <img
+    *ngIf="iconLeftHover"
+    class="icon-main-hover icon-left-hover"
+    [src]="iconLeftHover"
+    alt="left icon"
+  /><ng-content></ng-content>
+  <img
+    *ngIf="iconRight"
+    class="icon-main icon-right"
+    [src]="disabled ? iconRightHover : iconRight"
+    [attr.width]="iconRightWidth"
+    alt="right icon"
+  />
+  <img
+    *ngIf="iconRightHover"
+    class="icon-main-hover icon-right-hover"
+    [src]="iconRightHover"
+    [attr.width]="iconRightWidth"
+    alt="right icon"
+  />
+</ng-template>
+
+<ng-container [ngSwitch]="type">
+  <button
+    *ngSwitchCase="'primary'"
+    class="container primary-container size-{{ size }} color-{{ color }}"
+    [ngClass]="{
+      shouldIgnoreHover: shouldIgnoreHover || disabled,
+      noContent: noContent,
+      doNotUpdateImageSize: doNotUpdateImageSize
+    }"
+    mat-flat-button
+    [color]="color"
+    [disabled]="disabled"
+  >
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+
+  <button
+    *ngSwitchCase="'secondary'"
+    class="container secondary-container size-{{ size }} color-{{ color }}"
+    [ngClass]="{
+      shouldIgnoreHover: shouldIgnoreHover,
+      noContent: noContent,
+      doNotUpdateImageSize: doNotUpdateImageSize
+    }"
+    mat-stroked-button
+    [color]="color"
+    [disabled]="disabled"
+  >
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+
+  <a
+    *ngSwitchCase="'secondary-link'"
+    class="container secondary-container size-{{ size }} color-{{ color }}"
+    [ngClass]="{
+      shouldIgnoreHover: shouldIgnoreHover,
+      noContent: noContent,
+      doNotUpdateImageSize: doNotUpdateImageSize
+    }"
+    mat-stroked-button
+    [color]="color"
+    [disabled]="disabled"
+    [href]="hrefLink"
+    target="_blank"
+  >
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </a>
+
+  <button
+    *ngSwitchCase="'outline'"
+    class="container outline-container size-{{ size }} color-{{ color }}"
+    [ngClass]="{
+      shouldIgnoreHover: shouldIgnoreHover,
+      noContent: noContent,
+      doNotUpdateImageSize: doNotUpdateImageSize
+    }"
+    mat-stroked-button
+    [color]="color"
+    [disabled]="disabled"
+  >
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+
+  <button
+    *ngSwitchCase="'basic'"
+    class="container basic-container size-{{ size }} color-{{ color }}"
+    [ngClass]="{
+      shouldIgnoreHover: shouldIgnoreHover,
+      noContent: noContent,
+      doNotUpdateImageSize: doNotUpdateImageSize
+    }"
+    mat-button
+    [color]="color"
+    [disabled]="disabled"
+  >
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+
+  <button
+    *ngSwitchCase="'icon'"
+    class="icon-container size-{{ size }} color-{{ color }}"
+    [ngClass]="{
+      shouldIgnoreHover: shouldIgnoreHover,
+      noContent: noContent,
+      doNotUpdateImageSize: doNotUpdateImageSize
+    }"
+    mat-icon-button
+    [color]="color"
+    [disabled]="disabled"
+  >
+    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+  </button>
+</ng-container>
+
+<img
+  *ngIf="showBall"
+  src="../../../assets/images/ball-6.svg"
+  alt="ball"
+  class="ball"
+/>

@@ -1,0 +1,11 @@
+<label *ngIf="label" [id]="'checkbox-group-' + id" class="txt-label">{{
+  label
+}}</label>
+
+<app-checkbox
+  [checked]="isCheck(item.key)"
+  (change)="change(item.key, $event)"
+  [size]="size"
+  *ngFor="let item of options"
+  >{{ item.label }}</app-checkbox
+>

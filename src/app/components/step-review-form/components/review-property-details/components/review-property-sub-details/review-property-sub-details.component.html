@@ -1,0 +1,6 @@
+<div *ngFor="let data of datas" class="block-1">
+  <app-review-field-section
+    *ngFor="let item of data"
+    [data]="item"
+  ></app-review-field-section>
+</div>

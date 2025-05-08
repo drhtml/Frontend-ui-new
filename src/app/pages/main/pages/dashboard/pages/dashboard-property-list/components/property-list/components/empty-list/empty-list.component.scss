@@ -1,0 +1,78 @@
+@import "../../../../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $White;
+  border: 1px dashed #979797;
+  align-items: center;
+  min-height: 410px;
+  padding-top: 40px;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+
+  @include media-breakpoint-tablet-down {
+    min-height: 635px;
+    padding-bottom: 113px;
+  }
+
+  @include media-breakpoint-tablet-down {
+    min-height: 378px;
+    padding-bottom: 40px;
+    padding-top: 31px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.block-1 {
+  max-width: 482px;
+  text-align: center;
+}
+
+.text-1 {
+  font-size: 36px;
+  line-height: 44px;
+
+  @include media-breakpoint-mobile-down {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+}
+
+.text-2 {
+  font-size: 16px;
+  line-height: 22px;
+  margin-top: 9px;
+
+  @include media-breakpoint-tablet-down {
+    line-height: 19px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+}
+
+.img-1 {
+  margin-top: 30px;
+
+  @include media-breakpoint-tablet-down {
+    margin-top: 36px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 32px;
+  }
+}
+
+.btn-1 {
+  margin-top: 46px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 30px;
+  }
+}

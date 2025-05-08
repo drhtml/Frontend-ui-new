@@ -1,0 +1,59 @@
+<button (click)="decrease()" *ngIf="showMinusAddBtn" class="button btn-minus">
+  <img src="../../../assets/icons/minus-Teal.svg" alt="minus" />
+</button>
+<mat-form-field
+  floatLabel="always"
+  appearance="outline"
+  [ngClass]="{ showMinusAddBtn: showMinusAddBtn, noLabel: noLabel }"
+>
+  <mat-label ng-if="!noLabel">{{ label }}</mat-label>
+  <input
+    *ngIf="!errorStateMatcher"
+    matInput
+    [placeholder]="placeholder"
+    [type]="type"
+    [class]="{ isCCVField: isCCVField }"
+    (blur)="blur.emit()"
+    (keyup.enter)="enter.emit()"
+    [formControl]="formControl"
+    [readonly]="disabled"
+  />
+  <input
+    *ngIf="errorStateMatcher"
+    matInput
+    [placeholder]="placeholder"
+    [type]="type"
+    [class]="{ isCCVField: isCCVField }"
+    (blur)="blur.emit()"
+    (keyup.enter)="enter.emit()"
+    [formControl]="formControl"
+    [readonly]="disabled"
+    [errorStateMatcher]="errorStateMatcher"
+    autocomplete="off"
+  />
+
+  <img *ngIf="prefixImage" matPrefix [src]="prefixImage" alt="prefix" />
+  <img *ngIf="subfixImage" matSuffix [src]="subfixImage" alt="suffix" />
+
+  <app-button
+    (click)="type = type === 'text' ? 'password' : 'text'"
+    *ngIf="isPasswordField && !isCCVField"
+    matSuffix
+    type="icon"
+    color="primary"
+  >
+    <img
+      width="16"
+      height="16"
+      src="../../../assets/icons/eye-Teal.svg"
+      alt="eye"
+    />
+  </app-button>
+
+  <mat-error *ngIf="errorMessage">
+    {{ errorMessage }}
+  </mat-error>
+</mat-form-field>
+<button (click)="increase()" *ngIf="showMinusAddBtn" class="button btn-add">
+  <img src="../../../assets/icons/plus-Teal.svg" alt="plus" />
+</button>

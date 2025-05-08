@@ -1,0 +1,54 @@
+<div class="d-flex align-items-center justify-content-between h1-container">
+  <h1>{{ getControl("name").value }}</h1>
+
+  <div class="d-flex hide-desktop show-tablet hide-mobile">
+    <app-button
+      iconLeft="../../../../../assets/icons/trash-Red.svg"
+      iconLeftHover="../../../../../assets/icons/trash-White.svg"
+      type="secondary"
+      size="small"
+      color="warn"
+      class="btn-remove-all-photos"
+      (click)="doDelete()"
+      >DELETE PROPERTY</app-button
+    >
+    <app-button
+      iconLeft="../../../../../assets/icons/save-White.svg"
+      iconLeftHover="../../../../../assets/icons/save-Teal.svg"
+      type="primary"
+      size="small"
+      class="btn-save"
+      (click)="doSave()"
+      >SAVE CHANGES</app-button
+    >
+  </div>
+
+  <app-button
+    class="btn-delete show-mobile hide-desktop"
+    [shouldIgnoreHover]="true"
+    iconLeft="../../../../../assets/icons/trash-Red.svg"
+    type="basic"
+    size="very-small"
+    color="primary"
+    (click)="doDelete()"
+    color="warn"
+    >DELETE</app-button
+  >
+</div>
+
+<app-delete-this-property-right
+  (review)="doReview()"
+  (deleteThis)="doDelete()"
+  (save)="doSave()"
+></app-delete-this-property-right>
+
+<app-step-edit-review-form
+  class="form-group d-flex"
+  [form]="form"
+  [isAdmin]="isAdmin"
+  [screenSize]="screenSize"
+  (review)="doReview()"
+  (save)="doSave()"
+></app-step-edit-review-form>
+
+<app-bottom-links></app-bottom-links>

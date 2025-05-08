@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="106px" viewBox="0 0 106 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>479A9976-0E9A-4BD6-A82D-45BA7EB17DF2</title>
+    <g id="REX-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012" stroke-linecap="round">
+        <g id="05.1-Dashboard---empty" transform="translate(-669.000000, -502.000000)" stroke="#131415" stroke-width="2">
+            <g id="empty" transform="translate(120.000000, 336.000000)">
+                <g id="Group-9" transform="translate(550.000000, 167.000000)">
+                    <circle id="Oval" stroke-opacity="0.5" fill="#E6E6E6" cx="52" cy="52" r="52"></circle>
+                    <g id="home" transform="translate(25.670886, 22.379747)" stroke-dasharray="0,4" stroke-linejoin="round">
+                        <path d="M0,20.7341772 L26.6582278,0 L53.3164557,20.7341772 L53.3164557,53.3164557 C53.3164557,56.5882185 50.6641679,59.2405063 47.3924051,59.2405063 L5.92405063,59.2405063 C2.65228781,59.2405063 0,56.5882185 0,53.3164557 L0,20.7341772 Z" id="Path" fill="#CCCCCC"></path>
+                        <path d="M17.7721519,55.6202532 L17.7721519,29.6202532 L35.5443038,29.6202532 L35.5443038,55.6202532" id="Path" fill="#D8D8D8"></path>
+                    </g>
+                    <line x1="87.5527344" y1="14.0893555" x2="14.3218307" y2="87.6744861" id="Line" stroke-opacity="0.5" fill="#D8D8D8"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

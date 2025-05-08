@@ -1,0 +1,24 @@
+<div class="d-flex justify-content-between align-items-center block-1">
+  <h4>Property List</h4>
+
+  <app-view-as-toggle
+    [selectedView]="selectedView"
+    (onChange)="selectedView = $event"
+    class="hide-mobile"
+  ></app-view-as-toggle>
+</div>
+
+<app-empty-list *ngIf="tableDatas.length === 0"></app-empty-list>
+<app-table-list
+  *ngIf="tableDatas.length > 0 && selectedView === 'list'"
+  [tableDatas]="tableDatas"
+  class="hide-mobile"
+  (deleteProperty)="removeData($event)"
+></app-table-list>
+<app-property-grid-list
+  *ngIf="tableDatas.length > 0"
+  [tableDatas]="tableDatas"
+  (deleteThis)="removeData($event)"
+  class="show-mobile"
+  [ngClass]="{ 'hide-desktop': selectedView === 'list' }"
+></app-property-grid-list>

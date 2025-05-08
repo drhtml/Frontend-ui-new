@@ -1,0 +1,11 @@
+<span class="text-1">Edit Property Details</span>
+<span class="text-2">Label with an asterisk (*) are mandatory for uploading.</span>
+
+<app-step-one-form
+  [screenSize]="screenSize"
+  [form]="form"
+  [isAdmin]="isAdmin"
+  class="form-group d-flex"
+  [shouldShowCheckboxTerm]="false"
+  (searchPropertyEvent)="searchProperty($event)"
+></app-step-one-form>

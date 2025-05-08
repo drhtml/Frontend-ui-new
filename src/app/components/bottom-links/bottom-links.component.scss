@@ -1,0 +1,19 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+}
+
+.text-1 {
+  a,
+  strong {
+    color: $Teal;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  @include media-breakpoint-mobile-down {
+    max-width: 255px;
+    line-height: 24px;
+  }
+}

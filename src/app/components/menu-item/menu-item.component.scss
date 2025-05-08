@@ -1,0 +1,22 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  min-width: 78px;
+
+  &.color-primary {
+    color: $Teal;
+  }
+
+  &.color-warn {
+    color: $Red;
+  }
+
+  ::ng-deep {
+    img {
+      margin-right: 9px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+app-property-list {
+  margin-bottom: 26px;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 23px;
+  }
+}
+
+app-dashboard-bottom-statistic {
+  margin-bottom: 26px;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 23px;
+  }
+}

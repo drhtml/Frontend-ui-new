@@ -1,0 +1,26 @@
+<span class="text-1">Profile Settings</span>
+
+<mat-tab-group
+  dynamicHeight
+  class="no-header-separator"
+  mat-align-tabs="end"
+  animationDuration="0"
+  [disablePagination]="true"
+>
+  <mat-tab label="Personal Info"
+    ><app-edit-personal-info
+      [responsePersonalInfo]="responsePersonalInfo"
+      [form]="form"
+    ></app-edit-personal-info
+  ></mat-tab>
+  <mat-tab label="Account Settings"
+    ><app-edit-account-settings [form]="form"></app-edit-account-settings
+  ></mat-tab>
+  <mat-tab label="Notifications Settings"
+    ><app-edit-notifications-settings
+      [form]="form"
+    ></app-edit-notifications-settings
+  ></mat-tab>
+</mat-tab-group>
+
+<app-bottom-links></app-bottom-links>

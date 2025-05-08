@@ -1,0 +1,171 @@
+<app-profile-wrapper
+  [formControl]="avatarField"
+  [isEdit]="isEdit"
+  [profileFormControl]="form"
+>
+  <div class="d-flex flex-column wrapper">
+    <div class="d-flex flex-column container" [ngClass]="{ isEdit: isEdit }">
+      <span class="title">Personal Info</span>
+
+      <div *ngIf="isEdit" class="block-field-container input-field-container">
+        <app-input-field
+          [formControl]="getFormControlField('firstName')"
+          label="First Name"
+        ></app-input-field>
+        <app-input-field
+          [formControl]="getFormControlField('lastName')"
+          label="Last Name"
+        ></app-input-field>
+        <app-input-field
+          [formControl]="getFormControlField('address')"
+          class="address-field"
+          label="Address"
+        ></app-input-field>
+        <app-input-field
+          label="Phone Number"
+          [formControl]="getFormControlField('phoneNumber')"
+        ></app-input-field>
+      </div>
+
+      <div *ngIf="!isEdit" class="d-flex block-field-container">
+        <div class="d-flex flex-column block-field first-name-field">
+          <span class="text-field-title">First Name</span>
+          <span class="text-field-value">{{
+            getFormControlField("firstName").value
+          }}</span>
+        </div>
+        <div class="d-flex flex-column block-field">
+          <span class="text-field-title">Last Name</span>
+          <span class="text-field-value">{{
+            getFormControlField("lastName").value
+          }}</span>
+        </div>
+      </div>
+
+      <div
+        *ngIf="!isEdit"
+        class="d-flex flex-column block-field block-field-container"
+      >
+        <span class="text-field-title">Address</span>
+        <span class="text-field-value">{{
+          getFormControlField("address").value
+        }}</span>
+      </div>
+      <div
+        *ngIf="!isEdit"
+        class="d-flex flex-column block-field block-field-container"
+      >
+        <span class="text-field-title">Phone Number</span>
+        <span class="text-field-value">{{
+          getFormControlField("phoneNumber").value
+        }}</span>
+      </div>
+
+      <app-radios
+        [disabled]="!isEdit"
+        [formControl]="getFormControlField('customerType')"
+        label="Customer Type"
+        class="block-field-container"
+        [options]="[
+          { label: 'I’m a Canary', key: 'CANARY' },
+          { label: 'Real Estate Agent', key: 'REAL_ESTATE_AGENT' }
+        ]"
+      ></app-radios>
+
+      <span class="title">Account Settings</span>
+
+      <div
+        *ngIf="!isEdit"
+        class="d-flex flex-column block-field block-field-container"
+      >
+        <span class="text-field-title">Email</span>
+        <span class="text-field-value">{{
+          getFormControlField("email").value
+        }}</span>
+      </div>
+
+      <div *ngIf="isEdit" class="block-field-container input-field-container">
+        <app-input-field
+          label="Email"
+          [formControl]="getFormControlField('email')"
+        ></app-input-field>
+        <div class="hide-mobile"></div>
+        <app-input-field
+          [formControl]="getFormControlField('password')"
+          [isPasswordField]="true"
+          label="Password"
+          [formErrorMessage]="formErrorMessage"
+          [errorStateMatcher]="matcher"
+        ></app-input-field>
+        <app-input-field
+          [formControl]="getFormControlField('confirmPassword')"
+          [isPasswordField]="true"
+          label="Confirm Password"
+          [formErrorMessage]="formErrorMessage"
+          [errorStateMatcher]="matcher"
+        ></app-input-field>
+      </div>
+
+      <span class="title">Notifications Settings</span>
+
+      <app-radios
+        [disabled]="!isEdit"
+        [formControl]="getFormControlField('receiveNotificationBy')"
+        label="Receive notifications by"
+        class="block-field-container"
+        [options]="[
+          { label: 'Email', key: 'EMAIL' },
+          { label: 'SMS', key: 'SMS' },
+          { label: 'Both (Email & SMS)', key: 'BOTH' }
+        ]"
+      ></app-radios>
+
+      <app-radios
+        [disabled]="!isEdit"
+        [formControl]="getFormControlField('notificationFrequency')"
+        label="Notification frequency"
+        class="block-field-container"
+        [options]="[
+          { label: 'Once a day', key: 'ONCE_A_DAY' },
+          { label: '2 times per day', key: 'TWICE_A_DAY' },
+          { label: 'In realtime', key: 'IN_REAL_TIME' }
+        ]"
+      ></app-radios>
+    </div>
+    <div class="divider-container hide-desktop show-mobile">
+      <app-divider></app-divider>
+    </div>
+    <div *ngIf="isEdit" class="d-flex justify-content-between block-bottom">
+      <app-button
+        iconLeft="../../../../../../../assets/icons/trash-Red.svg"
+        iconLeftHover="../../../../../../../assets/icons/trash-White.svg"
+        type="secondary"
+        size="small"
+        color="warn"
+        class="btn-delete"
+        (click)="doDeleteUser()"
+        >DELETE USER</app-button
+      >
+
+      <div class="d-flex block-right">
+        <app-button
+          type="secondary"
+          size="small"
+          (click)="setIsEdit.emit(false)"
+          >CANCEL</app-button
+        >
+
+        <app-button
+          iconLeft="../../../../../../../assets/icons/save-White.svg"
+          iconLeftHover="../../../../../../../assets/icons/save-Teal.svg"
+          type="primary"
+          size="small"
+          class="btn-save"
+          (click)="doSaveUser.emit()"
+          [disabled]="form.invalid"
+          >SAVE CHANGES</app-button
+        >
+      </div>
+    </div>
+  </div>
+</app-profile-wrapper>

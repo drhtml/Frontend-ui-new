@@ -1,0 +1,25 @@
+@import "../../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include selfBreakPointHideShow;
+
+  ::ng-deep {
+    table {
+      tbody {
+        tr {
+          td[columnname="name"] {
+            span {
+              color: var(--Teal);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}

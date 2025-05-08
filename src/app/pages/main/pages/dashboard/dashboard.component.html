@@ -1,0 +1,36 @@
+<div class="bg"></div>
+<div class="d-flex justify-content-between align-items-start">
+  <div class="d-flex flex-column">
+    <h1>Welcome, {{ firstName }}!</h1>
+    <span class="body-3">This is your Dashboard</span>
+  </div>
+
+  <app-button
+    iconLeft="../../../assets/icons/plus-white.svg"
+    iconLeftHover="../../../assets/icons/plus-white-Teal.svg"
+    class="btn-1 hide-mobile icon-evaluate"
+    routerLink="/main/property/new"
+    >EVALUATE NEW PROPERTY</app-button
+  >
+
+  <app-button
+    class="btn-1 show-mobile hide-desktop"
+    [shouldIgnoreHover]="true"
+    iconLeft="../../../assets/icons/plus-property-small-Teal.svg"
+    type="basic"
+    size="very-small"
+    color="primary"
+    routerLink="/main/property/new"
+    >NEW</app-button
+  >
+</div>
+
+<app-kpi [kpis]="kpis" [dataLength]="propertyList.length"></app-kpi>
+
+<app-dashboard-property-list
+  (removeItem)="removeData($event)"
+  [propertyList]="propertyList"
+  [dashboardRealEstateAgent]="dashboardRealEstateAgent"
+></app-dashboard-property-list>
+
+<app-bottom-links></app-bottom-links>

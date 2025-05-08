@@ -1,0 +1,64 @@
+@import "../../../../../../../../../styles/includes";
+
+:host {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 14px;
+  row-gap: 14px;
+
+  @include media-breakpoint-tablet-landscape-down {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.text-1 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $Teal;
+}
+
+.block-item {
+  background-color: $White;
+  box-sizing: border-box;
+  padding: 26px 16px 24px 24px;
+
+  .block-header {
+    @include media-breakpoint-mobile-down {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+.block-2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 16px;
+  row-gap: 16px;
+  margin-top: 21px;
+
+  .text-3 {
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    color: $TealDark;
+  }
+
+  .text-2 {
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 7px;
+  }
+
+  .block-last-login {
+    grid-column: 2 / span 2;
+  }
+}
+
+.block-3 {
+  height: 37px;
+  background-color: $LightestGrey;
+  margin-top: 40px;
+}

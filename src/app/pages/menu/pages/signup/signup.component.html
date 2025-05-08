@@ -1,0 +1,46 @@
+<h3>SIGN UP</h3>
+
+<app-input-field
+  [formControl]="getControl('firstName')"
+  class="first-name-field"
+  label="First Name"
+></app-input-field>
+<app-input-field
+  [formControl]="getControl('lastName')"
+  class="last-name-field"
+  label="Last Name"
+></app-input-field>
+<app-input-field
+  [formControl]="getControl('email')"
+  class="email-field"
+  label="Email"
+></app-input-field>
+<app-input-field
+  [formControl]="getControl('password')"
+  [isPasswordField]="true"
+  class="password-field"
+  label="Password"
+></app-input-field>
+<app-radios
+  [options]="customerTypeOptions"
+  [formControl]="getControl('type')"
+></app-radios>
+<app-input-field
+  *ngIf="getControl('type').value === customerTypeOptions[1].key"
+  class="real-estate-agent-field"
+  label="Real Estate Agent License Number"
+  [formControl]="getControl('realEstateAgentLicense')"
+></app-input-field>
+
+<app-button
+  (click)="submitForm()"
+  iconLeft="../../../assets/icons/right-arrow.svg"
+  iconLeftHover="../../../assets/icons/right-arrow-teal.svg"
+  class="btn-1"
+  >SIGN UP</app-button
+>
+
+<span class="body-3"
+  >Already have My Canary account?
+  <a routerLink="/menu/login" class="link">Login here.</a></span
+>

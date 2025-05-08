@@ -1,0 +1,109 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 32px 50px 0 40px;
+  position: relative;
+
+  @include media-breakpoint-tablet-down {
+    padding: 42px 26px 0 24px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding: 16px 10px 0 10px;
+  }
+}
+
+app-bottom-links {
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.text-1 {
+  position: absolute;
+  top: 36px;
+  left: 40px;
+  font-size: 36px;
+  line-height: 37px;
+  font-weight: 500;
+
+  @include media-breakpoint-tablet-down {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  @include media-breakpoint-mobile-down {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: bold;
+    margin-left: 6px;
+  }
+}
+
+.tab-count {
+  padding: 3px 4px;
+  background-color: $Teal;
+  color: $White;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 18px;
+  min-width: 24px;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-edit {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+
+  @include media-breakpoint-tablet-down {
+    right: 16px;
+  }
+  @include media-breakpoint-mobile-down {
+    position: fixed;
+    margin-top: 0;
+    top: 34px;
+    right: 4px;
+    z-index: 2;
+  }
+}
+
+mat-tab-group {
+  margin-bottom: 42px;
+
+  @include media-breakpoint-tablet-down {
+    margin-top: 19px;
+  }
+
+  ::ng-deep {
+    mat-tab-header {
+      margin-right: 184px;
+
+      @include media-breakpoint-tablet-down {
+        margin-right: 0;
+      }
+
+      .mat-tab-label-container {
+        .mat-tab-list {
+          .mat-tab-labels {
+            @include media-breakpoint-tablet-down {
+              justify-content: center;
+            }
+
+            .mat-tab-label-content {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+}

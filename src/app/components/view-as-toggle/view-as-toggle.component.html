@@ -1,0 +1,45 @@
+<span class="body-4 text-1">View as</span>
+
+<button
+  *ngFor="let item of toggleList"
+  (click)="onChange.emit(item)"
+  class="button btn-toggle"
+  [ngClass]="{ active: selectedView == item }"
+>
+  <img
+    src="../../../../../../../assets/icons/list-small-Teal.svg"
+    alt="list icon"
+    class="main"
+    *ngIf="item === 'list'"
+  />
+  <img
+    src="../../../../../../../assets/icons/list-small-White.svg"
+    alt="list icon"
+    class="selected"
+    *ngIf="item === 'list'"
+  />
+  <img
+    src="../../../../../../../assets/icons/grid-small-Teal.svg"
+    alt="grid icon"
+    class="main"
+    *ngIf="item === 'grid'"
+  />
+  <img
+    src="../../../../../../../assets/icons/grid-small-White.svg"
+    alt="grid icon"
+    class="selected"
+    *ngIf="item === 'grid'"
+  />
+  <img
+    src="../../../../../../../assets/icons/chart-small-Teal.svg"
+    alt="chart icon"
+    class="main"
+    *ngIf="item === 'chart'"
+  />
+  <img
+    src="../../../../../../../assets/icons/chart-small-White.svg"
+    alt="chart icon"
+    class="selected"
+    *ngIf="item === 'chart'"
+  />
+</button>

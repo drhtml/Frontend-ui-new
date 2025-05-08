@@ -1,0 +1,144 @@
+@import "../../../../../styles/includes";
+
+:host {
+  position: relative;
+}
+
+.container {
+  min-height: 1060px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $White;
+
+  @include media-breakpoint-tablet-down {
+    min-height: 869px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    min-height: 1153px;
+  }
+
+  &::ng-deep {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      position: relative;
+
+      li {
+        padding-left: 86px;
+        list-style-type: none;
+        position: relative;
+        margin-bottom: 20px;
+        counter-increment: section;
+
+        .animate-point {
+          position: absolute;
+          top: 9px;
+          left: 9px;
+        }
+
+        .number {
+          position: absolute;
+          width: 55px;
+          height: 64px;
+          top: 0;
+          left: 0;
+          background-image: url(../../../../../assets/images/ball-list-item.svg);
+          background-size: 55px 64px;
+          background-repeat: no-repeat;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          color: $TealDark;
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 55px;
+        }
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+
+      @include media-breakpoint-tablet-down {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  z-index: -2;
+  pointer-events: none;
+
+  @include media-breakpoint-tablet-down {
+    left: -5.27%;
+    width: 115%;
+  }
+  @include media-breakpoint-mobile-down {
+    left: -93%;
+    width: 213%;
+  }
+}
+
+.block-1 {
+  position: absolute;
+  box-sizing: border-box;
+  top: 9%;
+  height: 73%;
+  padding-left: 10.82%;
+  padding-right: 3.41%;
+  width: 50.7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media-breakpoint-tablet-down {
+    width: 52.8%;
+    padding-left: 8.82%;
+    padding-right: 2.41%;
+  }
+
+  @include media-breakpoint-mobile-down {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 32px;
+    top: 3%;
+    height: 56%;
+  }
+}
+
+.img-1 {
+  position: absolute;
+  z-index: -2;
+  left: 50.75%;
+  top: 25.9%;
+  width: 33.6%;
+  height: 70.2%;
+  clip-path: polygon(0 0, 100% 11.4%, 100% 100%, 0 88%);
+
+  @include media-breakpoint-tablet-down {
+    left: 53%;
+    top: 16.03%;
+    width: 38.6%;
+    height: 59.7%;
+  }
+
+  @include media-breakpoint-mobile-down {
+    left: 15%;
+    top: 60.5%;
+    width: 71.3%;
+    height: 37.1%;
+  }
+}

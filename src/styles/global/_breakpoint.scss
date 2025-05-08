@@ -1,0 +1,31 @@
+.hide-desktop {
+  display: none;
+}
+
+@include media-breakpoint-tablet-down {
+  .hide-tablet.d-block,
+  .hide-tablet {
+    display: none;
+  }
+  .show-tablet {
+    display: flex;
+
+    &.d-block {
+      display: block;
+    }
+  }
+}
+
+@include media-breakpoint-mobile-down {
+  .hide-mobile.d-block,
+  .hide-mobile {
+    display: none;
+  }
+  .show-mobile {
+    display: flex;
+
+    &.d-block {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<app-profile-wrapper [formControl]="avatarField" [isEdit]="isEdit" [profileFormControl]="profileFormControl">
+  <div class="d-flex flex-column container">
+    <div class="d-flex justify-content-between align-items-center full-width block-header">
+      <app-input-field
+        class="search-field"
+        placeholder="Search by user or property name"
+        prefixImage="../../../../../../../assets/icons/search-Black.svg"
+        [noLabel]="true"
+      ></app-input-field>
+
+      <div class="d-flex align-items-center">
+        <app-select-field
+          [options]="sortBy"
+          [formControl]="sortByFormControl"
+          [noLabel]="true"
+          leftLabel="Sort by"
+          class="sort-by-field"
+        ></app-select-field>
+
+        <app-view-as-toggle
+          [selectedView]="viewAs"
+          (onChange)="viewAs = $event"
+          class="hide-mobile"
+        ></app-view-as-toggle>
+      </div>
+    </div>
+
+    <app-properties-grid-view
+      [tableDatas]="tableDatas"
+      [ngClass]="{ hide: viewAs !== 'grid' }"
+    ></app-properties-grid-view>
+    <app-properties-table-view
+      [tableDatas]="tableDatas"
+      [sortable]="sortable"
+      *ngIf="viewAs === 'list'"
+      class="hide-mobile"
+    ></app-properties-table-view>
+  </div>
+</app-profile-wrapper>

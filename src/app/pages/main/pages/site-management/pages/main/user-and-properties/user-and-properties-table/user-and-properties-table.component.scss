@@ -1,0 +1,109 @@
+@import "../../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+
+  @include selfBreakPointHideShow;
+
+  ::ng-deep {
+    table {
+      tbody {
+        tr {
+          td[columnname="name"].isExpandChild {
+            span {
+              color: $Teal;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-field {
+  min-width: 300px;
+
+  @include media-breakpoint-tablet-down {
+    min-width: 0;
+  }
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 24px;
+  }
+}
+
+.sort-by-field {
+  width: 287px;
+
+  ::ng-deep {
+    mat-form-field {
+      flex: 1;
+      width: 0;
+    }
+  }
+
+  @include media-breakpoint-tablet-down {
+    min-width: 0;
+  }
+}
+
+.status {
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 16px;
+  position: relative;
+  margin-left: 24px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    left: 0;
+    top: 3px;
+    background-color: currentColor;
+  }
+
+  &.red-status {
+    color: $Red;
+  }
+
+  &.blue-status {
+    color: $Blue;
+  }
+
+  &.green-status {
+    color: $Green;
+  }
+}
+
+.block-1 {
+  height: 46px;
+  justify-content: space-around;
+
+  .text-1 {
+    font-size: 12px;
+    line-height: 19px;
+    color: $TealDark;
+    margin-right: 7px;
+    font-weight: bold;
+  }
+
+  .text-2 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

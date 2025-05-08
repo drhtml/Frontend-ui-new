@@ -1,0 +1,77 @@
+<div class="bg-container" [ngClass]="{ haveData: dataLength > 0 }">
+  <img
+    *ngIf="dataLength === 0"
+    src="../../../../../assets/images/kpi-empty-bg.png"
+    alt="background"
+    class="bg hide-tablet"
+  />
+  <img
+    *ngIf="dataLength > 0"
+    src="../../../../../assets/images/kpi-bg.png"
+    alt="background"
+    class="bg hide-tablet"
+  />
+  <img
+    *ngIf="dataLength === 0"
+    src="../../../../../assets/images/kpi-empty-bg-tablet.png"
+    alt="background"
+    class="bg hide-desktop show-tablet hide-mobile"
+  />
+  <img
+    *ngIf="dataLength > 0"
+    src="../../../../../assets/images/kpi-bg-tablet.png"
+    alt="background"
+    class="bg hide-desktop show-tablet hide-mobile"
+  />
+  <img
+    *ngIf="dataLength === 0"
+    src="../../../../../assets/images/kpi-empty-bg-mobile.png"
+    alt="background"
+    class="bg hide-desktop show-mobile"
+  />
+  <img
+    *ngIf="dataLength > 0 && isExpand"
+    src="../../../../../assets/images/kpi-bg-mobile-expand.png"
+    alt="background"
+    class="bg hide-desktop show-mobile"
+  />
+  <img
+    *ngIf="dataLength > 0 && !isExpand"
+    src="../../../../../assets/images/kpi-bg-mobile-collapse.png"
+    alt="background"
+    class="bg hide-desktop show-mobile"
+  />
+</div>
+
+<span *ngIf="dataLength === 0" class="text-1"
+  >Reserved for your activity KPIs</span
+>
+<mat-grid-list
+  *ngIf="dataLength > 0"
+  class="block-1"
+  [cols]="columns"
+  [rowHeight]="cellHeight"
+>
+  <mat-grid-tile *ngFor="let item of kpisDisplay">
+    <div class="d-flex flex-column align-items-center">
+      <span class="text-2">{{ item.value }}</span>
+      <span class="text-3">{{ item.key }}</span>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<app-button
+  *ngIf="dataLength > 0"
+  class="btn-1 hide-desktop show-mobile"
+  [shouldIgnoreHover]="true"
+  type="icon"
+  color="primary"
+  (click)="isExpand = !isExpand"
+>
+  <img
+    src="../../../../../../../assets/icons/expand-bottom.svg"
+    alt="expand"
+    class="img-1"
+    [ngClass]="{isExpand: isExpand}"
+  />
+</app-button>

@@ -1,0 +1,41 @@
+<app-radios
+  *ngIf="showRadioOnMobile"
+  class="hide-desktop show-mobile"
+  [options]="[option]"
+  [formControl]="formControl"
+></app-radios>
+
+<div class="bg" [ngClass]="{ isPremiumPlan: isPremiumPlan }"></div>
+
+<div
+  class="d-flex flex-column block-1"
+  [ngClass]="{ isPremiumPlan: isPremiumPlan }"
+>
+  <span class="text-1">{{ plan }}</span>
+  <div class="text-2">{{ costPerYear }}</div>
+</div>
+
+<div class="d-flex flex-column block-2">
+  <div
+    class="d-flex align-items-center block-3"
+    *ngFor="let item of optionList"
+  >
+    <img
+      src="../../../../../../../../../assets/icons/check-Teal.svg"
+      alt="check"
+      class="img-1"
+    />
+    <span class="text-3" [ngClass]="{ 'font-semibold': item.isActive }">{{
+      item.label
+    }}</span>
+  </div>
+</div>
+
+<app-button
+  *ngIf="!isReview"
+  [type]="isPremiumPlan ? 'secondary' : 'primary'"
+  class="btn-choose"
+  (click)="nextStep()"
+  [shouldIgnoreHover]="isPremiumPlan"
+  >CHOOSE THIS PLAN</app-button
+>

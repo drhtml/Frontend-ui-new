@@ -1,0 +1,5 @@
+<app-review-field-section
+  *ngFor="let data of datas"
+  [data]="data"
+  [ngClass]="{ 'column-1': data.length === 1 }"
+></app-review-field-section>

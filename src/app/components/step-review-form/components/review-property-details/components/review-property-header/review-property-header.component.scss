@@ -1,0 +1,121 @@
+@import "../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+  box-sizing: border-box;
+}
+
+.block-1 {
+  background-color: var(--LightestGrey);
+  box-sizing: border-box;
+  padding: 13px 26px 23px 30px;
+  margin-bottom: 22px;
+}
+
+.text-1 {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: bold;
+}
+
+.text-2 {
+  margin-top: 5px;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: bold;
+
+  @include media-breakpoint-tablet-down {
+    line-height: 20px;
+  }
+}
+
+.text-3 {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 30px;
+
+  @include media-breakpoint-tablet-down {
+    line-height: 20px;
+  }
+}
+
+.img-1 {
+  width: 100%;
+  height: 440px;
+  object-fit: contain;
+
+  @include media-breakpoint-mobile-down {
+    height: 190px;
+  }
+}
+
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 440px;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+
+  @include media-breakpoint-mobile-down {
+    height: 190px;
+  }
+}
+
+.img-2 {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 128px;
+  overflow: visible;
+  margin-top: 10px;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 0;
+  }
+
+  &::ng-deep {
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-color: transparent;
+      width: 180px;
+      height: 100px;
+
+      @include media-breakpoint-mobile-down {
+        height: 66px;
+        width: 109px;
+      }
+
+      &.swiper-slide-active {
+        opacity: 1;
+      }
+    }
+  }
+}

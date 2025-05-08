@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.block-3 {
+  height: 37px;
+  background-color: var(--LightestGrey);
+  width: 100%;
+}

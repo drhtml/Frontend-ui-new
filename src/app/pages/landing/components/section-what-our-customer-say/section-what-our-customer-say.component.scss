@@ -1,0 +1,205 @@
+@import "../../../../../styles/includes";
+
+:host {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  padding-top: 92px;
+  padding-bottom: 230px;
+
+  @include media-breakpoint-tablet-down {
+    padding-bottom: 163px;
+  }
+  @include media-breakpoint-mobile-down {
+    padding-top: 66px;
+    padding-bottom: 368px;
+  }
+}
+
+.bg {
+  background-image: linear-gradient(245.01999999999998deg, #FDEADC 0%, #F9D0B6 100%);
+  opacity: 0.9000000357627869;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(0 250px, 100% 0, 100% calc(100% - 498px), 0 100%);
+  z-index: -1;
+  opacity: 0.9;
+  pointer-events: none;
+
+  @include media-breakpoint-tablet-down {
+    clip-path: polygon(0 250px, 100% 0, 100% calc(100% - 339px), 0 100%);
+  }
+
+  @include media-breakpoint-mobile-down {
+    top: 401px;
+    clip-path: polygon(0 84px, 100% 0, 100% calc(100% - 78px), 0 100%);
+  }
+
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 128px;
+  overflow: visible;
+
+  @include media-breakpoint-mobile-down {
+    margin-bottom: 0;
+  }
+
+  &::ng-deep {
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      height: 548px;
+      background-color: transparent;
+      width: 548px;
+      opacity: 0.7;
+
+      &::ng-deep {
+        .bg.active {
+          display: none;
+        }
+      }
+
+      &.swiper-slide-active {
+        opacity: 1;
+
+        &::ng-deep {
+          .bg.active {
+            display: flex;
+
+            &.hide-desktop {
+              display: none;
+            }
+
+            @include media-breakpoint-mobile-down {
+              &.hide-mobile {
+                display: none;
+              }
+              &.show-mobile {
+                display: flex;
+              }
+            }
+          }
+          .bg.inactive {
+            display: none;
+          }
+        }
+      }
+
+      @include media-breakpoint-mobile-down {
+        width: 100%;
+        height: 587px;
+      }
+    }
+
+    .swiper-pagination {
+      height: 54px;
+      bottom: -54px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color: $White;
+        opacity: 1;
+
+        &.swiper-pagination-bullet-active {
+          background-color: $Teal;
+        }
+      }
+    }
+  }
+}
+
+
+.img-1 {
+  position: absolute;
+  right: -38px;
+  top: -278px;
+  z-index: -1;
+
+  @include media-breakpoint-tablet-down {
+    right: auto;
+    top: -210px;
+    left: 31px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    width: 900px;
+    height: 400px;
+    top: -174px;
+    left: -5px;
+  }
+}
+
+.point-29 {
+  position: absolute;
+  right: 1213px;
+  top: -300px;
+
+  @include media-breakpoint-tablet-down {
+    right: auto;
+    left: 39px;
+    top: -240px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    left: 28px;
+    top: -208px;
+  }
+}
+
+.point-30 {
+  position: absolute;
+  right: 1130px;
+  top: -218px;
+
+  @include media-breakpoint-tablet-down {
+    right: auto;
+    left: 94px;
+    top: -176px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    left: 106px;
+    top: -127px;
+  }
+}
+
+.point-31 {
+  position: absolute;
+  right: 1047px;
+  top: -152px;
+
+  @include media-breakpoint-tablet-down {
+    display: none;
+  }
+}

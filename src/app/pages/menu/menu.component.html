@@ -1,0 +1,50 @@
+<div class="bg"></div>
+
+<div class="img-1-container">
+  <img
+    src="../../../assets/images/login-house.svg"
+    alt="login house"
+    class="img-1 hide-mobile"
+  />
+  <img
+    src="../../../assets/images/login-house-mobile.svg"
+    alt="login house"
+    class="img-1 show-mobile hide-desktop"
+  />
+</div>
+
+<div class="block-1 d-flex flex-column justify-content-between">
+  <img
+    class="img-2 hide-tablet"
+    src="../../../assets/images/logo-header-big.svg"
+    alt="logo"
+  />
+  <img
+    class="img-2 hide-desktop show-tablet hide-mobile"
+    src="../../../assets/images/logo-header-tablet.svg"
+    alt="logo"
+  />
+  <img
+    class="img-2 hide-desktop show-mobile"
+    src="../../../assets/images/logo-header-mobile.svg"
+    alt="logo"
+  />
+
+  <app-bottom-links></app-bottom-links>
+</div>
+
+<div class="block-2">
+  <router-outlet></router-outlet>
+</div>
+
+<app-button-box
+  routerLink="/landing-menu/menu"
+  [isClose]="true"
+  class="hide-mobile"
+></app-button-box>
+<app-button-box
+  routerLink="/landing-menu/menu"
+  [isClose]="true"
+  [forceShowHover]="true"
+  class="show-mobile hide-desktop"
+></app-button-box>

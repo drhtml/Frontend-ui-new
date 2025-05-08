@@ -1,0 +1,94 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 130px;
+  position: relative;
+
+  @include media-breakpoint-tablet-down {
+    height: 240px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    height: 130px;
+
+    &.isExpand {
+      height: 312px;
+    }
+  }
+}
+
+.bg-container,
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $LightGrey;
+  z-index: -1;
+}
+
+.bg-container {
+  .bg {
+    object-fit: fill;
+    mix-blend-mode: luminosity;
+    overflow: hidden;
+  }
+
+  &.haveData {
+    .bg {
+      mix-blend-mode: normal;
+    }
+  }
+}
+
+.text-1 {
+  font-size: 24px;
+  line-height: 29px;
+  color: $White;
+
+  @include media-breakpoint-tablet-down {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.block-1 {
+  position: absolute;
+  top: 13px;
+  left: 22px;
+  width: calc(100% - 44px);
+  color: $White;
+}
+
+.text-2 {
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.text-3 {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.btn-1 {
+  margin-bottom: -7px;
+  margin-top: auto;
+}
+
+.img-1 {
+  &.isExpand {
+    transform: scale(1, -1);
+  }
+}

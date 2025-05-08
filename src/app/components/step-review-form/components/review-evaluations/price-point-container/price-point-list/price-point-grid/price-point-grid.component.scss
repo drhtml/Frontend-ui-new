@@ -1,0 +1,46 @@
+@import "../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @include selfBreakPointHideShow;
+}
+
+.container {
+  padding: 24px 10px 20px;
+  border-bottom: 1px solid #dbdbdb;
+
+  .text-1 {
+    color: $Teal;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  .block-1 {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 16px;
+
+    .text-2 {
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: bold;
+      color: $TealDark;
+      text-transform: uppercase;
+    }
+
+    .text-3 {
+      margin-top: 7px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+
+    app-cell-evaluation-status {
+      margin-top: 7px;
+    }
+  }
+}

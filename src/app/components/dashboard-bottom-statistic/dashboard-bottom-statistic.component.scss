@@ -1,0 +1,18 @@
+@import "../../../styles/includes";
+
+:host {
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 26px;
+
+  @include media-breakpoint-tablet-down {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include media-breakpoint-mobile-down {
+    grid-template-columns: auto;
+    margin-bottom: 23px;
+  }
+}

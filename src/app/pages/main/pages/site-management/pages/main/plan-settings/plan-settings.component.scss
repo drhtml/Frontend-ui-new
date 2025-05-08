@@ -1,0 +1,164 @@
+@import "../../../../../../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 50px;
+  max-width: 800px;
+
+  @include media-breakpoint-mobile-down {
+    padding-top: 29px;
+  }
+
+  &.isEdit {
+    max-width: none;
+
+    .block-content {
+      justify-content: flex-start;
+      padding: 16px 20px;
+
+      @include media-breakpoint-tablet-down {
+        padding: 16px 20px;
+      }
+
+      @include media-breakpoint-mobile-down {
+        padding: 0;
+      }
+
+      .block-1 {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+
+        @include media-breakpoint-mobile-down {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+app-plan-card {
+  width: 288px;
+  max-width: 100%;
+}
+
+.block-content {
+  background-color: $LightestGrey;
+  padding: 24px 40px;
+  box-sizing: border-box;
+  margin-top: 17px;
+  justify-content: center;
+
+  @include media-breakpoint-tablet-down {
+    padding: 24px 40px 40px;
+  }
+
+  @include media-breakpoint-mobile-down {
+    padding: 0;
+    background-color: $White;
+  }
+}
+
+.block-1 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 26px;
+
+  @include media-breakpoint-mobile-down {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.text-1 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+
+  @include media-breakpoint-mobile-down {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.text-2 {
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 24px;
+
+  @include media-breakpoint-mobile-down {
+    margin-top: 10px;
+  }
+}
+
+.block-header {
+  margin-top: 30px;
+
+  .text-3 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+}
+
+.btn-save {
+  margin-left: 24px;
+}
+
+.block-bottom {
+  margin-top: 24px;
+}
+
+.block-add {
+  border: 1px dashed #d1d1d1;
+  width: 368px;
+  clip-path: polygon(
+    15px 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    0 100%,
+    0 15px
+  );
+  position: relative;
+  min-height: 217px;
+
+  @include media-breakpoint-mobile-down {
+    min-height: 202px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    top: -64px;
+    left: 27px;
+    border-left: 1px dashed #d1d1d1;
+    width: 1px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -64px;
+    right: 27px;
+    border-right: 1px dashed #d1d1d1;
+    width: 1px;
+    transform: rotate(45deg);
+  }
+}
+
+.btn-save,
+.btn-edit {
+  @include media-breakpoint-mobile-down {
+    position: fixed;
+    margin-top: 0;
+    top: 34px;
+    right: 4px;
+    z-index: 2;
+  }
+}

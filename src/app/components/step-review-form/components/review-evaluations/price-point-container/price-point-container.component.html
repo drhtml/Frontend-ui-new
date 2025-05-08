@@ -1,0 +1,41 @@
+<div class="d-flex align-items-center justify-content-between block-1">
+  <app-view-as-toggle
+    [toggleList]="['list', 'chart']"
+    [selectedView]="viewAs"
+    (onChange)="viewAs = $event"
+  ></app-view-as-toggle>
+
+  <div class="d-flex">
+    <app-select-field
+      [options]="sortBy"
+      [formControl]="sortByFormControl"
+      [noLabel]="true"
+      leftLabel="Sort by"
+      class="sort-by-field"
+      size="small"
+    ></app-select-field>
+
+    <app-button
+      iconRight="../../../../../../../assets/icons/chevrons-down.svg"
+      iconRightHover="../../../../../../../assets/icons/chevrons-down.svg"
+      type="outline"
+      size="small"
+      class="btn-expand-all hide-mobile"
+      [doNotUpdateImageSize]="true"
+      color=""
+      *ngIf="viewAs === 'list'"
+      (click)="doExpandAll()"
+      >Expand All</app-button
+    >
+  </div>
+</div>
+
+<app-price-point-list
+  #listPricePoint
+  [datas]="datas"
+  *ngIf="viewAs === 'list'"
+></app-price-point-list>
+<app-price-point-chart
+  [datas]="datas"
+  *ngIf="viewAs === 'chart'"
+></app-price-point-chart>

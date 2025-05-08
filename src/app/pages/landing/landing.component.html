@@ -1,0 +1,211 @@
+<div class="container d-flex flex-column relative">
+  <div class="bg"></div>
+
+  <div class="d-flex justify-content-between block-1-container relative">
+    <div class="block-1 relative d-flex flex-column">
+      <img
+        class="img-2 hide-tablet"
+        src="../../../assets/images/logo-header-big.svg"
+        alt="logo"
+      />
+      <img
+        class="img-2 hide-desktop show-tablet hide-mobile"
+        src="../../../assets/images/logo-header-tablet.svg"
+        alt="logo"
+      />
+      <img
+        class="img-2 hide-desktop show-mobile"
+        src="../../../assets/images/logo-header-mobile.svg"
+        alt="logo"
+      />
+      <div class="body-1 font-medium text-1">
+        {{ description }}
+      </div>
+      <app-button
+        routerLink="/menu/signup"
+        class="btn-1"
+        [shouldIgnoreHover]="true"
+        >GET STARTED</app-button
+      >
+    </div>
+    <div class="block-2">
+      <div class="animate-point point-1" order="1" duration="1.8"></div>
+      <div
+        class="animate-point point-2"
+        order="2"
+        duration="0.5"
+        type="bounce"
+      ></div>
+      <div
+        class="animate-point point-3"
+        order="3"
+        duration="0.5"
+        type="bounce"
+      ></div>
+      <div
+        class="animate-point point-4"
+        order="4"
+        duration="0.5"
+        type="bounce"
+        bounceY="-30"
+      ></div>
+      <div
+        class="animate-point point-5"
+        order="5"
+        type="bounce"
+        duration="0.5"
+        bounceY="-20"
+      ></div>
+      <div
+        class="animate-point point-6"
+        order="6"
+        type="bounce"
+        duration="0.7"
+      ></div>
+      <div
+        class="animate-point point-11"
+        order="11"
+        type="hide"
+        duration="0.3"
+      ></div>
+      <div class="animate-point point-12" order="12" duration="0.3"></div>
+      <img
+        class="img-1 hide-tablet"
+        src="../../../assets/images/landing-house.png"
+        alt="landing house"
+      />
+      <img
+        class="img-1 hide-desktop show-tablet hide-mobile"
+        src="../../../assets/images/landing-house-tablet.svg"
+        alt="landing house"
+      />
+      <img
+        class="img-1 hide-desktop show-mobile"
+        src="../../../assets/images/landing-house-mobile.svg"
+        alt="landing house"
+      />
+      <img
+        class="img-3 hide-tablet"
+        src="../../../assets/images/landing-house-stair-1.svg"
+        alt="landing house stair"
+      />
+      <img
+        class="img-3 hide-desktop show-tablet hide-mobile"
+        src="../../../assets/images/landing-house-stair-1-tablet.svg"
+        alt="landing house stair"
+      />
+      <img
+        class="img-3 hide-desktop show-mobile"
+        src="../../../assets/images/landing-house-stair-1-mobile.svg"
+        alt="landing house stair"
+      />
+      <img
+        class="img-4 hide-tablet"
+        src="../../../assets/images/landing-house-floor.svg"
+        alt="landing house stair"
+      />
+      <img
+        class="img-4 hide-desktop show-tablet hide-mobile"
+        src="../../../assets/images/landing-house-floor-tablet.svg"
+        alt="landing house stair"
+      />
+    </div>
+  </div>
+
+  <app-section-header
+    id="how-it-works"
+    class="align-self-center section-header-1"
+    >HOW IT WORKS
+    <div
+      class="animate-point point-7"
+      order="7"
+      type="bounce"
+      duration="0.5"
+      bounceY="-20"
+      hide-element="#section-header-ball-how-it-works"
+    ></div>
+    <div
+      class="animate-point point-8"
+      order="8"
+      type="bounce"
+      duration="0.5"
+      bounceY="-20"
+    ></div>
+    <div
+      class="animate-point point-9"
+      order="9"
+      type="bounce"
+      duration="0.5"
+      bounceY="-20"
+    ></div>
+    <div class="animate-point point-10" order="10"></div
+  ></app-section-header>
+
+  <app-section-how-it-works
+    [howItWorks]="howItWorks"
+  ></app-section-how-it-works>
+
+  <app-section-header
+    id="why-use-my-canary"
+    class="align-self-center section-header-2"
+    >WHY USE MY CANARY
+    <div
+      class="animate-point point-22"
+      order="22"
+      type="bounce"
+      duration="0.3"
+      bounceY="-20"
+      hide-element="#section-header-ball-why-use-my-canary"
+    ></div>
+    <div
+      class="animate-point point-23"
+      order="23"
+      type="bounce"
+      duration="0.3"
+      bounceY="-20"
+    ></div>
+    <div
+      class="animate-point point-24"
+      order="24"
+      type="bounce"
+      duration="0.3"
+      bounceY="-20"
+    ></div>
+    <div class="animate-point point-25" order="25" duration="0.5"></div
+  ></app-section-header>
+
+  <app-section-why-use-my-canary
+    [whyUseMyCanary]="whyUseMyCanary"
+  ></app-section-why-use-my-canary>
+
+  <app-section-header
+    id="what-our-customers-say"
+    class="align-self-center section-header-3"
+    >What Our Customers Say
+    <div class="animate-point point-32" duration="0.3" order="32"></div>
+    <div
+      class="animate-point point-33"
+      duration="5"
+      order="33"
+      type="bounce"
+      bounceY="pointInfo"
+      bounceX="-20"
+      hide-element="#section-header-ball-what-our-customers-say"
+    ></div>
+  </app-section-header>
+
+  <app-section-what-our-customer-say
+    [whatYourCustomerSay]="whatYourCustomerSay"
+  ></app-section-what-our-customer-say>
+
+  <app-section-welcome-to-my-canary
+    [welcomeToMyCanary]="welcomeToMyCanary"
+  ></app-section-welcome-to-my-canary>
+
+  <app-section-bottom></app-section-bottom>
+
+  <app-button-box routerLink="/landing-menu/menu"></app-button-box>
+  <div class="animate-point point-41" order="41"></div>
+</div>
+
+<app-ball-animation (click)="scrollToTop()" #ballAnimation></app-ball-animation>

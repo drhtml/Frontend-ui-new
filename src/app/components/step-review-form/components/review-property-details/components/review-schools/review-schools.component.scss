@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding-top: 19px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.text-1 {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.btn-1 {
+  margin-top: 32px;
+}
+
+.block-1 {
+  margin-top: 30px;
+
+  .text-2 {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--White);
+    font-size: 14px;
+    line-height: 17px;
+    background-color: var(--RedLight02);
+    border: 2px solid var(--Red);
+    border-radius: 100%;
+    margin-right: 12px;
+
+    &.isGoodGrade {
+      background-color: var(--TealLight03);
+      border: 2px solid var(--Teal);
+    }
+  }
+
+  .text-3 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .block-2 {
+    font-size: 14px;
+    line-height: 18px;
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}

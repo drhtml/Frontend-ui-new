@@ -1,0 +1,89 @@
+<span *ngIf="showTitle" class="section-title">Monthly Payment</span>
+
+<div class="d-flex full-width container-bar">
+  <div class="value value-1" [style.width]="principalAndInterestPercent"></div>
+  <div class="value value-2" [style.width]="propertyTaxPercent"></div>
+  <div class="value value-3" [style.width]="homeInsurancePercent"></div>
+  <div class="value value-4" [style.width]="HOAFeesPercent"></div>
+  <div class="value value-5" [style.width]="utilitiesPercent"></div>
+</div>
+
+<div class="d-flex align-items-center justify-content-between value-field">
+  <div class="label value value-1">Principal & Interest</div>
+  <app-input-field
+    [formControl]="getFormControl('principalAndInterest')"
+    *ngIf="isEdit"
+    [noLabel]="true"
+  ></app-input-field>
+  <span *ngIf="!isEdit" class="text-1"
+    >${{ getFormControl("principalAndInterest").value }}</span
+  >
+</div>
+<div class="d-flex align-items-center justify-content-between value-field">
+  <div class="label value value-2">Property tax</div>
+  <app-input-field
+    [formControl]="getFormControl('propertyTax')"
+    *ngIf="isEdit"
+    [noLabel]="true"
+  ></app-input-field>
+  <span *ngIf="!isEdit" class="text-1"
+    >${{ getFormControl("propertyTax").value }}</span
+  >
+</div>
+<div class="d-flex align-items-center justify-content-between value-field">
+  <div class="label value value-3">Home Insurance</div>
+  <app-input-field
+    [formControl]="getFormControl('homeInsurance')"
+    *ngIf="isEdit"
+    [noLabel]="true"
+  ></app-input-field>
+  <span *ngIf="!isEdit" class="text-1"
+    >${{ getFormControl("homeInsurance").value }}</span
+  >
+</div>
+<div class="d-flex align-items-center justify-content-between value-field">
+  <div class="label value value-4">HOA Fees</div>
+  <app-input-field
+    [formControl]="getFormControl('HOAFees')"
+    *ngIf="isEdit"
+    [noLabel]="true"
+  ></app-input-field>
+  <span *ngIf="!isEdit" class="text-1"
+    >${{ getFormControl("HOAFees").value }}</span
+  >
+</div>
+<div class="d-flex align-items-center justify-content-between value-field">
+  <div class="label value value-5">Utilities</div>
+  <app-input-field
+    [formControl]="getFormControl('utilities')"
+    *ngIf="isEdit"
+    [noLabel]="true"
+  ></app-input-field>
+  <span *ngIf="!isEdit" class="text-1"
+    >${{ getFormControl("utilities").value }}</span
+  >
+</div>
+<div
+  class="d-flex align-items-center justify-content-between value-field total-field"
+>
+  <div class="label font-bold">Total due at close</div>
+  <app-input-field
+    *ngIf="isEdit"
+    [noLabel]="true"
+    [formControl]="getFormControl('totalDue')"
+  ></app-input-field>
+  <span *ngIf="!isEdit" class="text-1 font-bold"
+    >${{ getFormControl("totalDue").value }}</span
+  >
+</div>
+<div class="d-flex align-items-center justify-content-between value-field">
+  <div class="label">Down Payment at close</div>
+  <app-input-field
+    [formControl]="getFormControl('downPaymentAtClose')"
+    *ngIf="isEdit"
+    [noLabel]="true"
+  ></app-input-field>
+  <span *ngIf="!isEdit" class="text-1"
+    >${{ getFormControl("downPaymentAtClose").value }}</span
+  >
+</div>

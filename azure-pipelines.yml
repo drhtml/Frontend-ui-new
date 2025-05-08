@@ -1,0 +1,34 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+#    npm install -g @angular/cli
+#    npm install
+ #   ng build
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install -g @angular/cli@^9
+    npm install
+    ng build
+  displayName: 'npm install and build'
+  
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'RyanTech CSP(1bc04011-60bf-45c3-bcd6-6e690f6e2a5d)'
+    appType: 'webAppLinux'
+    WebAppName: 'mycanaryfrontend'
+    packageForLinux: '$(System.DefaultWorkingDirectory)'
+  

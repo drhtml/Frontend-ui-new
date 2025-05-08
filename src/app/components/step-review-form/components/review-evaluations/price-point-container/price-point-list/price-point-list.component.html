@@ -1,0 +1,50 @@
+<mat-accordion multi displayMode="flat">
+  <mat-expansion-panel *ngFor="let item of datas" [expanded]="true" hideToggle>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'90px'"
+      [expandedHeight]="'90px'"
+      [ngClass]="{ isBestPricePoint: item.isBestPricePoint }"
+    >
+      <mat-panel-title>
+        <div class="d-flex flex-column block-1">
+          <span class="text-1">{{item.name}}: {{ item.price }}</span>
+          <span class="text-2"
+            ><strong>{{ item.leads }}</strong> leads</span
+          >
+        </div>
+      </mat-panel-title>
+      <mat-panel-description class="custom-arrow">
+        <span *ngIf="!item.isBestPricePoint"></span>
+        <div
+          *ngIf="item.isBestPricePoint"
+          class="hide-desktop show-mobile"
+        ></div>
+        <div *ngIf="item.isBestPricePoint" class="text-best-price hide-mobile">
+          Best Price Point
+        </div>
+        <div class="d-flex align-items-center block-2">
+          <span class="text-1"
+            >Total Score: <strong>{{ item.totalScore }}</strong></span
+          >
+          <img
+            width="21"
+            height="12"
+            src="../../../../../../../../../assets/icons/chevron-down-Black.svg"
+            alt="arrow down"
+          />
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-table
+      theme="admin"
+      [inputDatas]="tableDatas"
+      [displayedColumns]="displayedColumns"
+      class="hide-mobile"
+    >
+    </app-table>
+    <app-price-point-grid
+      [datas]="tableDatas"
+      class="hide-desktop show-mobile"
+    ></app-price-point-grid>
+  </mat-expansion-panel>
+</mat-accordion>

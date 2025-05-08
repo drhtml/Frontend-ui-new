@@ -1,0 +1,132 @@
+<app-review-property-header
+  [propertyData]="propertyData"
+  [showPropertyHeaderDetail]="showPropertyHeaderDetail"
+  [isAdmin]="isAdmin"
+></app-review-property-header>
+
+<mat-accordion multi displayMode="flat">
+  <mat-expansion-panel [expanded]="true" hideToggle>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'36px'"
+      [expandedHeight]="'36px'"
+    >
+      <mat-panel-title> Floor Plans </mat-panel-title>
+      <mat-panel-description class="custom-arrow">
+        <span></span>
+        <img
+          width="21"
+          height="12"
+          src="../../../../../../../../../assets/icons/chevron-down-Black.svg"
+          alt="arrow down"
+        />
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-review-floor-plans
+      [propertyData]="propertyData"
+    ></app-review-floor-plans>
+  </mat-expansion-panel>
+  <app-divider></app-divider>
+  <mat-expansion-panel [expanded]="true" hideToggle>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'36px'"
+      [expandedHeight]="'36px'"
+    >
+      <mat-panel-title> Overview </mat-panel-title>
+      <mat-panel-description class="custom-arrow">
+        <span></span>
+        <img
+          width="21"
+          height="12"
+          src="../../../../../../../../../assets/icons/chevron-down-Black.svg"
+          alt="arrow down"
+        />
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="text-1">
+      {{ overview }}
+    </div>
+  </mat-expansion-panel>
+  <app-divider></app-divider>
+  <mat-expansion-panel [expanded]="true" hideToggle>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'36px'"
+      [expandedHeight]="'36px'"
+    >
+      <mat-panel-title> Interior Details </mat-panel-title>
+      <mat-panel-description class="custom-arrow">
+        <span></span>
+        <img
+          width="21"
+          height="12"
+          src="../../../../../../../../../assets/icons/chevron-down-Black.svg"
+          alt="arrow down"
+        />
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-review-interior-details
+      [propertyData]="propertyData"
+    ></app-review-interior-details>
+  </mat-expansion-panel>
+  <app-divider></app-divider>
+  <mat-expansion-panel [expanded]="true" hideToggle>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'36px'"
+      [expandedHeight]="'36px'"
+    >
+      <mat-panel-title> Property Details </mat-panel-title>
+      <mat-panel-description class="custom-arrow">
+        <span></span>
+        <img
+          width="21"
+          height="12"
+          src="../../../../../../../../../assets/icons/chevron-down-Black.svg"
+          alt="arrow down"
+        />
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-review-property-sub-details
+      [propertyData]="propertyData"
+      [isAdmin]="isAdmin"
+    ></app-review-property-sub-details>
+  </mat-expansion-panel>
+  <app-divider></app-divider>
+  <mat-expansion-panel [expanded]="true" hideToggle>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'36px'"
+      [expandedHeight]="'36px'"
+    >
+      <mat-panel-title> Recent Improvements </mat-panel-title>
+      <mat-panel-description class="custom-arrow">
+        <span></span>
+        <img
+          width="21"
+          height="12"
+          src="../../../../../../../../../assets/icons/chevron-down-Black.svg"
+          alt="arrow down"
+        />
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-review-recent-improvements
+      [propertyData]="propertyData"
+    ></app-review-recent-improvements>
+  </mat-expansion-panel>
+  <app-divider></app-divider>
+  <mat-expansion-panel *ngIf="isAdmin" [expanded]="true" hideToggle>
+    <mat-expansion-panel-header
+      [collapsedHeight]="'36px'"
+      [expandedHeight]="'36px'"
+    >
+      <mat-panel-title> Plan </mat-panel-title>
+      <mat-panel-description class="custom-arrow">
+        <span></span>
+        <img
+          width="21"
+          height="12"
+          src="../../../../../../../../../assets/icons/chevron-down-Black.svg"
+          alt="arrow down"
+        />
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-review-plan [propertyData]="propertyData"></app-review-plan>
+  </mat-expansion-panel>
+</mat-accordion>

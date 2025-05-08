@@ -1,0 +1,28 @@
+mat-dialog-container.mat-dialog-container {
+  border-radius: 0;
+  padding: 0;
+}
+
+.cdk-overlay-dark-backdrop {
+  background-color: rgba($color: $Black, $alpha: 0.2) !important;
+}
+
+.no-background-and-shadow {
+  mat-dialog-container.mat-dialog-container {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.cdk-overlay-container {
+  .cdk-global-overlay-wrapper {
+    .cdk-overlay-pane {
+      &.right-dialog {
+        position: absolute !important;
+        right: 0;
+        top: 0;
+        height: 100%;
+      }
+    }
+  }
+}

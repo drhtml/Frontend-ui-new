@@ -1,0 +1,62 @@
+<span class="section-title">Schools</span>
+
+<span class="description">
+  <strong>{{ formControls.controls.length }}</strong> schools around
+</span>
+
+<div
+  class="d-flex flex-column block-form-container"
+  *ngFor="let formControl of formControls.controls; let i = index"
+>
+  <div class="d-flex justify-content-between align-items-center">
+    <span class="text-1">School {{ i + 1 }}</span>
+
+    <app-button
+      class="btn-delete"
+      [shouldIgnoreHover]="true"
+      type="icon"
+      color="primary"
+      (click)="removeAtIndex(i)"
+    >
+      <img
+        src="../../../../../../../../assets/icons/trash-rectangle.svg"
+        alt="trash"
+      />
+    </app-button>
+  </div>
+  <app-divider></app-divider>
+
+  <div class="block-form mt-16">
+    <app-input-field
+      [formControl]="getFormControlField(formControl, 'name')"
+      label="School"
+      class="field-name"
+    ></app-input-field>
+    <app-grade-slider
+      label="Overall Grade"
+      [formControl]="getFormControlField(formControl, 'grade')"
+    ></app-grade-slider>
+    <app-input-field
+      label="Grades"
+      [formControl]="getFormControlField(formControl, 'grades')"
+    ></app-input-field>
+    <app-input-field
+      label="Distances"
+      [formControl]="getFormControlField(formControl, 'distance')"
+    ></app-input-field>
+    <app-input-field
+      label="Students"
+      [formControl]="getFormControlField(formControl, 'students')"
+    ></app-input-field>
+  </div>
+</div>
+
+<app-button
+  size="small"
+  type="secondary"
+  iconLeft="../../../../../../../../assets/icons/plus-Teal.svg"
+  iconLeftHover="../../../../../../../../assets/icons/plus-Teal.svg"
+  class="align-self-start btn-add"
+  (click)="addNewSchool()"
+  >ADD NEW SCHOOL</app-button
+>

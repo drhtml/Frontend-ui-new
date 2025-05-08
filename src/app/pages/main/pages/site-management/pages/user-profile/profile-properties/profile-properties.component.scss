@@ -1,0 +1,52 @@
+@import "../../../../../../../../styles/includes";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-field {
+  max-width: 348px;
+  flex: 1;
+  width: 0;
+  margin-right: 10px;
+}
+
+.sort-by-field {
+  width: 220px;
+
+  ::ng-deep {
+    label.left-label {
+      @include media-breakpoint-tablet-down {
+        display: none;
+      }
+    }
+
+    mat-form-field {
+      width: 0;
+      flex: 1;
+    }
+  }
+
+  @include media-breakpoint-tablet-down {
+    width: 162px;
+  }
+}
+
+app-view-as-toggle {
+  margin-left: 40px;
+}
+
+.block-header {
+  margin-bottom: 24px;
+}
+
+app-properties-grid-view {
+  &.hide {
+    @include media-breakpoint-tablet-down {
+      display: grid !important;
+    }
+  }
+}

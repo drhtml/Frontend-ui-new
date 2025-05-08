@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  column-gap: 30px;
+  row-gap: 24px;
+  width: 100%;
+}
+
+.field-radios {
+  max-width: 522px;
+
+  ::ng-deep {
+    .mat-radio-label-content {
+      white-space: nowrap !important;
+    }
+  }
+}
+
+.field-frequency {
+  max-width: 300px;
+}

@@ -1,0 +1,25 @@
+<app-settings-wrapper
+  (saveChange)="submitForm()"
+  [form]="form"
+  title="ACCOUNT SETTINGS"
+>
+  <div class="container">
+    <app-input-field
+      label="Email"
+      [errorStateMatcher]="matcher"
+      [formControl]="getControl('accountSettingEmail')"
+      [formErrorMessage]="formErrorMessage"
+    ></app-input-field>
+    <app-input-field
+      label="Old Password"
+      [isPasswordField]="true"
+      [formControl]="getControl('accountSettingOldPassword')"
+    ></app-input-field>
+    <app-input-field
+      label="Password"
+      [isPasswordField]="true"
+      [errorStateMatcher]="matcher"
+      [formControl]="getControl('accountSettingPassword')"
+      [formErrorMessage]="formErrorMessage"
+    ></app-input-field></div
+></app-settings-wrapper>

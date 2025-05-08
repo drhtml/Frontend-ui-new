@@ -1,0 +1,29 @@
+.mat-select-panel-wrap {
+  margin-top: 40px !important;
+
+  .mat-select-panel {
+    .mat-option {
+      height: 36px;
+
+      .mat-option-text {
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      &.mat-active,
+      &:focus,
+      &:hover {
+        background-color: $TealLight01;
+      }
+
+      &.mat-selected:not(.mat-option-multiple) {
+        background-color: $TealLight01;
+
+        .mat-option-text {
+          color: $Black;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

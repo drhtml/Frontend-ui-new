@@ -1,0 +1,82 @@
+<div
+  class="d-flex align-items-center justify-content-between step-review-form-block-1"
+>
+  <span class="text-1">{{ name }}</span>
+
+  <app-button
+    *ngIf="shouldShowEditButton && tabIndex === 0"
+    iconLeft="../../../../../../../assets/icons/edit-Teal.svg"
+    iconLeftHover="../../../../../../../assets/icons/edit-Teal.svg"
+    type="secondary"
+    size="small"
+    (click)="edit.emit()"
+    class="hide-mobile"
+    >EDIT PROPERTY</app-button
+  >
+
+  <app-button
+    *ngIf="shouldShowEditButton && tabIndex === 0"
+    class="btn-1 show-mobile hide-desktop"
+    [shouldIgnoreHover]="true"
+    iconLeft="../../../../../../../assets/icons/edit-Teal.svg"
+    type="basic"
+    size="very-small"
+    color="primary"
+    (click)="edit.emit()"
+    >EDIT</app-button
+  >
+
+  <app-button
+    *ngIf="tabIndex === 1 && isAdmin"
+    iconLeft="../../../../../../../assets/icons/chevrons-left-Teal.svg"
+    iconLeftHover="../../../../../../../assets/icons/chevrons-left-Teal.svg"
+    [doNotUpdateImageSize]="true"
+    type="secondary"
+    size="small"
+    (click)="showPricePointSummary()"
+    class="hide-desktop show-tablet"
+    >PRICE POINTS SUMMARY</app-button
+  >
+</div>
+
+<app-owner-popover-right
+  *ngIf="isAdmin && tabIndex === 0 && propertyData.listedBy"
+  [ownerInfo]="propertyData.listedBy"
+></app-owner-popover-right>
+<app-price-points-summary-right
+  *ngIf="isAdmin && tabIndex === 1"
+  [datas]="pricePointSummaryDatas"
+></app-price-points-summary-right>
+
+<mat-tab-group
+  *ngIf="!onlyShowPropertyDetails"
+  dynamicHeight
+  mat-align-tabs="start"
+  animationDuration="0"
+  [disablePagination]="true"
+  [selectedIndex]="tabIndex"
+  (selectedIndexChange)="selectedTabChange($event)"
+>
+  <mat-tab label="Property Details"
+    ><app-review-property-details
+      [isAdmin]="isAdmin"
+      #propertyDetails
+      [propertyData]="propertyData"
+      *ngIf="!isLoadingData"
+    ></app-review-property-details
+  ></mat-tab>
+  <mat-tab label="Evaluations"
+    ><app-review-evaluations
+      [datas]="pricePointSummaryDatas"
+      [isAdmin]="isAdmin"
+      *ngIf="!isLoadingData"
+    ></app-review-evaluations
+  ></mat-tab>
+</mat-tab-group>
+
+<app-review-property-details
+  *ngIf="onlyShowPropertyDetails && !isLoadingData"
+  [showPropertyHeaderDetail]="showPropertyHeaderDetail"
+  #propertyDetails
+  [propertyData]="propertyData"
+></app-review-property-details>

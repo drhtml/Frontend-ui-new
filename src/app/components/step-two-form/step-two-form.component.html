@@ -1,0 +1,106 @@
+<span *ngIf="shouldShowTitle" class="section-title">INTERIOR DETAILS</span>
+<span class="section-sub-title">Remodeling/Renovations</span>
+
+<app-checkbox-group
+  class="mt-10"
+  [formControl]="getFormControl('remodelingRenovations')"
+  [options]="[{ label: 'Main Bath', key: 'Main Bath' }]"
+></app-checkbox-group>
+<app-input-field
+  *ngIf="getFormControl('yearRenovatedMainPath')"
+  [formControl]="getFormControl('yearRenovatedMainPath')"
+  class="mt-10 field-year"
+  label="Year Renovated"
+></app-input-field>
+<app-checkbox-group
+  class="mt-10"
+  [formControl]="getFormControl('remodelingRenovations')"
+  [options]="[{ label: 'Kitchen', key: 'Kitchen' }]"
+></app-checkbox-group>
+<app-input-field
+  *ngIf="getFormControl('yearRenovatedKitchen')"
+  [formControl]="getFormControl('yearRenovatedKitchen')"
+  class="mt-10 field-year"
+  label="Year Renovated"
+></app-input-field>
+<app-checkbox-group
+  class="mt-10"
+  [formControl]="getFormControl('remodelingRenovations')"
+  [options]="[{ label: 'Roof', key: 'Roof' }]"
+></app-checkbox-group>
+<app-input-field
+  *ngIf="getFormControl('yearRenovatedRoof')"
+  [formControl]="getFormControl('yearRenovatedRoof')"
+  class="mt-10 field-year"
+  label="Year Renovated"
+></app-input-field>
+<app-checkbox-group
+  class="mt-10"
+  [formControl]="getFormControl('remodelingRenovations')"
+  [options]="[{ label: 'Heating System', key: 'Heating System' }]"
+></app-checkbox-group>
+<app-input-field
+  *ngIf="getFormControl('yearRenovatedHeatingSystem')"
+  [formControl]="getFormControl('yearRenovatedHeatingSystem')"
+  class="mt-10 field-year"
+  label="Year Renovated"
+></app-input-field>
+<app-checkbox-group
+  class="mt-10"
+  [formControl]="getFormControl('remodelingRenovations')"
+  [options]="[{ label: 'Windows', key: 'Windows' }]"
+></app-checkbox-group>
+<app-input-field
+  *ngIf="getFormControl('yearRenovatedWindows')"
+  [formControl]="getFormControl('yearRenovatedWindows')"
+  class="mt-10 field-year"
+  label="Year Renovated"
+></app-input-field>
+<span class="section-sub-title">Heating</span>
+
+<app-checkbox-group
+  [formControl]="getFormControl('heatingtype')"
+  label="Fuel Type"
+  [options]="[
+    { label: 'Oil', key: 'oil' },
+    { label: 'Gas', key: 'gas' },
+    { label: 'Electric', key: 'electric' }
+  ]"
+></app-checkbox-group>
+
+<app-checkbox-group
+  class="mt-24"
+  [formControl]="getFormControl('heatingsystem')"
+  label="System"
+  [options]="[
+    { label: 'Radiant (Hot Water)', key: 'radiant' },
+    { label: 'Hot Air', key: 'hot_air' },
+    { label: 'Electric baseboard', key: 'electric_baseboard' }
+  ]"
+></app-checkbox-group>
+
+<span class="section-sub-title">Cooling</span>
+
+<app-checkbox-group
+  [formControl]="getFormControl('coolingtype')"
+  label="Cooling Features"
+  [options]="[
+    { label: 'Central Air', key: 'central_air' },
+    { label: 'Mini-Splits', key: 'mini_split' },
+    { label: 'Window Units', key: 'window_unit' }
+  ]"
+></app-checkbox-group>
+
+<span class="section-sub-title">Pool</span>
+<app-checkbox-group
+  [options]="[{ label: 'Have Pool', key: 'Have Pool' }]"
+  [formControl]="getFormControl('pool')"
+></app-checkbox-group>
+<app-checkbox-group
+  *ngIf="getFormControl('poolInAboveGround')"
+  [options]="[
+    { label: 'In Ground', key: 'in_ground' },
+    { label: 'Above ground', key: 'above_ground' }
+  ]"
+  [formControl]="getFormControl('poolInAboveGround')"
+></app-checkbox-group>

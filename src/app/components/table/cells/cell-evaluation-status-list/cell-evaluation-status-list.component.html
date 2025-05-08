@@ -1,0 +1,14 @@
+<div
+  *ngFor="let item of value"
+  [ngClass]="{
+    isNotStarted: item.status === 'Not Started',
+    isInProgress: item.status === 'In Progress',
+    isCompleted: item.status === 'Completed'
+  }"
+  class="block-1"
+  [matTooltip]="item.status"
+  matTooltipPosition="above"
+  [matTooltipClass]="getTooltipClass(item)"
+>
+  {{ item.count }}
+</div>

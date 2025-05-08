@@ -1,0 +1,80 @@
+@import "../../../styles/includes";
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  @include selfBreakPointHideShow;
+
+  ::ng-deep {
+    .mat-radio-button {
+      // min-width: 200px;
+
+      // @include media-breakpoint-tablet-down {
+      //   min-width: 0;
+      // }
+
+      .mat-radio-label {
+        align-items: flex-start;
+
+        .mat-radio-container {
+          .mat-ripple {
+            .mat-ripple-element {
+              background-color: $Teal;
+            }
+          }
+
+          .mat-radio-outer-circle {
+            border-width: 1px;
+            border-color: #ebebeb;
+            background-color: $LightGrey;
+          }
+        }
+
+        .mat-radio-label-content {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 500;
+          color: $Black;
+
+          @include media-breakpoint-tablet-down {
+            white-space: break-spaces;
+          }
+        }
+      }
+
+      &.mat-radio-checked {
+        .mat-radio-label {
+          .mat-radio-container {
+            .mat-radio-outer-circle {
+              border-color: #ebebeb;
+              background-color: $White;
+            }
+
+            .mat-radio-inner-circle {
+              background-color: $Teal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.txt-label {
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+mat-radio-group {
+  display: grid;
+  column-gap: 28px;
+  row-gap: 16px;
+
+  @include media-breakpoint-tablet-down {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}

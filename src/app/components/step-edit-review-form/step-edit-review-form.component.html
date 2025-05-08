@@ -1,0 +1,61 @@
+<mat-tab-group
+  dynamicHeight
+  mat-align-tabs="start"
+  animationDuration="0"
+  [disablePagination]="true"
+>
+  <mat-tab label="Property Details"
+    ><app-edit-review-property-details
+      [form]="form"
+      [isAdmin]="isAdmin"
+      [screenSize]="screenSize"
+    ></app-edit-review-property-details
+  ></mat-tab>
+  <mat-tab label="Interior Details"
+    ><app-edit-interior-details
+      [form]="form"
+      [isAdmin]="isAdmin"
+      [screenSize]="screenSize"
+    ></app-edit-interior-details
+  ></mat-tab>
+</mat-tab-group>
+
+<app-divider></app-divider>
+
+<div class="bottom d-flex justify-content-between">
+  <app-button type="secondary" size="normal" class="hide-mobile"
+    >CANCEL</app-button
+  >
+  <app-button type="basic" size="normal" class="hide-desktop show-mobile"
+    >CANCEL</app-button
+  >
+
+  <div class="d-flex">
+    <app-button
+      iconLeft="../../../../../../../assets/icons/eye-Teal.svg"
+      iconLeftHover="../../../../../../../assets/icons/eye-Teal.svg"
+      type="secondary"
+      size="normal"
+      class="hide-mobile"
+      (click)="review.emit()"
+      >PREVIEW</app-button
+    >
+    <app-button
+      iconLeft="../../../../../../../assets/icons/eye-Teal.svg"
+      iconLeftHover="../../../../../../../assets/icons/eye-Teal.svg"
+      type="secondary"
+      size="normal"
+      class="hide-desktop show-mobile"
+      [noContent]="true"
+    ></app-button>
+    <app-button
+      iconLeft="../../../../../../../assets/icons/save-White.svg"
+      iconLeftHover="../../../../../../../assets/icons/save-Teal.svg"
+      type="primary"
+      size="normal"
+      class="btn-save"
+      (click)="save.emit()"
+      >SAVE CHANGES</app-button
+    >
+  </div>
+</div>

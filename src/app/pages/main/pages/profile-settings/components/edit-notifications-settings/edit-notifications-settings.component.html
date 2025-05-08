@@ -1,0 +1,23 @@
+<app-settings-wrapper
+  (saveChange)="submitForm()"
+  [form]="form"
+  title="NOTIFICATIONS SETTINGS"
+  ><div class="container">
+    <app-radios
+      [formControl]="getControl('notificationChannel')"
+      class="field-radios"
+      label="I wish to receive notifications by"
+      [options]="[
+        { label: 'Email', key: 'EMAIL' },
+        { label: 'SMS', key: 'SMS' },
+        { label: 'Both (Email & SMS)', key: 'BOTH' }
+      ]"
+    ></app-radios>
+    <app-select-field
+      [formControl]="getControl('notificationFrequency')"
+      [options]="frequencyOptions"
+      class="field-frequency"
+      label="Notification frequency"
+      placeholder="Select frequency"
+    ></app-select-field></div
+></app-settings-wrapper>
