@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 import { IDate } from '../IDate';
 import { IEvaluationStatus, IProperty } from '../IProperty';
 import { IParkingType } from './IParkingType';

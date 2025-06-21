@@ -8,7 +8,7 @@ import {
 } from '@angular/core';
 import * as d3 from 'd3';
 import * as _ from 'lodash';
-import * as moment from 'moment';
+import moment from 'moment';
 
 export interface ILineChartByMonthData {
   value: number;

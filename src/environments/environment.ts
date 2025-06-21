@@ -7,7 +7,7 @@ import { environment as environmentBase } from './environmentBase';
 export const environment = {
   ...environmentBase,
   production: false,
-  backendApi: 'http://localhost:3300',//https://mycanarybackend.azurewebsites.net
+  backendApi: 'https://9bpedfdmed.us-east-1.awsapprunner.com/',
 };
 
 /*

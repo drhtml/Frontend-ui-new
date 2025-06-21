@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import * as _ from 'lodash';
-import * as moment from 'moment';
+import moment from 'moment';
 import { IResponseDashboardRealEstateAgent } from 'src/app/interfaces/backendResponse/IResponseDashboardRealEstateAgent';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { ProfileSettingsService } from 'src/app/services/profile-settings.service';

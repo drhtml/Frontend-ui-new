@@ -57,7 +57,7 @@ export class ReviewInteriorDetailsComponent implements OnInit, OnChanges {
       this.remodelingAndRenovation = [];
       _.forOwn(
         this.propertyData.interiorDetails.remodelingAndRenovation || {},
-        (value, key) => {
+        (value: any, key) => {
           if (value.didRemodel) {
             this.remodelingAndRenovation.push(
               `${convertCamelCaseTextToTitleCaseText(key)} (Remodel Year: ${

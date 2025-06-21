@@ -1,6 +1,6 @@
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import * as _ from 'lodash';
-import * as moment from 'moment';
+import moment from 'moment';
 import { convertStringToNumber } from 'src/app/utils/string';
 import {
   fromICheckboxGroupFormFieldToRequest,
@@ -16,6 +16,7 @@ import {
   IResponsePhotos,
 } from './IResponseProperty';
 import { updateParkingTypeField } from 'src/app/utils/form-property';
+import { IProperty } from 'src/app/interfaces/IProperty';
 
 export interface IRequestRecentImprovement {
   type: string;
@@ -187,7 +188,7 @@ export const updateIRequestUpdatePropertyFromFormData = (
     (item) => ({
       type: item.type || '',
       description: item.description || '',
-      date: moment(item.date, 'MM/YYYY').toDate() || '',
+      date: moment(item.date, 'MM/YYYY').toDate(),
     })
   );
   requestProperty.contact.email = inputForm.email || '';

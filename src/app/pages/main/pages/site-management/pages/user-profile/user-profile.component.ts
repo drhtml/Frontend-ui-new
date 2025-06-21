@@ -137,7 +137,7 @@ export class UserProfileComponent
           if (this.avatarField && this.avatarField.value) {
             this.avatarField.patchValue({
               file: this.avatarField.value.file as IFile,
-              url: userAvatar || '',
+              url: userAvatar ?? '',
             });
           }
           this.profileForm.patchValue({

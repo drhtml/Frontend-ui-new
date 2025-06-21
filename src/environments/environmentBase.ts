@@ -7,6 +7,6 @@ export const environment = {
       aboutUs: 'aboutUs',
     },
   },
-  backendApi: 'http://localhost:3300',
-  mycanaryBackendApi: 'http://localhost:3300/api', //https://mycanarybackend.azurewebsites.net/api
+  backendApi: '',
+  mycanaryBackendApi: 'https://9bpedfdmed.us-east-1.awsapprunner.com/api',
 };

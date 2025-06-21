@@ -6,10 +6,7 @@ import { Subscription } from 'rxjs';
   template: '',
 })
 export abstract class AutoUnsubscribeComponent implements OnDestroy {
-  protected subscriptions: {
-    key: string;
-    subscription: Subscription;
-  }[] = [];
+  subscriptions: { key: string; subscription: Subscription }[] = [];
 
   public ngOnDestroy(): void {
     _.forEach(this.subscriptions, (sub) => {
@@ -19,7 +16,7 @@ export abstract class AutoUnsubscribeComponent implements OnDestroy {
 
   protected addSubscriptions(sub: Subscription, key = '') {
     if (key) {
-      const oldSubscriptions = _.remove(this.subscriptions, { key });
+      const oldSubscriptions = _.remove(this.subscriptions as any, (s: any) => s.key === key);
       _.forEach(oldSubscriptions, (oldSub) => {
         oldSub.subscription.unsubscribe();
       });
@@ -28,5 +25,10 @@ export abstract class AutoUnsubscribeComponent implements OnDestroy {
       key,
       subscription: sub,
     });
+  }
+
+  removeSubscription(key: string): void {
+    const oldSubscriptions = _.remove(this.subscriptions as any, (s: any) => s.key === key);
+    // ... existing code ...
   }
 }

@@ -52,6 +52,6 @@ export class OwnerPopoverRightComponent extends AutoUnsubscribeComponent impleme
   }
 
   getPropertyCity(property: IProperty): string {
-    return _.get(property, 'houseFacts.address.city', '');
+    return _.get(property, 'houseFacts.address.city') ?? '';
   }
 }
