@@ -28,6 +28,9 @@ h3 {
 
 .email-field {
   margin-bottom: 24px;
+    .mat-mdc-form-field{
+      width: 100%; 
+    }
 
   @include media-breakpoint-mobile-down {
     margin-bottom: 17px;

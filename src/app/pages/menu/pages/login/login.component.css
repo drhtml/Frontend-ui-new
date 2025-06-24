@@ -1,0 +1,101 @@
+.color-Pastel {
+  color: #fffe71;
+}
+
+:root {
+  --LightGrey: #f6f6f6;
+  --LightestGrey: #fafafa;
+  --RedLight02: #f3b1b1;
+  --Red: #ff5e57;
+  --Blue: #019eeb;
+  --Green: #28c840;
+  --White: #ffffff;
+  --Teal: #00b3b0;
+  --TealDark: #186363;
+  --TealLight02: #a5d8d9;
+  --TealLight03: #6dc8c9;
+  --Pastel: #fffe71;
+  --PodBlue: #03a9f4;
+}
+
+:host {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+  width: 460px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 36px 40px 36px;
+}
+@media (max-width: 575px) {
+  :host {
+    width: calc(100% - 20px);
+    padding: 0 20px 33px 20px;
+  }
+}
+
+h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media (max-width: 575px) {
+  h3 {
+    margin-top: 22px;
+    margin-bottom: 23px;
+  }
+}
+
+.email-field {
+  margin-bottom: 24px;
+}
+.email-field .mat-mdc-form-field {
+  width: 100%;
+}
+@media (max-width: 575px) {
+  .email-field {
+    margin-bottom: 17px;
+  }
+}
+
+.password-field {
+  margin-bottom: 16px;
+}
+
+.block-1 {
+  margin-bottom: 45px;
+}
+@media (max-width: 575px) {
+  .block-1 {
+    margin-bottom: 40px;
+  }
+}
+
+.btn-1 {
+  margin-bottom: 30px;
+}
+@media (max-width: 575px) {
+  .btn-1 {
+    margin-bottom: 16px;
+  }
+}
+
+.body-3 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+}
