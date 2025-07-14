@@ -1,3 +1,38 @@
+.color-Pastel {
+  color: #fffe71;
+}
+
+:root {
+  --LightGrey: #f6f6f6;
+  --LightestGrey: #fafafa;
+  --RedLight02: #f3b1b1;
+  --Red: #ff5e57;
+  --Blue: #019eeb;
+  --Green: #28c840;
+  --White: #ffffff;
+  --Teal: #00b3b0;
+  --TealDark: #186363;
+  --TealLight02: #a5d8d9;
+  --TealLight03: #6dc8c9;
+  --Pastel: #fffe71;
+  --PodBlue: #03a9f4;
+}
+
 :host {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(19, 20, 21, 0.2) !important;
 }
