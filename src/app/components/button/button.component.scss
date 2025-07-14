@@ -54,7 +54,7 @@
       padding-left: 18px;
       padding-right: 18px;
 
-      ::ng-deep {
+      ::ng-deep { 
         .mat-button-wrapper {
           font-size: 16px;
           line-height: 48px;
@@ -309,7 +309,6 @@
 
 .container {
   width: 100%;
-
   ::ng-deep {
     .mat-button-wrapper {
       font-weight: bold;
@@ -328,17 +327,19 @@
   .icon-main-hover {
     display: none;
   }
-
+  
   &:not(.noContent) {
     .icon-left-hover,
     .icon-left {
       margin-right: 20px;
+      vertical-align: middle;
     }
 
     .icon-right-hover,
     .icon-right {
       margin-left: 20px;
     }
+    
   }
 
   &.size-normal {
@@ -363,13 +364,14 @@
     }
   }
 
-  &:hover:not(.shouldIgnoreHover) {
+  &:hover:not(.shouldIgnoreHover) { 
     .icon-main {
       display: none;
     }
 
     .icon-main-hover {
-      display: block;
+      display: inline-block;
+      vertical-align: middle;
     }
-  }
+  } 
 }
